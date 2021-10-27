@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tile } from "../tile";
+import { Tile } from "../game-entities";
 
 const WORLD_SIZE = 15;
 

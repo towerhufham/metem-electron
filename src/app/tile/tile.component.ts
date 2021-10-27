@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Tile } from '../tile';
+import { MapObject, Tile } from '../game-entities';
 
 @Component({
   selector: 'app-tile',
@@ -9,6 +9,7 @@ import { Tile } from '../tile';
 export class TileComponent implements OnInit {
 
   @Input() tile?: Tile;
+  @Input() object?: MapObject;
 
   constructor() { }
 
