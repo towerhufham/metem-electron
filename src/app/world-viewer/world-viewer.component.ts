@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Tile, MapObject } from "../game-entities";
+import { Grid, BreadthFirstFinder } from "pathfinding";
 
 const WORLD_SIZE = 15;
 
 function defaultMap() {
-  //just makes a 2d array of default TileComponents
   let map: Tile[] = [];
   for (var i = 0; i < WORLD_SIZE; i++) {
     for (var j = 0; j < WORLD_SIZE; j++) {
@@ -27,12 +27,24 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
+  pathfindingGrid: Grid = this.makePathfindingGrid();
+  finder = new BreadthFirstFinder();
   player: MapObject = {name: "coin", img: "player.png", x: 7, y: 7};
   objects: MapObject[] = [this.player];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  makePathfindingGrid(): Grid {
+    let grid = new Grid(WORLD_SIZE, WORLD_SIZE);
+    for (const t of this.tiles) {
+      if (t.wall) {
+        grid.setWalkableAt(t.x, t.y, false);
+      }
+    }
+    return grid;
   }
 
   getTileAt(x: number, y: number) {
@@ -45,39 +57,17 @@ export class WorldViewerComponent implements OnInit {
     return this.getTileAt(px, py);
   }
 
-  private playerBFS(goal: Tile): Tile[] {
-    const dirs = [[1, 0], [0, 1], [-1, 0], [0, -1]];
-    let q = [];
-    let discovered = [this.getPlayerTile()];
-    q.push(this.getPlayerTile());
-    while (q.length > 0) {
-      const v = q.pop();
-      if (v) {
-        for (const d of dirs) {
-          const dx = v.x + d[0];
-          const dy = v.y + d[1];
-          const t = this.getTileAt(dx, dy);
-          if (t) {
-            if (t === goal) {
-              q.push(t);
-              return q;
-            } else if (!discovered.includes(t)) {
-              discovered.push(t);
-              q.push(t);
-            }
-          }
-        }
-      }
-    }
-    return [];
-  }
-
-  getPlayerPathToTile(goal: Tile): Tile[] {
-    const path = this.playerBFS(goal);
-    for (let t of path) {
+  getPlayerPathToTile(goal: Tile): void {
+    const gridBackup = this.pathfindingGrid.clone()
+    const px = this.player.x;
+    const py = this.player.y;
+    const path = this.finder.findPath(px, py, goal.x, goal.y, this.pathfindingGrid);
+    this.pathfindingGrid = gridBackup;
+    console.log(path);
+    for (let p of path) {
+      const t = this.getTileAt(p[0], p[1]);
       t.img = "fire_wall.png";
     }
-    return path;
   }
 
   moveCoin(x:number, y:number): void {
