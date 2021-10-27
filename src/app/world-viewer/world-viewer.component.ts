@@ -81,6 +81,7 @@ export class WorldViewerComponent implements OnInit {
     if (this.tilesInPath.length > 1) {
       this.player.x = x;
       this.player.y = y;
+      this.clearPath();
     }
   }
 }
