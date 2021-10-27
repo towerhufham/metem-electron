@@ -5,7 +5,7 @@
         src="assets/img/{{t.img}}" 
         *ngFor="let t of tiles" 
         [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}" 
-        (click)="getPlayerPathToTile(t.x, t.y)" 
+        (click)="getPlayerPathToTile(t)" 
         draggable="false"
     >
 

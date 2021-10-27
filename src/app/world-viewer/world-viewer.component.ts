@@ -39,45 +39,41 @@ export class WorldViewerComponent implements OnInit {
     return this.tiles[x + (y*WORLD_SIZE)];
   }
 
-  private playerBFS(x:number, y:number, currentPath: Tile[], visited: Tile[]): Tile[] {
-    //init
+  getPlayerTile() {
+    const px = this.player.x;
+    const py = this.player.y;
+    return this.getTileAt(px, py);
+  }
+
+  private playerBFS(goal: Tile): Tile[] {
     const dirs = [[1, 0], [0, 1], [-1, 0], [0, -1]];
-    const lastTile = currentPath[currentPath.length - 1];
-    let newTiles = [];
-    //check four directions
-    for (const d of dirs) {
-      const dx = lastTile.x + d[0];
-      const dy = lastTile.y + d[1];
-      //check if new tiles are valid
-      if (dx >= 0 && dx < WORLD_SIZE && dy >= 0 && dy < WORLD_SIZE) {
-        const t = this.getTileAt(dx, dy);
-        //check for visited
-        if (!visited.includes(t)) {
-          visited.push(t);
-          newTiles.push(t);
+    let q = [];
+    let discovered = [this.getPlayerTile()];
+    q.push(this.getPlayerTile());
+    while (q.length > 0) {
+      const v = q.pop();
+      if (v) {
+        for (const d of dirs) {
+          const dx = v.x + d[0];
+          const dy = v.y + d[1];
+          const t = this.getTileAt(dx, dy);
+          if (t) {
+            if (t === goal) {
+              q.push(t);
+              return q;
+            } else if (!discovered.includes(t)) {
+              discovered.push(t);
+              q.push(t);
+            }
+          }
         }
       }
     }
-    //check valid, adjacent, unvisited tiles
-    for (const t of newTiles) {
-      //check if goal
-      if (t.x === x && t.y === y) {
-        return currentPath.concat(t);
-      } else {
-        //not goal, but could be closer
-        let newPath = currentPath.concat(t);
-        return this.playerBFS(x, y, newPath, visited);
-      }
-    }
-    //if we got here, found nothing
     return [];
   }
 
-  getPlayerPathToTile(x: number, y: number): Tile[] {
-    const px = this.player.x;
-    const py = this.player.y;
-    const playerTile = this.getTileAt(px, py);
-    const path = this.playerBFS(x, y, [playerTile], []);
+  getPlayerPathToTile(goal: Tile): Tile[] {
+    const path = this.playerBFS(goal);
     for (let t of path) {
       t.img = "fire_wall.png";
     }
