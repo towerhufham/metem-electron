@@ -1,11 +1,13 @@
-<div id="grid">
+<div id="grid" (mouseleave)="clearPath()">
     <!-- tiles -->
     <img 
         class="tile" 
         src="assets/img/{{t.img}}" 
         *ngFor="let t of tiles" 
         [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}" 
-        (click)="getPlayerPathToTile(t)" 
+        [ngClass]="{'inPath': tilesInPath.includes(t)}"
+        (mouseenter)="getPlayerPathToTile(t)" 
+        (click)="movePlayer(t.x, t.y)"
         draggable="false"
     >
 

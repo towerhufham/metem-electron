@@ -10,10 +10,12 @@ function createWindow() {
         height: 600,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        // fullscreen: true
     });
 
     mainWindow.setMenu(null);
+    mainWindow.maximize();
     
     mainWindow.loadURL(
         url.format({

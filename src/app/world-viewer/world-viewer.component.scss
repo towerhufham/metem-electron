@@ -35,6 +35,10 @@ div {
     filter: hue-rotate(180deg);
 }
 
+.inPath {
+    filter: hue-rotate(90deg);
+}
+
 .tile {
     z-index: 10;
 }

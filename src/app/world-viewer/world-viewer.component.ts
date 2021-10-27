@@ -27,10 +27,12 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  pathfindingGrid: Grid = this.makePathfindingGrid();
-  finder = new BreadthFirstFinder();
   player: MapObject = {name: "coin", img: "player.png", x: 7, y: 7};
   objects: MapObject[] = [this.player];
+
+  pathfindingGrid: Grid = this.makePathfindingGrid();
+  finder = new BreadthFirstFinder();
+  tilesInPath: Tile[] = [];
 
   constructor() { }
 
@@ -57,21 +59,26 @@ export class WorldViewerComponent implements OnInit {
     return this.getTileAt(px, py);
   }
 
+  clearPath(): void {
+    this.tilesInPath = [];
+  }
+
   getPlayerPathToTile(goal: Tile): void {
+    this.clearPath();
     const gridBackup = this.pathfindingGrid.clone()
     const px = this.player.x;
     const py = this.player.y;
     const path = this.finder.findPath(px, py, goal.x, goal.y, this.pathfindingGrid);
     this.pathfindingGrid = gridBackup;
-    console.log(path);
     for (let p of path) {
       const t = this.getTileAt(p[0], p[1]);
-      t.img = "fire_wall.png";
+      this.tilesInPath.push(t);
+      // t.img = "fire_wall.png";
     }
   }
 
-  moveCoin(x:number, y:number): void {
-    if (!this.getTileAt(x, y).wall) {
+  movePlayer(x:number, y:number): void {
+    if (this.tilesInPath.length > 1) {
       this.player.x = x;
       this.player.y = y;
     }
