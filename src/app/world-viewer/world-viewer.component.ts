@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { TileComponent } from '../tile/tile.component';
+import { Tile } from "../tile";
 
 const WORLD_SIZE = 15;
 
 function defaultMap() {
   //just makes a 2d array of default TileComponents
-  let map: TileComponent[][] = [];
+  let map: Tile[][] = [];
   for (var i = 0; i < WORLD_SIZE; i++) {
     map[i] = [];
     for (var j = 0; j < WORLD_SIZE; j++) {
-      map[i][j] = new TileComponent();
+      //random for testing
+      if (Math.random() < 0.5) {
+        map[i][j] = { name: "default tile", img: "Ice_17_16x16" };
+      } else {
+        map[i][j] = { name: "default tile 2", img: "Fire_15_16x16" };
+      }
     }
   }
   return map;
@@ -22,7 +27,7 @@ function defaultMap() {
 })
 export class WorldViewerComponent implements OnInit {
 
-  tiles: TileComponent[][] = defaultMap();
+  tiles: Tile[][] = defaultMap();
 
   constructor() { }
 
