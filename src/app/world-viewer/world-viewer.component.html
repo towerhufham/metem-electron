@@ -1,4 +1,4 @@
-<table cellpadding="0">
+<!-- <table cellpadding="0">
     <tbody>
         <tr *ngFor="let row of tiles">
             <td *ngFor="let t of row">
@@ -6,4 +6,9 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<div id="grid">
+    <img class="tile" src="../../assets/{{t.img}}" *ngFor="let t of tiles" [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}">
+    <img class="object" src="../../assets/{{o.img}}" *ngFor="let o of objects" [ngStyle]="{'grid-column': o.x+1, 'grid-row':o.y+1}">
+</div>
