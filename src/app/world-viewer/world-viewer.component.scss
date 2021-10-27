@@ -31,6 +31,15 @@ div {
     image-rendering: pixelated;
 }
 
-.tile:hover {
+#grid .tile:hover  {
     filter: hue-rotate(180deg);
+}
+
+.tile {
+    z-index: 10;
+}
+
+.object {
+    z-index: 11;
+    pointer-events: none;
 }

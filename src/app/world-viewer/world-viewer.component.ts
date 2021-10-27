@@ -46,4 +46,8 @@ export class WorldViewerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  addCoin(x:number, y:number): void {
+    this.objects.push({name: "coin", img: "Coin_spin.gif", x: x, y: y});
+  }
 }
