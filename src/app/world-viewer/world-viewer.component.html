@@ -1,13 +1,3 @@
-<!-- <table cellpadding="0">
-    <tbody>
-        <tr *ngFor="let row of tiles">
-            <td *ngFor="let t of row">
-                <app-tile [tile]="t"></app-tile>
-            </td>
-        </tr>
-    </tbody>
-</table> -->
-
 <div id="grid">
     <!-- tiles -->
     <img 
@@ -15,7 +5,7 @@
         src="assets/img/{{t.img}}" 
         *ngFor="let t of tiles" 
         [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}" 
-        (click)="addCoin(t.x, t.y)" 
+        (click)="getPlayerPathToTile(t.x, t.y)" 
         draggable="false"
     >
 

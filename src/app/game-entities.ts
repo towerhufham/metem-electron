@@ -3,6 +3,7 @@ export interface Tile {
     img: string;
     x: number;
     y: number;
+    wall: boolean;
 }
 
 export interface MapObject {
