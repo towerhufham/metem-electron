@@ -1,7 +1,8 @@
 <div>
-    <div style="display: flex; justify-content: space-around; align-items: center; min-height: 100vh;">
-        <app-world-viewer></app-world-viewer>
+    <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5vh;">
+        <app-world-viewer (getKeyEvent)="getKeys($event)"></app-world-viewer>
 
         <app-world-viewer></app-world-viewer>
     </div>
+    <p>Keys: {{keys}}</p>
 </div>

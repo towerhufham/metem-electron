@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Tile, MapObject } from "../game-entities";
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Tile, ObjectType, ObjectOnMap } from "../game-entities";
 import { Grid, BreadthFirstFinder } from "pathfinding";
+import { MapObject } from 'out/Metem-win32-x64/resources/app/src/app/game-entities';
 
 const WORLD_SIZE = 15;
 
@@ -19,16 +20,6 @@ function defaultMap() {
   return map;
 }
 
-function emptyMapObjectsList() {
-  let map: (MapObject|null)[] = [];
-  for (var i = 0; i < WORLD_SIZE; i++) {
-    for (var j = 0; j < WORLD_SIZE; j++) {
-      map.push(null);
-    }
-  }
-  return map;
-}
-
 @Component({
   selector: 'app-world-viewer',
   templateUrl: './world-viewer.component.html',
@@ -37,31 +28,32 @@ function emptyMapObjectsList() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  mapObjects: (MapObject|null)[] = emptyMapObjectsList();
-  player: MapObject = {name: "player", img: "player.png", x: 0, y: 0};
+  player: ObjectOnMap = {type: {name: "player", img: "player.png", collectable: false}, x: 7, y: 7};
+  mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
+  @Output() getKeyEvent = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void {
-    this.moveMapObjectTo(this.player, 7, 7)
     //test
-    this.makeMapObjectAt("coin", "Coin_spin.gif", 2, 2)
+    const coinType = {name: "Coin", img: "Coin_spin.gif", collectable: true};
+    this.makeObjectOnMap(coinType, 2, 2)
   }
 
-  makeMapObjectAt(name: string, img: string, x:number, y:number) {
+  makeObjectOnMap(type: ObjectType, x:number, y:number) {
     //todo: maybe prevent if on a wall?
-    this.mapObjects[x + (y * WORLD_SIZE)] = {name: name, img: img, x: x, y: y};
+    this.mapObjects.push({type: type, x: x, y: y});
   }
 
-  moveMapObjectTo(o: MapObject, x: number, y: number) {
+  moveObjectOnMapTo(o: ObjectOnMap, x: number, y: number) {
     //will overwrite anything already there
     o.x = x;
     o.y = y;
-    this.mapObjects[x + (y * WORLD_SIZE)] = o;
   }
 
   makePathfindingGrid(): Grid {
@@ -78,18 +70,13 @@ export class WorldViewerComponent implements OnInit {
     return this.tiles[x + (y * WORLD_SIZE)];
   }
 
-  getObjectAt(x: number, y:number) {
-    return this.mapObjects[x + (y * WORLD_SIZE)];
-  }
-
-  getAllObjects(): MapObject[] {
-    let obj: MapObject[] = [];
-    for (const o of this.mapObjects) {
-      if (o) {
-        obj.push(o);
+  getObjectAt(x: number, y:number): ObjectOnMap|null {
+    for (let o of this.mapObjects) {
+      if (o.x === x && o.y === y) {
+        return o;
       }
     }
-    return obj;
+    return null;
   }
 
   getPlayerTile(): (Tile|null) {
@@ -124,8 +111,19 @@ export class WorldViewerComponent implements OnInit {
 
   movePlayer(x:number, y:number): void {
     if (this.tilesInPath.length > 1) {
-      this.player.x = x;
-      this.player.y = y;
+      //check for collectibles
+      for (const t of this.tilesInPath) {
+        const o = this.getObjectAt(t.x, t.y);
+        if (o) {
+          if (o.type.collectable) {
+            //collect
+            this.mapObjects = this.mapObjects.filter(ob => ob !== o);
+            this.getKeyEvent.emit(1);
+          }
+        }
+      }
+      //actually move
+      this.moveObjectOnMapTo(this.player, x, y)
       this.clearPath();
     }
   }

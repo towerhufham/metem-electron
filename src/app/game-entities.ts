@@ -6,22 +6,28 @@ export interface Tile {
     wall: boolean;
 }
 
-export interface MapObject {
-    //something on the map, over a tile
+export interface ObjectType {
+    //a specific kind of object
     name: string;
     img: string;
+    collectable: boolean;
+}
+
+export interface ObjectOnMap {
+    //something on the map, over a tile
+    type: ObjectType;
     x: number;
-    y: number;
+    y: number; 
 }
 
-export interface Player {
-    hp: number;
-    mp: number;
+// export interface Player {
+//     hp: number;
+//     mp: number;
 
-    str: number;
-    dex: number;
-    con: number;
-    int: number;
-    wis: number;
-    cha: number;
-}
+//     str: number;
+//     dex: number;
+//     con: number;
+//     int: number;
+//     wis: number;
+//     cha: number;
+// }
