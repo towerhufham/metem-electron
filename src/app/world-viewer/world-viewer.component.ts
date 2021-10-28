@@ -65,12 +65,17 @@ export class WorldViewerComponent implements OnInit {
     }
   }
 
-  makePathfindingGrid(): Grid {
-    //todo: make/call this dynamically
+  makePathfindingGrid(ignore?: ObjectOnMap): Grid {
+    //"ignore" is used so that an object the player clicks on won't keep them from moving
     let grid = new Grid(WORLD_SIZE, WORLD_SIZE);
     for (const t of this.tiles) {
       if (t.wall) {
         grid.setWalkableAt(t.x, t.y, false);
+      }
+    }
+    for (const o of this.getActiveObjects()) {
+      if (!o.type.collectable && o !== this.player && o !== ignore) {
+        grid.setWalkableAt(o.x, o.y, false)
       }
     }
     return grid;
@@ -104,6 +109,12 @@ export class WorldViewerComponent implements OnInit {
   }
 
   getPlayerPathToTile(goal: Tile): void {
+    const o = this.getObjectAt(goal.x, goal.y);
+    if (o) {
+      this.pathfindingGrid = this.makePathfindingGrid(o);
+    } else {
+      this.pathfindingGrid = this.makePathfindingGrid();
+    }
     const px = this.player.x;
     const py = this.player.y;
     this.clearPath();
