@@ -3,6 +3,7 @@ import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap } from "../core";
 import * as collectables from "../collectables";
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
+import { YellowKeyDoor } from '../interactions'; //test
 
 function defaultMap() {
   let map: Tile[] = [];
@@ -51,6 +52,10 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.xpPickup, 2, 4);
     this.makeObjectOnMap(collectables.xpPickup, 3, 4);
     this.makeObjectOnMap(collectables.xpPickup, 4, 4);
+
+    //double test
+    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: YellowKeyDoor}
+    this.makeObjectOnMap(ykd, 2, 10);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
@@ -61,6 +66,7 @@ export class WorldViewerComponent implements OnInit {
   }
 
   makePathfindingGrid(): Grid {
+    //todo: make/call this dynamically
     let grid = new Grid(WORLD_SIZE, WORLD_SIZE);
     for (const t of this.tiles) {
       if (t.wall) {
@@ -76,11 +82,15 @@ export class WorldViewerComponent implements OnInit {
 
   getObjectAt(x: number, y:number): ObjectOnMap|null {
     for (let o of this.mapObjects) {
-      if (o.x === x && o.y === y) {
+      if (o.x === x && o.y === y && o.active) {
         return o;
       }
     }
     return null;
+  }
+
+  getActiveObjects(): ObjectOnMap[] {
+    return this.mapObjects.filter((o) => o.active);
   }
 
   getPlayerTile(): Tile {
@@ -113,10 +123,24 @@ export class WorldViewerComponent implements OnInit {
       for (const t of this.tilesInPath) {
         const o = this.getObjectAt(t.x, t.y);
         if (o) {
-          if (o.type.collectable) {
+          if (o.type.collectable && o.active) {
             //collect
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
             this.collectionService.registerCollection(o.type);
+          }
+        }
+      }
+      //check for interaction
+      const o = this.getObjectAt(x, y);
+      if (o) {
+        if (o.type.interaction && o.active) {
+          //interact
+          o.type.interaction(o, this.collectionService);
+          if (o.active) {
+            //if the object is still there after interacting, place player just before it
+            const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
+            x = semiFinalStep.x;
+            y = semiFinalStep.y;
           }
         }
       }

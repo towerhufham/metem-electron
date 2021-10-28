@@ -15,7 +15,7 @@
     <img 
         class="object" 
         src="assets/img/{{o.type.img}}"
-        *ngFor="let o of mapObjects" 
+        *ngFor="let o of getActiveObjects()" 
         [ngStyle]="{'grid-column': o.x+1, 'grid-row': o.y+1}" 
         draggable="false"
     >
