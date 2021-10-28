@@ -42,6 +42,12 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.YellowKey, 2, 2);
     this.makeObjectOnMap(collectables.BlueKey, 3, 2);
     this.makeObjectOnMap(collectables.RedKey, 4, 2);
+
+    this.makeObjectOnMap(collectables.strPickup, 2, 3);
+    this.makeObjectOnMap(collectables.dexPickup, 3, 3);
+    this.makeObjectOnMap(collectables.intPickup, 4, 3);
+    this.makeObjectOnMap(collectables.vitPickup, 5, 3);
+    this.makeObjectOnMap(collectables.spiPickup, 6, 3);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
