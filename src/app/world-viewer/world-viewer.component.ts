@@ -1,9 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Tile, ObjectType, ObjectOnMap } from "../game-entities";
+import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap } from "../core";
+import * as collectables from "../collectables";
 import { Grid, BreadthFirstFinder } from "pathfinding";
-import { MapObject } from 'out/Metem-win32-x64/resources/app/src/app/game-entities';
-
-const WORLD_SIZE = 15;
 
 function defaultMap() {
   let map: Tile[] = [];
@@ -28,32 +26,27 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = {type: {name: "player", img: "player.png", collectable: false}, x: 7, y: 7};
+  player: ObjectOnMap = new ObjectOnMap({ name: "player", img: "player.png", collectable: false }, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
-  @Output() getKeyEvent = new EventEmitter<number>();
+  @Output() collectionEvent = new EventEmitter<ObjectType>();
 
   constructor() { }
 
   ngOnInit(): void {
     //test
-    const coinType = {name: "Coin", img: "Coin_spin.gif", collectable: true};
-    this.makeObjectOnMap(coinType, 2, 2)
+    this.makeObjectOnMap(collectables.YellowKey, 2, 2);
+    this.makeObjectOnMap(collectables.BlueKey, 3, 2);
+    this.makeObjectOnMap(collectables.RedKey, 4, 2);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
     //todo: maybe prevent if on a wall?
-    this.mapObjects.push({type: type, x: x, y: y});
-  }
-
-  moveObjectOnMapTo(o: ObjectOnMap, x: number, y: number) {
-    //will overwrite anything already there
-    o.x = x;
-    o.y = y;
+    this.mapObjects.push(new ObjectOnMap(type, x, y));
   }
 
   makePathfindingGrid(): Grid {
@@ -79,14 +72,10 @@ export class WorldViewerComponent implements OnInit {
     return null;
   }
 
-  getPlayerTile(): (Tile|null) {
+  getPlayerTile(): Tile {
     const px = this.player.x;
     const py = this.player.y;
-    if (px && py) {
-      return this.getTileAt(px, py);
-    } else {
-      return null;
-    }
+    return this.getTileAt(px, py);
   }
 
   clearPath(): void {
@@ -116,12 +105,12 @@ export class WorldViewerComponent implements OnInit {
           if (o.type.collectable) {
             //collect
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
-            this.getKeyEvent.emit(1);
+            this.collectionEvent.emit(o.type);
           }
         }
       }
       //actually move
-      this.moveObjectOnMapTo(this.player, x, y)
+      this.player.moveTo(x, y);
       this.clearPath();
     }
   }

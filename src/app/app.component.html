@@ -1,8 +1,10 @@
 <div>
     <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5vh;">
-        <app-world-viewer (getKeyEvent)="getKeys($event)"></app-world-viewer>
+        <app-world-viewer (collectionEvent)="registerCollection($event)"></app-world-viewer>
 
-        <app-world-viewer></app-world-viewer>
+        <app-world-viewer (collectionEvent)="registerCollection($event)"></app-world-viewer>
     </div>
-    <p>Keys: {{keys}}</p>
+    <p class="iconLabel"><img class="icon" src="assets/img/yellow_key.png">: {{yellowKeys}}</p>
+    <p class="iconLabel"><img class="icon" src="assets/img/blue_key.png">: {{blueKeys}}</p>
+    <p class="iconLabel"><img class="icon" src="assets/img/red_key.png">: {{redKeys}}</p>
 </div>

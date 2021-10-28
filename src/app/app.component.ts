@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ObjectType } from "./core";
+import * as collectables from './collectables';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'metem';
-  keys = 0;
+  yellowKeys = 0;
+  blueKeys = 0;
+  redKeys = 0;
 
-  getKeys(n: number) {
-    this.keys += n;
+  registerCollection(collect: ObjectType): void {
+    if (collect === collectables.YellowKey) {
+      this.yellowKeys++;
+    } else if (collect === collectables.BlueKey) {
+      this.blueKeys++;
+    } else if (collect === collectables.RedKey) {
+      this.redKeys++;
+    }
   }
 }

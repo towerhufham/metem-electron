@@ -1,9 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
+//no select, no drag
+//doesn't work on web, but works in electron!
 *, *::after, *::before {
 	-webkit-user-select: none;
     user-select: none;
 	-webkit-user-drag: none;
 	-webkit-app-region: no-drag;
 	cursor: default;
+}
+
+@font-face {
+	font-family: Antiquity;
+	src: url(assets/font/antiquity-print.ttf);
+}
+
+* {
+	font-family: Antiquity;
 }
