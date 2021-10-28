@@ -1,10 +1,10 @@
 <div>
-    <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5vh;">
-        <app-world-viewer (collectionEvent)="registerCollection($event)"></app-world-viewer>
-
-        <app-world-viewer (collectionEvent)="registerCollection($event)"></app-world-viewer>
+    <div id="worldHolder">
+        <app-world-viewer id="materialWorld" (collectionEvent)="registerCollection($event)"></app-world-viewer>
+        <app-world-viewer id="astralWorld" (collectionEvent)="registerCollection($event)"></app-world-viewer>
     </div>
-    <p class="iconLabel"><img class="icon" src="assets/img/yellow_key.png">: {{yellowKeys}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/blue_key.png">: {{blueKeys}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/red_key.png">: {{redKeys}}</p>
+    <div id="collectHolder">
+        <app-material-collects id="materialCollects"></app-material-collects>
+        <app-astral-collects id="astralCollects" [yellowKeys]="yellowKeys" [blueKeys]="blueKeys" [redKeys]="redKeys"></app-astral-collects>
+    </div>
 </div>
