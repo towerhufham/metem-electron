@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap } from "../core";
 import * as collectables from "../collectables";
 import { Grid, BreadthFirstFinder } from "pathfinding";
+import { CollectionService } from '../collection.service';
 
 function defaultMap() {
   let map: Tile[] = [];
@@ -33,9 +34,7 @@ export class WorldViewerComponent implements OnInit {
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
-  @Output() collectionEvent = new EventEmitter<ObjectType>();
-
-  constructor() { }
+  constructor(private collectionService: CollectionService) { }
 
   ngOnInit(): void {
     //test
@@ -117,7 +116,7 @@ export class WorldViewerComponent implements OnInit {
           if (o.type.collectable) {
             //collect
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
-            this.collectionEvent.emit(o.type);
+            this.collectionService.registerCollection(o.type);
           }
         }
       }

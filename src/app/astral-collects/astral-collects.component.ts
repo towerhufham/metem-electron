@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CollectionService } from '../collection.service';
 
 @Component({
   selector: 'app-astral-collects',
@@ -7,14 +8,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AstralCollectsComponent implements OnInit {
 
-  @Input() xp: number = 0;
-  @Input() yellowKeys: number = 0;
-  @Input() blueKeys: number = 0;
-  @Input() redKeys: number = 0;
-
-  constructor() { }
+  constructor(private collectionService: CollectionService) { }
 
   ngOnInit(): void {
   }
 
+  getXp() {
+    return this.collectionService.xp;
+  }
+
+  getYellowKeys() {
+    return this.collectionService.yellowKeys;
+  }
+
+  getBlueKeys() {
+    return this.collectionService.blueKeys;
+  }
+
+  getRedKeys() {
+    return this.collectionService.redKeys;
+  }
 }

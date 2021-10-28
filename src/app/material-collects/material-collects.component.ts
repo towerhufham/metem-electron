@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CollectionService } from '../collection.service';
 
 @Component({
   selector: 'app-material-collects',
@@ -7,15 +8,28 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MaterialCollectsComponent implements OnInit {
 
-  @Input() str = 0;
-  @Input() dex = 0;
-  @Input() int = 0;
-  @Input() vit = 0;
-  @Input() spi = 0;
-
-  constructor() { }
+  constructor(private collectionService: CollectionService) { }
 
   ngOnInit(): void {
   }
 
+  getStr() {
+    return this.collectionService.str;
+  }
+
+  getDex() {
+    return this.collectionService.dex;
+  }
+
+  getInt() {
+    return this.collectionService.int;
+  }
+
+  getVit() {
+    return this.collectionService.vit;
+  }
+
+  getSpi() {
+    return this.collectionService.spi;
+  }
 }

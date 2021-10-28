@@ -1,10 +1,10 @@
 <div>
     <div id="worldHolder">
-        <app-world-viewer id="materialWorld" (collectionEvent)="registerCollection($event)"></app-world-viewer>
-        <app-world-viewer id="astralWorld" (collectionEvent)="registerCollection($event)"></app-world-viewer>
+        <app-world-viewer id="materialWorld"></app-world-viewer>
+        <app-world-viewer id="astralWorld"></app-world-viewer>
     </div>
     <div id="collectHolder">
-        <app-material-collects id="materialCollects" [str]="str" [dex]="dex" [int]="int" [vit]="vit" [spi]="spi" ></app-material-collects>
-        <app-astral-collects id="astralCollects" [xp]="xp" [yellowKeys]="yellowKeys" [blueKeys]="blueKeys" [redKeys]="redKeys"></app-astral-collects>
+        <app-material-collects id="materialCollects"></app-material-collects>
+        <app-astral-collects id="astralCollects"></app-astral-collects>
     </div>
 </div>
