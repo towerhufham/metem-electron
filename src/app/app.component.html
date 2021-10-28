@@ -4,7 +4,7 @@
         <app-world-viewer id="astralWorld" (collectionEvent)="registerCollection($event)"></app-world-viewer>
     </div>
     <div id="collectHolder">
-        <app-material-collects id="materialCollects"></app-material-collects>
+        <app-material-collects id="materialCollects" [str]="str" [dex]="dex" [int]="int" [vit]="vit" [spi]="spi" ></app-material-collects>
         <app-astral-collects id="astralCollects" [yellowKeys]="yellowKeys" [blueKeys]="blueKeys" [redKeys]="redKeys"></app-astral-collects>
     </div>
 </div>

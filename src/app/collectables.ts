@@ -1,5 +1,6 @@
 import { ObjectType } from "./core";
 
+//keys
 export const YellowKey: ObjectType = {
     name: "Yellow Key",
     img: "yellow_key.png",
@@ -18,6 +19,7 @@ export const RedKey: ObjectType = {
     collectable: true,
 }
 
+//basic pickups
 export const strPickup: ObjectType = {
     name: "STR +1",
     img: "str.png",
