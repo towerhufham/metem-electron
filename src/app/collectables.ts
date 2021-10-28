@@ -45,3 +45,10 @@ export const spiPickup: ObjectType = {
     img: "spi.png",
     collectable: true,
 }
+
+//points
+export const xpPickup: ObjectType = {
+    name: "XP +1",
+    img: "xp_bubble_small.png",
+    collectable: true,
+}

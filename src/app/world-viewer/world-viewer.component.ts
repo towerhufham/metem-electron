@@ -48,11 +48,17 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.intPickup, 4, 3);
     this.makeObjectOnMap(collectables.vitPickup, 5, 3);
     this.makeObjectOnMap(collectables.spiPickup, 6, 3);
+
+    this.makeObjectOnMap(collectables.xpPickup, 2, 4);
+    this.makeObjectOnMap(collectables.xpPickup, 3, 4);
+    this.makeObjectOnMap(collectables.xpPickup, 4, 4);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
-    //todo: maybe prevent if on a wall?
-    this.mapObjects.push(new ObjectOnMap(type, x, y));
+    //don't place if there's a wall
+    if (!this.getTileAt(x, y).wall) {
+      this.mapObjects.push(new ObjectOnMap(type, x, y));
+    }
   }
 
   makePathfindingGrid(): Grid {

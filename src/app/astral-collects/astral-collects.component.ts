@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AstralCollectsComponent implements OnInit {
 
+  @Input() xp: number = 0;
   @Input() yellowKeys: number = 0;
   @Input() blueKeys: number = 0;
   @Input() redKeys: number = 0;

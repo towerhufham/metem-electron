@@ -18,13 +18,11 @@ export interface ObjectType {
 export class ObjectOnMap {
     //something on the map, over a tile
     type: ObjectType;
-    collectable: boolean;
     x: number;
     y: number;
 
-    constructor(type: ObjectType, x: number, y:number , collectable: boolean = false) {
+    constructor(type: ObjectType, x: number, y:number) {
         this.type = type;
-        this.collectable = collectable;
         this.x = x;
         this.y = y;
     }

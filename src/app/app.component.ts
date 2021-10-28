@@ -23,6 +23,11 @@ export class AppComponent {
   vit = 0;
   spi = 0;
 
+  //points
+  hp = 0;
+  mp = 0;
+  xp = 0;
+
   registerCollection(collect: ObjectType): void {
     //keys
     if (collect === collectables.YellowKey) {
@@ -43,6 +48,10 @@ export class AppComponent {
       this.vit++;
     } else if (collect === collectables.spiPickup) {
       this.spi++;
+    }
+    //xp
+    else if (collect === collectables.xpPickup) {
+      this.xp++;
     }
   }
 }
