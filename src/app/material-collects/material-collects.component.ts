@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from '../collection.service';
+import { PersistenceService } from '../persistence.service';
 
 @Component({
   selector: 'app-material-collects',
@@ -8,7 +9,7 @@ import { CollectionService } from '../collection.service';
 })
 export class MaterialCollectsComponent implements OnInit {
 
-  constructor(private collectionService: CollectionService) { }
+  constructor(private collectionService: CollectionService, private persistenceService: PersistenceService) { }
 
   ngOnInit(): void {
   }

@@ -1,7 +1,9 @@
 {
   "name": "Metem",
   "version": "0.0.0",
-  "author": {"name": "Heaven Topology / Tower Hufham"},
+  "author": {
+    "name": "Heaven Topology / Tower Hufham"
+  },
   "description": "A silly game",
   "main": "app.js",
   "scripts": {
@@ -41,6 +43,7 @@
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@types/pathfinding": "^0.0.5",
+    "angular": "^1.8.2",
     "electron": "^15.3.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",

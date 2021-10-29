@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ObjectType } from "./core";
-import * as collectables from './collectables';
 
 @Component({
   selector: 'app-root',
