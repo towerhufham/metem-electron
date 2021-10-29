@@ -1,11 +1,16 @@
 console.log("Custom webpack loading!!!!!!!!!!!!!!!!!!!!");
-const webpack = require('webpack');
-const path = require("path");
 
 module.exports = {
-    entry: path.resolve(__dirname, "app.js"),
-
+    target: "node",
     node: {
         __dirname: false
+    },
+    module: {
+        rules: [
+            {
+                test: /\.node$/,
+                loader: "node-loader"
+            }
+        ]
     }
 };
