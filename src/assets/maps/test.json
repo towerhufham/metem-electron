@@ -1664,7 +1664,7 @@
                 "name": "Yellow Key Door",
                 "img": "door.png",
                 "collectable": false,
-                "interaction": "Yellow Key Door"
+                "interaction": "YellowKeyDoor"
             },
             "x": 2,
             "y": 10

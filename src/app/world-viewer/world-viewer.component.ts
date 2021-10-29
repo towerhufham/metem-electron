@@ -55,7 +55,7 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.xpPickup, 4, 4);
 
     //double test
-    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: "Yellow Key Door"}
+    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: "YellowKeyDoor"}
     this.makeObjectOnMap(ykd, 2, 10);
   }
 
