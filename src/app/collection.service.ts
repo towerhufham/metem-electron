@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ObjectType } from './core';
+import { isEqual } from "lodash";
 import * as collectables from "./collectables";
 
 @Injectable({
@@ -28,27 +29,27 @@ export class CollectionService {
 
   registerCollection(collect: ObjectType): void {
     //keys
-    if (collect === collectables.YellowKey) {
+    if (isEqual(collect, collectables.YellowKey)) {
       this.yellowKeys++;
-    } else if (collect === collectables.BlueKey) {
+    } else if (isEqual(collect, collectables.BlueKey)) {
       this.blueKeys++;
-    } else if (collect === collectables.RedKey) {
+    } else if (isEqual(collect, collectables.RedKey)) {
       this.redKeys++;
     }
     //pickups
-    else if (collect === collectables.strPickup) {
+    else if (isEqual(collect, collectables.strPickup)) {
       this.str++;
-    } else if (collect === collectables.dexPickup) {
+    } else if (isEqual(collect, collectables.dexPickup)) {
       this.dex++;
-    } else if (collect === collectables.intPickup) {
+    } else if (isEqual(collect, collectables.intPickup)) {
       this.int++;
-    } else if (collect === collectables.vitPickup) {
+    } else if (isEqual(collect, collectables.vitPickup)) {
       this.vit++;
-    } else if (collect === collectables.spiPickup) {
+    } else if (isEqual(collect, collectables.spiPickup)) {
       this.spi++;
     }
     //xp
-    else if (collect === collectables.xpPickup) {
+    else if (isEqual(collect, collectables.xpPickup)) {
       this.xp++;
     }
   }

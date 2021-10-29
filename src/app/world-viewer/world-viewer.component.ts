@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap } from "../core";
+import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as collectables from "../collectables";
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
-import { YellowKeyDoor } from '../interactions'; //test
+import { MapService } from '../map.service';
+import { interact } from "../interactions";
 
 function defaultMap() {
   let map: Tile[] = [];
@@ -35,7 +36,7 @@ export class WorldViewerComponent implements OnInit {
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
-  constructor(private collectionService: CollectionService) { }
+  constructor(private collectionService: CollectionService, private mapService: MapService) { }
 
   ngOnInit(): void {
     //test
@@ -54,7 +55,7 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.xpPickup, 4, 4);
 
     //double test
-    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: YellowKeyDoor}
+    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: "Yellow Key Door"}
     this.makeObjectOnMap(ykd, 2, 10);
   }
 
@@ -63,6 +64,10 @@ export class WorldViewerComponent implements OnInit {
     if (!this.getTileAt(x, y).wall) {
       this.mapObjects.push(new ObjectOnMap(type, x, y));
     }
+  }
+
+  spawnObjectOnMap(spawn: ObjectSpawn) {
+    this.makeObjectOnMap(spawn.type, spawn.x, spawn.y);
   }
 
   makePathfindingGrid(ignore?: ObjectOnMap): Grid {
@@ -146,7 +151,7 @@ export class WorldViewerComponent implements OnInit {
       if (o) {
         if (o.type.interaction && o.active) {
           //interact
-          o.type.interaction(o, this.collectionService);
+          interact(o, this.collectionService);
           if (o.active) {
             //if the object is still there after interacting, place player just before it
             const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
@@ -160,4 +165,32 @@ export class WorldViewerComponent implements OnInit {
       this.clearPath();
     }
   }
+
+  getMapJSON() {
+    //have to convert actual objects on map to object spawns
+    let spawns: ObjectSpawn[] = []
+    for (const o of this.getActiveObjects()) {
+      if (o !== this.player) {
+        spawns.push({type: o.type, x: o.x, y: o.y});
+      }
+    };
+    this.mapService.getMapJSON(this.tiles, spawns);
+  }
+
+  loadMapJSON() {
+    const player = this.player;
+    const ob = this.mapService.loadMapJSON();
+    let currentMap = this;
+    ob.subscribe({
+      next(x) { 
+        currentMap.tiles = x.tiles;
+        currentMap.mapObjects = [player];
+        for (const s of x.spawns) {
+          currentMap.spawnObjectOnMap(s);
+        }
+      }
+    });
+  }
+
+  
 }

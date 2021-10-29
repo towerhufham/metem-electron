@@ -15,7 +15,7 @@ export interface ObjectType {
     name: string;
     img: string;
     collectable: boolean;
-    interaction?: (mo: ObjectOnMap, cs: CollectionService) => void;
+    interaction?: string;
 }
 
 export class ObjectOnMap {
@@ -40,4 +40,16 @@ export class ObjectOnMap {
     remove() {
         this.active = false;
     }
+}
+
+export interface ObjectSpawn {
+    type: ObjectType,
+    x: number,
+    y: number
+}
+
+export interface MapData {
+    name: string,
+    tiles: Tile[],
+    spawns: ObjectSpawn[]
 }

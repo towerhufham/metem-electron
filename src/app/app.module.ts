@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { WorldViewerComponent } from './world-viewer/world-viewer.component';
@@ -14,7 +15,8 @@ import { AstralCollectsComponent } from './astral-collects/astral-collects.compo
     AstralCollectsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
