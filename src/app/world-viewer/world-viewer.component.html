@@ -7,7 +7,8 @@
         [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}" 
         [ngClass]="{'inPath': tilesInPath.includes(t)}"
         (mouseenter)="getPlayerPathToTile(t)" 
-        (click)="movePlayer(t.x, t.y)"
+        (click)="clickHandler(t.x, t.y)"
+        (dblclick)="tryBuildTile(t.x, t.y)"
         draggable="false"
     >
 

@@ -1,0 +1,7 @@
+<div id="builderRoot">
+    <h3>Map Builder</h3>
+    <div *ngIf="selectedTile">
+        <p>Selected: <img src="assets/img/{{selectedTile.img}}"><button (click)="selectTile(undefined)">x</button></p>
+    </div>
+    <img *ngFor="let t of tileLibrary" src="assets/img/{{t.img}}" (click)="selectTile(t)">
+</div>

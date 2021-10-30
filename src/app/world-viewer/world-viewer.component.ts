@@ -7,6 +7,7 @@ import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { interact } from "../interactions";
 
+
 function defaultMap() {
   let map: Tile[] = [];
   for (var i = 0; i < WORLD_SIZE; i++) {
@@ -136,6 +137,15 @@ export class WorldViewerComponent implements OnInit {
     }
   }
 
+  clickHandler(x: number, y: number) {
+    //usually move player, but sometimes build tile
+    if (!this.mapService.inBuildingMode()) {
+      this.movePlayer(x, y);
+    } else {
+      this.tryBuildTile(x, y);
+    }
+  }
+
   movePlayer(x:number, y:number): void {
     if (this.tilesInPath.length > 1) {
       //check for collectibles
@@ -193,6 +203,25 @@ export class WorldViewerComponent implements OnInit {
         }
       }
     });
+  }
+
+  tryBuildTile(x: number, y: number) {
+    if (this.mapService.inBuildingMode()) {
+      const t = this.mapService.makeBuilderTile(x, y);
+      if (t) {
+        //if we're building a wall over an object, destroy it unless it's the player
+        if (t.wall) {
+          const o = this.getObjectAt(x, y);
+          if (o) {
+            if (o !== this.player) {
+              o.remove();
+            }
+          }
+        }
+        //place tile
+        this.tiles[x + (y * WORLD_SIZE)] = t;
+      }
+    }
   }
 
   

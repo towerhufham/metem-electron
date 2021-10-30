@@ -21,3 +21,9 @@ export const IceWall: TileType = {
     img: "ice_wall.png",
     wall: true
 }
+
+
+export const ALL_TILES: TileType[] = [
+    IceFloor,
+    IceWall
+];
