@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Tile } from "../core";
 import { MapService } from '../map.service';
 import { ALL_TILES, TileType } from '../tiles';
+import { ALL_COLLECTABLES } from '../collectables';
+import { ObjectType } from '../core';
 
 @Component({
   selector: 'app-map-builder',
@@ -11,15 +12,34 @@ import { ALL_TILES, TileType } from '../tiles';
 export class MapBuilderComponent implements OnInit {
 
   tileLibrary = ALL_TILES;
-  selectedTile?: TileType;
+  objectLibrary = ALL_COLLECTABLES;
 
   constructor(private mapService: MapService) { }
 
   ngOnInit(): void {
   }
 
-  selectTile(t: TileType|undefined) {
-    this.selectedTile = t;
+  selectTile(t: TileType) {
     this.mapService.setBuilderTile(t);
+  }
+
+  getTile() {
+    return this.mapService.builderTileType;
+  }
+
+  clearTile() {
+    this.mapService.clearTileType()
+  }
+
+  selectObject(o: ObjectType) {
+    this.mapService.setBuilderObject(o);
+  }
+
+  getObject() {
+    return this.mapService.builderObjectType;
+  }
+
+  clearObject() {
+    this.mapService.clearObjectType()
   }
 }

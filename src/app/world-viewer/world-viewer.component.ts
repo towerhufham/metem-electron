@@ -142,7 +142,7 @@ export class WorldViewerComponent implements OnInit {
     if (!this.mapService.inBuildingMode()) {
       this.movePlayer(x, y);
     } else {
-      this.tryBuildTile(x, y);
+      this.tryBuildThing(x, y);
     }
   }
 
@@ -205,21 +205,36 @@ export class WorldViewerComponent implements OnInit {
     });
   }
 
-  tryBuildTile(x: number, y: number) {
+  tryBuildThing(x: number, y: number) {
+    //could be building a tile or an object
     if (this.mapService.inBuildingMode()) {
-      const t = this.mapService.makeBuilderTile(x, y);
-      if (t) {
-        //if we're building a wall over an object, destroy it unless it's the player
-        if (t.wall) {
-          const o = this.getObjectAt(x, y);
-          if (o) {
-            if (o !== this.player) {
-              o.remove();
+      //TILE
+      if (this.mapService.builderTileType) {
+        const t = this.mapService.makeBuilderTile(x, y);
+        if (t) {
+          //if we're building a wall over an object, destroy it unless it's the player
+          if (t.wall) {
+            const o = this.getObjectAt(x, y);
+            if (o) {
+              if (o !== this.player) {
+                o.remove();
+              }
             }
           }
+          //place tile
+          this.tiles[x + (y * WORLD_SIZE)] = t;
         }
-        //place tile
-        this.tiles[x + (y * WORLD_SIZE)] = t;
+      //OBJECT
+      } else if (this.mapService.builderObjectType) {
+        const o = this.mapService.makeBuilderObject();
+        if (o) {
+          //don't place if wall
+          if (!this.getTileAt(x, y).wall) {
+            //if there's already an object, remove it
+            this.getObjectAt(x, y)?.remove()
+            this.makeObjectOnMap(o, x, y);
+          }
+        }
       }
     }
   }

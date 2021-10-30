@@ -52,3 +52,16 @@ export const xpPickup: ObjectType = {
     img: "xp_bubble_small.png",
     collectable: true,
 }
+
+
+export const ALL_COLLECTABLES: ObjectType[] = [
+    YellowKey,
+    BlueKey,
+    RedKey,
+    strPickup,
+    dexPickup,
+    intPickup,
+    vitPickup,
+    spiPickup,
+    xpPickup
+];
