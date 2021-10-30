@@ -1577,5 +1577,555 @@
             "y": 14
         }
     ],
-    "spawns": []
+    "spawns": [
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 3,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 4,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 5,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 9,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 10,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 11,
+            "y": 1
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 12,
+            "y": 2
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 3
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 5
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 6
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 7
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 8
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 9
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 13,
+            "y": 11
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 12,
+            "y": 12
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 11,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 9,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 10,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 4,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 3,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 5,
+            "y": 13
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 2,
+            "y": 12
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 11
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 9
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 8
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 7
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 6
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 5
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 1,
+            "y": 3
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 2,
+            "y": 2
+        },
+        {
+            "type": {
+                "name": "Yellow Key",
+                "img": "yellow_key.png",
+                "collectable": true
+            },
+            "x": 3,
+            "y": 7
+        },
+        {
+            "type": {
+                "name": "Yellow Key",
+                "img": "yellow_key.png",
+                "collectable": true
+            },
+            "x": 11,
+            "y": 7
+        },
+        {
+            "type": {
+                "name": "Blue Key",
+                "img": "blue_key.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 3
+        },
+        {
+            "type": {
+                "name": "STR +1",
+                "img": "str.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 5
+        },
+        {
+            "type": {
+                "name": "STR +1",
+                "img": "str.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 5
+        },
+        {
+            "type": {
+                "name": "STR +1",
+                "img": "str.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 5
+        },
+        {
+            "type": {
+                "name": "STR +1",
+                "img": "str.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 6
+        },
+        {
+            "type": {
+                "name": "VIT +1",
+                "img": "vit.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "VIT +1",
+                "img": "vit.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "XP +1",
+                "img": "xp_bubble_small.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "DEX +1",
+                "img": "dex.png",
+                "collectable": true
+            },
+            "x": 5,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "DEX +1",
+                "img": "dex.png",
+                "collectable": true
+            },
+            "x": 9,
+            "y": 4
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 9
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 6,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 9
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 9
+        },
+        {
+            "type": {
+                "name": "INT +1",
+                "img": "int.png",
+                "collectable": true
+            },
+            "x": 8,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "Yellow Key",
+                "img": "yellow_key.png",
+                "collectable": true
+            },
+            "x": 7,
+            "y": 11
+        },
+        {
+            "type": {
+                "name": "Blue Key",
+                "img": "blue_key.png",
+                "collectable": true
+            },
+            "x": 5,
+            "y": 10
+        },
+        {
+            "type": {
+                "name": "Blue Key",
+                "img": "blue_key.png",
+                "collectable": true
+            },
+            "x": 9,
+            "y": 10
+        }
+    ]
 }

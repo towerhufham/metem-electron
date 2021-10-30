@@ -118,22 +118,24 @@ export class WorldViewerComponent implements OnInit {
   }
 
   getPlayerPathToTile(goal: Tile): void {
-    const o = this.getObjectAt(goal.x, goal.y);
-    if (o) {
-      this.pathfindingGrid = this.makePathfindingGrid(o);
-    } else {
-      this.pathfindingGrid = this.makePathfindingGrid();
-    }
-    const px = this.player.x;
-    const py = this.player.y;
-    this.clearPath();
-    const gridBackup = this.pathfindingGrid.clone()
-    const path = this.finder.findPath(px, py, goal.x, goal.y, this.pathfindingGrid);
-    this.pathfindingGrid = gridBackup;
-    for (let p of path) {
-      const t = this.getTileAt(p[0], p[1]);
-      this.tilesInPath.push(t);
-      // t.img = "fire_wall.png";
+    if (!this.mapService.inBuildingMode()) {
+      const o = this.getObjectAt(goal.x, goal.y);
+      if (o) {
+        this.pathfindingGrid = this.makePathfindingGrid(o);
+      } else {
+        this.pathfindingGrid = this.makePathfindingGrid();
+      }
+      const px = this.player.x;
+      const py = this.player.y;
+      this.clearPath();
+      const gridBackup = this.pathfindingGrid.clone()
+      const path = this.finder.findPath(px, py, goal.x, goal.y, this.pathfindingGrid);
+      this.pathfindingGrid = gridBackup;
+      for (let p of path) {
+        const t = this.getTileAt(p[0], p[1]);
+        this.tilesInPath.push(t);
+        // t.img = "fire_wall.png";
+      }
     }
   }
 
