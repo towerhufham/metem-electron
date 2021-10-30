@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as collectables from "../collectables";
+import * as tileLibrary from "../tiles";
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
@@ -12,9 +13,11 @@ function defaultMap() {
     for (var j = 0; j < WORLD_SIZE; j++) {
       //testing
       if (Math.random() < 0.8) {
-        map.push({ name: "ice floor", img: "ice_floor.png", x: j, y: i, wall: false});
+        // map.push({ name: "ice floor", img: "ice_floor.png", x: j, y: i, wall: false});
+        map.push(tileLibrary.makeTile(tileLibrary.IceFloor, j, i));
       } else {
-        map.push({ name: "ice wall", img: "ice_wall.png", x: j, y: i, wall: true});
+        //map.push({ name: "ice wall", img: "ice_wall.png", x: j, y: i, wall: true});
+        map.push(tileLibrary.makeTile(tileLibrary.IceWall, j, i));
       }
     }
   }
