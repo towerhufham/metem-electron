@@ -26,11 +26,39 @@ export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate];
 
 
 //HAZARDS
-export const StuckDoor: ObjectType = {
+export const Door15: ObjectType = {
     name: "Stuck Door",
     img: "door.png",
     collectable: false,
-    interaction: "" //todo
+    interaction: "Door15" //todo
 }
 
-export const ALL_HAZARDS = [StuckDoor];
+export const Pit15: ObjectType = {
+    name: "Chasm",
+    img: "chasm.png",
+    collectable: false,
+    interaction: "Pit15" //todo
+}
+
+export const Riddle15: ObjectType = {
+    name: "Riddle",
+    img: "riddle.png",
+    collectable: false,
+    interaction: "Riddle15" //todo
+}
+
+export const Spikes15: ObjectType = {
+    name: "Spike Trap",
+    img: "spikes.png",
+    collectable: false,
+    interaction: "Spikes15" //todo
+}
+
+export const Magic15: ObjectType = {
+    name: "Magic Circle",
+    img: "magic_circle.png",
+    collectable: false,
+    interaction: "Magic15" //todo
+}
+
+export const ALL_HAZARDS = [Door15, Pit15, Riddle15, Spikes15, Magic15];

@@ -19,6 +19,13 @@ export const RedKey: ObjectType = {
     collectable: true,
 }
 
+//points
+export const xpPickup: ObjectType = {
+    name: "XP +1",
+    img: "xp_bubble_small.png",
+    collectable: true,
+}
+
 //basic pickups
 export const strPickup: ObjectType = {
     name: "STR +1",
@@ -46,22 +53,15 @@ export const spiPickup: ObjectType = {
     collectable: true,
 }
 
-//points
-export const xpPickup: ObjectType = {
-    name: "XP +1",
-    img: "xp_bubble_small.png",
-    collectable: true,
-}
-
 
 export const ALL_COLLECTABLES: ObjectType[] = [
     YellowKey,
     BlueKey,
     RedKey,
+    xpPickup,
     strPickup,
     dexPickup,
     intPickup,
     vitPickup,
-    spiPickup,
-    xpPickup
+    spiPickup
 ];
