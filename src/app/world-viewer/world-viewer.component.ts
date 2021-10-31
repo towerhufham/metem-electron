@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
-import * as collectables from "../collectables";
 import * as tileLibrary from "../tiles";
+import * as collectables from "../collectables";
+import * as obstacles from "../obstacles"
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
@@ -59,8 +60,7 @@ export class WorldViewerComponent implements OnInit {
     this.makeObjectOnMap(collectables.xpPickup, 4, 4);
 
     //double test
-    const ykd: ObjectType = {name: "Yellow Key Door", img: "door.png", collectable: false, interaction: "YellowKeyDoor"}
-    this.makeObjectOnMap(ykd, 2, 10);
+    this.makeObjectOnMap(obstacles.YellowKeyGate, 2, 10);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {

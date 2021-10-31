@@ -12,6 +12,12 @@
         <img *ngFor="let t of tileLibrary" src="assets/img/{{t.img}}" (click)="selectTile(t)">
     </div>
     <div>
-        <img *ngFor="let o of objectLibrary" src="assets/img/{{o.img}}" (click)="selectObject(o)">
+        <img *ngFor="let o of collectableLibrary" src="assets/img/{{o.img}}" (click)="selectObject(o)">
+    </div>
+    <div>
+        <img *ngFor="let o of gateLibrary" src="assets/img/{{o.img}}" (click)="selectObject(o)">
+    </div>
+    <div>
+        <img *ngFor="let o of hazardLibrary" src="assets/img/{{o.img}}" (click)="selectObject(o)">
     </div>
 </div>

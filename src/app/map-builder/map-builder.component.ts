@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MapService } from '../map.service';
 import { ALL_TILES, TileType } from '../tiles';
 import { ALL_COLLECTABLES } from '../collectables';
+import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
 import { ObjectType } from '../core';
 
 @Component({
@@ -12,7 +13,9 @@ import { ObjectType } from '../core';
 export class MapBuilderComponent implements OnInit {
 
   tileLibrary = ALL_TILES;
-  objectLibrary = ALL_COLLECTABLES;
+  collectableLibrary = ALL_COLLECTABLES;
+  gateLibrary = ALL_GATES;
+  hazardLibrary = ALL_HAZARDS;
 
   constructor(private mapService: MapService) { }
 

@@ -13,13 +13,34 @@ export function interact(o: ObjectOnMap, cs: CollectionService) {
 }
 
 const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) => void} = {
-    YellowKeyDoor(o: ObjectOnMap, cs: CollectionService) {
+
+    YellowKeyGate(o: ObjectOnMap, cs: CollectionService) {
         if (cs.yellowKeys > 0) {
-            alert("Opening door!");
+            alert("Opening gate!");
             cs.yellowKeys--;
             o.remove();
         } else {
             alert("Not enough yellow keys!");
+        }
+    },
+
+    BlueKeyGate(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.blueKeys > 0) {
+            alert("Opening gate!");
+            cs.blueKeys--;
+            o.remove();
+        } else {
+            alert("Not enough blue keys!");
+        }
+    },
+
+    RedKeyGate(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.redKeys > 0) {
+            alert("Opening gate!");
+            cs.redKeys--;
+            o.remove();
+        } else {
+            alert("Not enough red keys!");
         }
     }
 }
