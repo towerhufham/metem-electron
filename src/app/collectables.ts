@@ -26,6 +26,12 @@ export const xpPickup: ObjectType = {
     collectable: true,
 }
 
+export const hpPickup: ObjectType = {
+    name: "HP +5",
+    img: "hp_pickup.png",
+    collectable: true,
+}
+
 //basic pickups
 export const strPickup: ObjectType = {
     name: "STR +1",
@@ -59,6 +65,7 @@ export const ALL_COLLECTABLES: ObjectType[] = [
     BlueKey,
     RedKey,
     xpPickup,
+    hpPickup,
     strPickup,
     dexPickup,
     intPickup,

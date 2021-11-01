@@ -10,6 +10,18 @@ export interface TileType {
     wall: boolean
 }
 
+export const GrassFloor: TileType = {
+    name: "Grass Floor",
+    img: "grass_floor.png",
+    wall: false
+}
+
+export const DungeonWall: TileType = {
+    name: "Dungeon Wall",
+    img: "dungeon_wall.png",
+    wall: true
+}
+
 export const IceFloor: TileType = {
     name: "Ice Floor",
     img: "ice_floor.png",
@@ -22,8 +34,25 @@ export const IceWall: TileType = {
     wall: true
 }
 
+export const DarkDungeonFloor: TileType = {
+    name: "Dark Dungeon Floor",
+    img: "dark_dungeon_floor.png",
+    wall: false
+}
+
+export const DarkDungeonWall: TileType = {
+    name: "Dark Dungeon Wall",
+    img: "dark_dungeon_wall.png",
+    wall: true
+}
+
+
 
 export const ALL_TILES: TileType[] = [
+    GrassFloor,
+    DungeonWall,
     IceFloor,
-    IceWall
+    IceWall,
+    DarkDungeonFloor,
+    DarkDungeonWall
 ];

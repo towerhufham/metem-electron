@@ -44,23 +44,6 @@ export class WorldViewerComponent implements OnInit {
   constructor(private collectionService: CollectionService, private mapService: MapService) { }
 
   ngOnInit(): void {
-    //test
-    this.makeObjectOnMap(collectables.YellowKey, 2, 2);
-    this.makeObjectOnMap(collectables.BlueKey, 3, 2);
-    this.makeObjectOnMap(collectables.RedKey, 4, 2);
-
-    this.makeObjectOnMap(collectables.strPickup, 2, 3);
-    this.makeObjectOnMap(collectables.dexPickup, 3, 3);
-    this.makeObjectOnMap(collectables.intPickup, 4, 3);
-    this.makeObjectOnMap(collectables.vitPickup, 5, 3);
-    this.makeObjectOnMap(collectables.spiPickup, 6, 3);
-
-    this.makeObjectOnMap(collectables.xpPickup, 2, 4);
-    this.makeObjectOnMap(collectables.xpPickup, 3, 4);
-    this.makeObjectOnMap(collectables.xpPickup, 4, 4);
-
-    //double test
-    this.makeObjectOnMap(obstacles.YellowKeyGate, 2, 10);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {

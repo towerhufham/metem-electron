@@ -12,9 +12,10 @@ export function interact(o: ObjectOnMap, cs: CollectionService) {
     }
 }
 
-function d20(): number {
-    return Math.floor(Math.random() * 20) + 1;
-}
+// function d20(): number {
+//     return Math.floor(Math.random() * 20) + 1;
+// }
+
 
 const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) => void} = {
 
@@ -49,54 +50,66 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
         }
     },
 
-    //HAZARDS
-    Door15(o: ObjectOnMap, cs: CollectionService) {
-        const roll = d20();
-        alert(`${cs.str + roll} vs 15`);
-        if (cs.str + roll >= 15) {
+    XpGate1(o: ObjectOnMap, cs: CollectionService) {
+        const value = 1;
+        if (cs.xp >= value) {
+            alert("Opening gate!");
+            cs.xp -= value;
             o.remove();
         } else {
-            cs.hp -= 5;
+            alert("Not enough XP!");
         }
+    },
+
+    XpGate2(o: ObjectOnMap, cs: CollectionService) {
+        const value = 2;
+        if (cs.xp >= value) {
+            alert("Opening gate!");
+            cs.xp -= value;
+            o.remove();
+        } else {
+            alert("Not enough XP!");
+        }
+    },
+
+    //HAZARDS
+    Door15(o: ObjectOnMap, cs: CollectionService) {
+        const value = 15;
+        if (cs.str < value) {
+            cs.takeDamage(value - cs.str)
+        }
+        o.remove()
     },
 
     Pit15(o: ObjectOnMap, cs: CollectionService) {
-        const roll = d20();
-        alert(`${cs.dex + roll} vs 15`);
-        if (cs.dex + roll >= 15) {
-            o.remove();
-        } else {
-            cs.hp -= 5;
+        const value = 15;
+        if (cs.dex < value) {
+            cs.takeDamage(value - cs.dex)
         }
+        o.remove()
     },
 
     Riddle15(o: ObjectOnMap, cs: CollectionService) {
-        const roll = d20();
-        alert(`${cs.int + roll} vs 15`);
-        if (cs.int + roll >= 15) {
-            o.remove();
-        } else {
-            cs.hp -= 5;
+        const value = 15;
+        if (cs.int < value) {
+            cs.takeDamage(value - cs.int)
         }
+        o.remove()
     },
 
     Spikes15(o: ObjectOnMap, cs: CollectionService) {
-        const roll = d20();
-        alert(`${cs.vit + roll} vs 15`);
-        if (cs.vit + roll >= 15) {
-            o.remove();
-        } else {
-            cs.hp -= 5;
+        const value = 15;
+        if (cs.vit < value) {
+            cs.takeDamage(value - cs.vit)
         }
+        o.remove()
     },
 
     Magic15(o: ObjectOnMap, cs: CollectionService) {
-        const roll = d20();
-        alert(`${cs.spi + roll} vs 15`);
-        if (cs.spi + roll >= 15) {
-            o.remove();
-        } else {
-            cs.hp -= 5;
+        const value = 15;
+        if (cs.spi < value) {
+            cs.takeDamage(value - cs.spi)
         }
+        o.remove()
     },
 }

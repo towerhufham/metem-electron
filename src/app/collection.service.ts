@@ -21,8 +21,7 @@ export class CollectionService {
   spi = 0;
 
   //points
-  hp = 0;
-  mp = 0;
+  hp = 500;
   xp = 0;
 
   constructor() { }
@@ -48,9 +47,15 @@ export class CollectionService {
     } else if (isEqual(collect, collectables.spiPickup)) {
       this.spi++;
     }
-    //xp
+    //points
     else if (isEqual(collect, collectables.xpPickup)) {
       this.xp++;
+    } else if (isEqual(collect, collectables.hpPickup)) {
+      this.hp += 5;
     }
+  }
+
+  takeDamage(n: number) {
+    this.hp = Math.max(0, this.hp - n);
   }
 }

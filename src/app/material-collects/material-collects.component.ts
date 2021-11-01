@@ -14,6 +14,10 @@ export class MaterialCollectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getHp() {
+    return this.collectionService.hp;
+  }
+
   getStr() {
     return this.collectionService.str;
   }
