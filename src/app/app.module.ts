@@ -7,6 +7,7 @@ import { WorldViewerComponent } from './world-viewer/world-viewer.component';
 import { MaterialCollectsComponent } from './material-collects/material-collects.component';
 import { AstralCollectsComponent } from './astral-collects/astral-collects.component';
 import { MapBuilderComponent } from './map-builder/map-builder.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MapBuilderComponent } from './map-builder/map-builder.component';
     MaterialCollectsComponent,
     AstralCollectsComponent,
     MapBuilderComponent,
+    InfoBoxComponent,
   ],
   imports: [
     BrowserModule,

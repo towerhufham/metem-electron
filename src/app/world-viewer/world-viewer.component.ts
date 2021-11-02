@@ -7,6 +7,7 @@ import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { interact } from "../interactions";
+import { InfoService } from '../info.service';
 
 
 function defaultMap() {
@@ -34,16 +35,42 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = new ObjectOnMap({ name: "player", img: "player.png", collectable: false }, 7, 7);
+  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false }, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
-  constructor(private collectionService: CollectionService, private mapService: MapService) { }
+  constructor(private collectionService: CollectionService, private mapService: MapService, private infoService: InfoService) { }
 
   ngOnInit(): void {
+  }
+
+  sendInfo(o: any | undefined) {
+    let name: string | undefined = undefined;
+    let img: string | undefined = undefined;
+    let description: string | undefined = undefined;
+    //for tiles
+    if (o.hasOwnProperty("name")) {
+      name = o.name;
+    }
+    if (o.hasOwnProperty("img")) {
+      img = o.img;
+    }
+    if (o.hasOwnProperty("description")) {
+      description = o.description;
+    }
+    //for objects
+    if (o.hasOwnProperty("type")) {
+      const t = o.type;
+      name = t.name;
+      img = t.img;
+      if (t.hasOwnProperty("description")) {
+        description = t.description;
+      }
+    }
+    this.infoService.setInfo(name, img, description);
   }
 
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
@@ -129,6 +156,17 @@ export class WorldViewerComponent implements OnInit {
     } else {
       this.tryBuildThing(x, y);
     }
+  }
+
+  hoverHandler(tile: Tile) {
+    //send info
+    const o = this.getObjectAt(tile.x, tile.y);
+    if (o) {
+      this.sendInfo(o);
+    } else {
+      this.sendInfo(tile);
+    }
+    this.getPlayerPathToTile(tile);
   }
 
   movePlayer(x:number, y:number): void {
