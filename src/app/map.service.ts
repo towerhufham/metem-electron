@@ -18,9 +18,9 @@ export class MapService {
     console.log(JSON.stringify(m));
   }
 
-  loadMapJSON() {
+  loadMapJSON(name: string) {
     //todo: more than just test.json
-    return this.http.get<MapData>("./assets/maps/test.json");
+    return this.http.get<MapData>(`./assets/maps/${name}.json`);
   }
 
   inBuildingMode(): boolean {

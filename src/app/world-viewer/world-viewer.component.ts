@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as tileLibrary from "../tiles";
 import * as collectables from "../collectables";
@@ -41,6 +41,8 @@ export class WorldViewerComponent implements OnInit {
   pathfindingGrid: Grid = this.makePathfindingGrid();
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
+
+  @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
   constructor(private collectionService: CollectionService, private mapService: MapService, private infoService: InfoService) { }
 
@@ -214,18 +216,21 @@ export class WorldViewerComponent implements OnInit {
   }
 
   loadMapJSON() {
-    const player = this.player;
-    const ob = this.mapService.loadMapJSON();
-    let currentMap = this;
-    ob.subscribe({
-      next(x) { 
-        currentMap.tiles = x.tiles;
-        currentMap.mapObjects = [player];
-        for (const s of x.spawns) {
-          currentMap.spawnObjectOnMap(s);
+    const name = this.mapInput?.nativeElement.value!;
+    if (name != "") {
+      const player = this.player;
+      const ob = this.mapService.loadMapJSON(name);
+      let currentMap = this;
+      ob.subscribe({
+        next(x) { 
+          currentMap.tiles = x.tiles;
+          currentMap.mapObjects = [player];
+          for (const s of x.spawns) {
+            currentMap.spawnObjectOnMap(s);
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   tryBuildThing(x: number, y: number) {
