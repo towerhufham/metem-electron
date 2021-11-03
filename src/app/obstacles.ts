@@ -36,7 +36,14 @@ export const XpGate2: ObjectType = {
     interaction: "XpGate2"
 }
 
-export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate1, XpGate2];
+export const XpGate5: ObjectType = {
+    name: "5 XP Gate",
+    img: "xp_gate_5.png",
+    collectable: false,
+    interaction: "XpGate5"
+}
+
+export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate1, XpGate2, XpGate5];
 
 
 //HAZARDS

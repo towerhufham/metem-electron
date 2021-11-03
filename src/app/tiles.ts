@@ -46,6 +46,18 @@ export const DarkDungeonWall: TileType = {
     wall: true
 }
 
+export const PinkFloor: TileType = {
+    name: "Pink Floor",
+    img: "pink_floor.png",
+    wall: false
+}
+
+export const PinkWall: TileType = {
+    name: "Pink Wall",
+    img: "pink_wall.png",
+    wall: true
+}
+
 
 
 export const ALL_TILES: TileType[] = [
@@ -54,5 +66,7 @@ export const ALL_TILES: TileType[] = [
     IceFloor,
     IceWall,
     DarkDungeonFloor,
-    DarkDungeonWall
+    DarkDungeonWall,
+    PinkFloor,
+    PinkWall
 ];

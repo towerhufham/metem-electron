@@ -72,6 +72,17 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
         }
     },
 
+    XpGate5(o: ObjectOnMap, cs: CollectionService) {
+        const value = 5;
+        if (cs.xp >= value) {
+            alert("Opening gate!");
+            cs.xp -= value;
+            o.remove();
+        } else {
+            alert("Not enough XP!");
+        }
+    },
+
     //HAZARDS
     Door15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
