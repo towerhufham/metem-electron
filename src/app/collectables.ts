@@ -1,66 +1,87 @@
 import { ObjectType } from "./core";
 
+export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
+    "str" | "dex" | "int" | "vit" | "spi" |
+    "hp" | "xp";
+
+export class Collectable implements ObjectType {
+    
+    name: string;
+    img: string;
+    kind: CollectableKinds;
+    amount: number;
+    collectable: boolean = true;
+    interaction: string = "Collect";
+
+    constructor(name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+        this.name = name;
+        this.img = img;
+        this.kind = kind;
+        this.amount = amount;
+    }
+}
+
 //keys
-export const YellowKey: ObjectType = {
-    name: "Yellow Key",
-    img: "yellow_key.png",
-    collectable: true,
-}
+export const YellowKey = new Collectable (
+    "Yellow Key",
+    "yellow_key.png",
+    "yellowKeys"
+)
 
-export const BlueKey: ObjectType = {
-    name: "Blue Key",
-    img: "blue_key.png",
-    collectable: true,
-}
+export const BlueKey = new Collectable(
+    "Blue Key",
+    "blue_key.png",
+    "blueKeys"
+)
 
-export const RedKey: ObjectType = {
-    name: "Red Key",
-    img: "red_key.png",
-    collectable: true,
-}
+export const RedKey = new Collectable(
+    "Red Key",
+    "red_key.png",
+    "redKeys"
+)
 
 //points
-export const xpPickup: ObjectType = {
-    name: "XP +1",
-    img: "xp_bubble_small.png",
-    collectable: true,
-}
+export const xpPickup = new Collectable (
+    "XP +1",
+    "xp_bubble_small.png",
+    "xp"
+)
 
-export const hpPickup: ObjectType = {
-    name: "HP +5",
-    img: "hp_pickup.png",
-    collectable: true,
-}
+export const hpPickup = new Collectable(
+    "HP +1",
+    "hp_pickup.png",
+    "hp"
+)
 
 //basic pickups
-export const strPickup: ObjectType = {
-    name: "STR +1",
-    img: "str.png",
-    collectable: true,
-}
-export const dexPickup: ObjectType = {
-    name: "DEX +1",
-    img: "dex.png",
-    collectable: true,
-}
-export const intPickup: ObjectType = {
-    name: "INT +1",
-    img: "int.png",
-    collectable: true,
-}
-export const vitPickup: ObjectType = {
-    name: "VIT +1",
-    img: "vit.png",
-    collectable: true,
-}
-export const spiPickup: ObjectType = {
-    name: "SPI +1",
-    img: "spi.png",
-    collectable: true,
-}
+export const strPickup = new Collectable(
+    "STR +1",
+    "str.png",
+    "str"
+)
+export const dexPickup = new Collectable(
+    "DEX +1",
+    "dex.png",
+    "dex"
+)
+export const intPickup = new Collectable(
+    "INT +1",
+    "int.png",
+    "int"
+)
+export const vitPickup = new Collectable(
+    "VIT +1",
+    "vit.png",
+    "vit"
+)
+export const spiPickup = new Collectable(
+    "SPI +1",
+    "spi.png",
+    "spi"
+)
 
 
-export const ALL_COLLECTABLES: ObjectType[] = [
+export const ALL_COLLECTABLES: Collectable[] = [
     YellowKey,
     BlueKey,
     RedKey,

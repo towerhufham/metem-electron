@@ -15,7 +15,7 @@ export interface ObjectType {
     name: string;
     img: string;
     collectable: boolean;
-    interaction?: string;
+    interaction: string;
 }
 
 export class ObjectOnMap {

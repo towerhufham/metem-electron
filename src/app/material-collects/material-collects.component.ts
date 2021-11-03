@@ -15,26 +15,26 @@ export class MaterialCollectsComponent implements OnInit {
   }
 
   getHp() {
-    return this.collectionService.hp;
+    return this.collectionService.collects.hp;
   }
 
   getStr() {
-    return this.collectionService.str;
+    return this.collectionService.collects.str;
   }
 
   getDex() {
-    return this.collectionService.dex;
+    return this.collectionService.collects.dex;
   }
 
   getInt() {
-    return this.collectionService.int;
+    return this.collectionService.collects.int;
   }
 
   getVit() {
-    return this.collectionService.vit;
+    return this.collectionService.collects.vit;
   }
 
   getSpi() {
-    return this.collectionService.spi;
+    return this.collectionService.collects.spi;
   }
 }

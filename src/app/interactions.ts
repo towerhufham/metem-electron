@@ -21,9 +21,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
 
     //GATES
     YellowKeyGate(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.yellowKeys > 0) {
+        if (cs.collects.yellowKeys > 0) {
             alert("Opening gate!");
-            cs.yellowKeys--;
+            cs.collects.yellowKeys--;
             o.remove();
         } else {
             alert("Not enough yellow keys!");
@@ -31,9 +31,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
     },
 
     BlueKeyGate(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.blueKeys > 0) {
+        if (cs.collects.blueKeys > 0) {
             alert("Opening gate!");
-            cs.blueKeys--;
+            cs.collects.blueKeys--;
             o.remove();
         } else {
             alert("Not enough blue keys!");
@@ -41,9 +41,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
     },
 
     RedKeyGate(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.redKeys > 0) {
+        if (cs.collects.redKeys > 0) {
             alert("Opening gate!");
-            cs.redKeys--;
+            cs.collects.redKeys--;
             o.remove();
         } else {
             alert("Not enough red keys!");
@@ -52,9 +52,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
 
     XpGate1(o: ObjectOnMap, cs: CollectionService) {
         const value = 1;
-        if (cs.xp >= value) {
+        if (cs.collects.xp >= value) {
             alert("Opening gate!");
-            cs.xp -= value;
+            cs.collects.xp -= value;
             o.remove();
         } else {
             alert("Not enough XP!");
@@ -63,9 +63,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
 
     XpGate2(o: ObjectOnMap, cs: CollectionService) {
         const value = 2;
-        if (cs.xp >= value) {
+        if (cs.collects.xp >= value) {
             alert("Opening gate!");
-            cs.xp -= value;
+            cs.collects.xp -= value;
             o.remove();
         } else {
             alert("Not enough XP!");
@@ -74,9 +74,9 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
 
     XpGate5(o: ObjectOnMap, cs: CollectionService) {
         const value = 5;
-        if (cs.xp >= value) {
+        if (cs.collects.xp >= value) {
             alert("Opening gate!");
-            cs.xp -= value;
+            cs.collects.xp -= value;
             o.remove();
         } else {
             alert("Not enough XP!");
@@ -86,40 +86,40 @@ const ALL_INTERACTIONS: { [key: string]: (o:ObjectOnMap, cs:CollectionService) =
     //HAZARDS
     Door15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
-        if (cs.str < value) {
-            cs.takeDamage(value - cs.str)
+        if (cs.collects.str < value) {
+            cs.takeDamage(value - cs.collects.str)
         }
         o.remove()
     },
 
     Pit15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
-        if (cs.dex < value) {
-            cs.takeDamage(value - cs.dex)
+        if (cs.collects.dex < value) {
+            cs.takeDamage(value - cs.collects.dex)
         }
         o.remove()
     },
 
     Riddle15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
-        if (cs.int < value) {
-            cs.takeDamage(value - cs.int)
+        if (cs.collects.int < value) {
+            cs.takeDamage(value - cs.collects.int)
         }
         o.remove()
     },
 
     Spikes15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
-        if (cs.vit < value) {
-            cs.takeDamage(value - cs.vit)
+        if (cs.collects.vit < value) {
+            cs.takeDamage(value - cs.collects.vit)
         }
         o.remove()
     },
 
     Magic15(o: ObjectOnMap, cs: CollectionService) {
         const value = 15;
-        if (cs.spi < value) {
-            cs.takeDamage(value - cs.spi)
+        if (cs.collects.spi < value) {
+            cs.takeDamage(value - cs.collects.spi)
         }
         o.remove()
     },

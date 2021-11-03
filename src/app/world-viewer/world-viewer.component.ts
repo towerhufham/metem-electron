@@ -1,8 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as tileLibrary from "../tiles";
-import * as collectables from "../collectables";
-import * as obstacles from "../obstacles"
+import { Collectable } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
@@ -35,7 +34,7 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false }, 7, 7);
+  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false, interaction: "" }, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
@@ -176,28 +175,30 @@ export class WorldViewerComponent implements OnInit {
       //check for collectibles
       for (const t of this.tilesInPath) {
         const o = this.getObjectAt(t.x, t.y);
-        if (o) {
-          if (o.type.collectable && o.active) {
+        if (o && o != this.player) {
+          if (o.type instanceof Collectable) {
             //collect
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
             this.collectionService.registerCollection(o.type);
+          } else {
+            alert("not instanceof Collectable");
           }
         }
       }
       //check for interaction
-      const o = this.getObjectAt(x, y);
-      if (o) {
-        if (o.type.interaction && o.active) {
-          //interact
-          interact(o, this.collectionService);
-          if (o.active) {
-            //if the object is still there after interacting, place player just before it
-            const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
-            x = semiFinalStep.x;
-            y = semiFinalStep.y;
-          }
-        }
-      }
+      // const o = this.getObjectAt(x, y);
+      // if (o) {
+      //   if (o.type.interaction && o.active) {
+      //     //interact
+      //     interact(o, this.collectionService);
+      //     if (o.active) {
+      //       //if the object is still there after interacting, place player just before it
+      //       const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
+      //       x = semiFinalStep.x;
+      //       y = semiFinalStep.y;
+      //     }
+      //   }
+      // }
       //actually move
       this.player.moveTo(x, y);
       this.clearPath();

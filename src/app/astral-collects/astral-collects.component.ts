@@ -14,18 +14,18 @@ export class AstralCollectsComponent implements OnInit {
   }
 
   getXp() {
-    return this.collectionService.xp;
+    return this.collectionService.collects.xp;
   }
 
   getYellowKeys() {
-    return this.collectionService.yellowKeys;
+    return this.collectionService.collects.yellowKeys;
   }
 
   getBlueKeys() {
-    return this.collectionService.blueKeys;
+    return this.collectionService.collects.blueKeys;
   }
 
   getRedKeys() {
-    return this.collectionService.redKeys;
+    return this.collectionService.collects.redKeys;
   }
 }
