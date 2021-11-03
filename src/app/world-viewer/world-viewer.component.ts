@@ -5,7 +5,6 @@ import { Collectable } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
-import { interact } from "../interactions";
 import { InfoService } from '../info.service';
 
 
@@ -34,7 +33,7 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false, interaction: "" }, 7, 7);
+  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false}, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
@@ -180,25 +179,23 @@ export class WorldViewerComponent implements OnInit {
             //collect
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
             this.collectionService.registerCollection(o.type);
-          } else {
-            alert("not instanceof Collectable");
           }
         }
       }
       //check for interaction
-      // const o = this.getObjectAt(x, y);
-      // if (o) {
-      //   if (o.type.interaction && o.active) {
-      //     //interact
-      //     interact(o, this.collectionService);
-      //     if (o.active) {
-      //       //if the object is still there after interacting, place player just before it
-      //       const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
-      //       x = semiFinalStep.x;
-      //       y = semiFinalStep.y;
-      //     }
-      //   }
-      // }
+      const o = this.getObjectAt(x, y);
+      if (o) {
+        if (o.type.interact && o.active) {
+          //interact
+          o.type.interact(o, this.collectionService);
+          if (o.active) {
+            //if the object is still there after interacting, place player just before it
+            const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
+            x = semiFinalStep.x;
+            y = semiFinalStep.y;
+          }
+        }
+      }
       //actually move
       this.player.moveTo(x, y);
       this.clearPath();

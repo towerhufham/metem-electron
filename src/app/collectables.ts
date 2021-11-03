@@ -1,8 +1,5 @@
 import { ObjectType } from "./core";
-
-export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
-    "str" | "dex" | "int" | "vit" | "spi" |
-    "hp" | "xp";
+import { CollectableKinds } from "./core";
 
 export class Collectable implements ObjectType {
     
@@ -11,7 +8,6 @@ export class Collectable implements ObjectType {
     kind: CollectableKinds;
     amount: number;
     collectable: boolean = true;
-    interaction: string = "Collect";
 
     constructor(name: string, img: string, kind: CollectableKinds, amount: number = 1) {
         this.name = name;

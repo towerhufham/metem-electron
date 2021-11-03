@@ -2,6 +2,10 @@ import { CollectionService } from "./collection.service";
 
 export const WORLD_SIZE = 15;
 
+export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
+    "str" | "dex" | "int" | "vit" | "spi" |
+    "hp" | "xp";
+
 export interface Tile {
     name: string;
     img: string;
@@ -15,7 +19,7 @@ export interface ObjectType {
     name: string;
     img: string;
     collectable: boolean;
-    interaction: string;
+    interact?: (o: ObjectOnMap, cs: CollectionService) => void;
 }
 
 export class ObjectOnMap {

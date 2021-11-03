@@ -1,85 +1,131 @@
-import { ObjectType } from "./core"
+import { CollectionService } from "./collection.service";
+import { CollectableKinds, ObjectOnMap, ObjectType } from "./core"
+
+export class Gate implements ObjectType {
+
+    name: string;
+    img: string;
+    kind: CollectableKinds;
+    amount: number;
+    collectable: boolean = false;
+
+    constructor (name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+        this.name = name;
+        this.img = img;
+        this.kind = kind;
+        this.amount = amount;
+    }
+
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.collects[this.kind] > this.amount) {
+            alert("Opening gate!");
+            cs.collects[this.kind] -= this.amount;
+            o.remove();
+        } else {
+            alert(`Not enough ${this.kind}!`);
+        }
+    }
+}
 
 //GATES
-export const YellowKeyGate: ObjectType = {
-    name: "Yellow Key Gate",
-    img: "yellow_key_gate.png",
-    collectable: false,
-    interaction: "YellowKeyGate"
-}
+export const YellowKeyGate = new Gate(
+    "Yellow Key Gate",
+    "yellow_key_gate.png",
+    "yellowKeys"
+)
 
-export const BlueKeyGate: ObjectType = {
-    name: "Blue Key Gate",
-    img: "blue_key_gate.png",
-    collectable: false,
-    interaction: "BlueKeyGate"
-}
+export const BlueKeyGate = new Gate(
+    "Blue Key Gate",
+    "blue_key_gate.png",
+    "blueKeys"
+)
 
-export const RedKeyGate: ObjectType = {
-    name: "Red Key Gate",
-    img: "red_key_gate.png",
-    collectable: false,
-    interaction: "RedKeyGate"
-}
+export const RedKeyGate = new Gate(
+    "Red Key Gate",
+    "red_key_gate.png",
+    "redKeys"
+)
 
-export const XpGate1: ObjectType = {
-    name: "1 XP Gate",
-    img: "xp_gate_1.png",
-    collectable: false,
-    interaction: "XpGate1"
-}
+export const XpGate1 = new Gate(
+    "1 XP Gate",
+    "xp_gate_1.png",
+    "xp"
+)
 
-export const XpGate2: ObjectType = {
-    name: "2 XP Gate",
-    img: "xp_gate_2.png",
-    collectable: false,
-    interaction: "XpGate2"
-}
+export const XpGate2 = new Gate(
+    "2 XP Gate",
+    "xp_gate_2.png",
+    "xp",
+    2
+)
 
-export const XpGate5: ObjectType = {
-    name: "5 XP Gate",
-    img: "xp_gate_5.png",
-    collectable: false,
-    interaction: "XpGate5"
-}
+export const XpGate5 = new Gate(
+    "5 XP Gate",
+    "xp_gate_5.png",
+    "xp",
+    5
+)
 
 export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate1, XpGate2, XpGate5];
 
 
+export class Hazard implements ObjectType {
+
+    name: string;
+    img: string;
+    kind: CollectableKinds;
+    amount: number;
+    collectable: boolean = false;
+
+    constructor(name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+        this.name = name;
+        this.img = img;
+        this.kind = kind;
+        this.amount = amount;
+    }
+
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.collects[this.kind] < this.amount) {
+            cs.takeDamage(this.amount - cs.collects.str)
+        }
+        o.remove()
+    }
+}
+
 //HAZARDS
-export const Door15: ObjectType = {
-    name: "Stuck Door",
-    img: "door.png",
-    collectable: false,
-    interaction: "Door15" //todo
-}
+export const Door15 = new Hazard(
+    "Stuck Door",
+    "door.png",
+    "str",
+    15
+)
 
-export const Pit15: ObjectType = {
-    name: "Chasm",
-    img: "chasm.png",
-    collectable: false,
-    interaction: "Pit15" //todo
-}
+export const Pit15 = new Hazard(
+    "Chasm",
+    "chasm.png",
+    "dex",
+    15
+)
 
-export const Riddle15: ObjectType = {
-    name: "Riddle",
-    img: "riddle.png",
-    collectable: false,
-    interaction: "Riddle15" //todo
-}
+export const Riddle15 = new Hazard(
+    "Riddle",
+    "riddle.png",
+    "int",
+    15
+)
 
-export const Spikes15: ObjectType = {
-    name: "Spike Trap",
-    img: "spikes.png",
-    collectable: false,
-    interaction: "Spikes15" //todo
-}
+export const Spikes15 = new Hazard(
+    "Spike Trap",
+    "spikes.png",
+    "vit",
+    15
+)
 
-export const Magic15: ObjectType = {
-    name: "Magic Circle",
-    img: "magic_circle.png",
-    collectable: false,
-    interaction: "Magic15" //todo
-}
+export const Magic15 = new Hazard(
+    "Magic Circle",
+    "magic_circle.png",
+    "spi",
+    15
+)
 
 export const ALL_HAZARDS = [Door15, Pit15, Riddle15, Spikes15, Magic15];
