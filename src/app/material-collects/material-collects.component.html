@@ -1,8 +1,26 @@
-<div>
-    <p class="iconLabel"><img class="icon" src="assets/img/hp_pickup.png">: {{getHp()}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/str.png">: {{getStr()}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/dex.png">: {{getDex()}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/int.png">: {{getInt()}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/vit.png">: {{getVit()}}</p>
-    <p class="iconLabel"><img class="icon" src="assets/img/spi.png">: {{getSpi()}}</p>
+<div id="holder">
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/hp_pickup.png">: {{get("hp")}}</p>
+        <p class="iconLabel">x {{get("hp_mult")}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/str.png">: {{get("str")}}</p>
+        <p class="iconLabel">x {{get("str_mult")}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/dex.png">: {{get("dex")}}</p>
+        <p class="iconLabel">x {{get("dex_mult")}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/int.png">: {{get("int")}}</p>
+        <p class="iconLabel">x {{get("int_mult")}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/vit.png">: {{get("vit")}}</p>
+        <p class="iconLabel">x {{get("vit_mult")}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/spi.png">: {{get("spi")}}</p>
+        <p class="iconLabel">x {{get("spi_mult")}}</p>
+    </div>
 </div>

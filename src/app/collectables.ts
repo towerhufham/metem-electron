@@ -44,9 +44,10 @@ export const xpPickup = new Collectable (
 )
 
 export const hpPickup = new Collectable(
-    "HP +1",
+    "HP +25",
     "hp_pickup.png",
-    "hp"
+    "hp",
+    25
 )
 
 //basic pickups
@@ -76,6 +77,38 @@ export const spiPickup = new Collectable(
     "spi"
 )
 
+//multiplier pickups
+export const Quartz = new Collectable(
+    "Quartz",
+    "quartz.png",
+    "hp_mult"
+)
+export const Ruby = new Collectable(
+    "Ruby",
+    "ruby.png",
+    "str_mult"
+)
+export const Emerald = new Collectable(
+    "Emerald",
+    "emerald.png",
+    "dex_mult"
+)
+export const Diamond = new Collectable(
+    "Diamond",
+    "diamond.png",
+    "int_mult"
+)
+export const Topaz = new Collectable(
+    "Topaz",
+    "topaz.png",
+    "vit_mult"
+)
+export const Amethyst = new Collectable(
+    "Amethyst",
+    "amethyst.png",
+    "spi_mult"
+)
+
 
 export const ALL_COLLECTABLES: Collectable[] = [
     YellowKey,
@@ -87,5 +120,11 @@ export const ALL_COLLECTABLES: Collectable[] = [
     dexPickup,
     intPickup,
     vitPickup,
-    spiPickup
-];
+    spiPickup,
+    Quartz,
+    Ruby,
+    Emerald,
+    Diamond,
+    Topaz,
+    Amethyst
+]

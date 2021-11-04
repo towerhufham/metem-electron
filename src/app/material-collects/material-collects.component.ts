@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from '../collection.service';
+import { CollectableKinds } from '../core';
 import { PersistenceService } from '../persistence.service';
 
 @Component({
@@ -14,27 +15,7 @@ export class MaterialCollectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getHp() {
-    return this.collectionService.collects.hp;
-  }
-
-  getStr() {
-    return this.collectionService.collects.str;
-  }
-
-  getDex() {
-    return this.collectionService.collects.dex;
-  }
-
-  getInt() {
-    return this.collectionService.collects.int;
-  }
-
-  getVit() {
-    return this.collectionService.collects.vit;
-  }
-
-  getSpi() {
-    return this.collectionService.collects.spi;
+  get(kind: CollectableKinds) {
+    return this.collectionService.collects[kind];
   }
 }
