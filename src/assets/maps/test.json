@@ -1579,1065 +1579,622 @@
     ],
     "spawns": [
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
+            "group": "hazard",
+            "id": 3,
+            "x": 9,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 13,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 0,
             "x": 7,
             "y": 9
         },
         {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 3,
             "x": 6,
             "y": 12
         },
         {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 8,
             "y": 12
         },
         {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 3,
+            "group": "hazard",
+            "id": 1,
+            "x": 5,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 9,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 11,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 1,
+            "x": 13,
+            "y": 14
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 12,
             "y": 12
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "hazard",
+            "id": 3,
+            "x": 13,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 14,
+            "y": 12
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 10,
+            "y": 12
+        },
+        {
+            "group": "hazard",
+            "id": 0,
             "x": 7,
             "y": 10
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
-            "y": 11
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
             "y": 12
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 5,
-            "y": 12
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 5,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 5,
-            "y": 14
-        },
-        {
-            "type": {
-                "name": "Chasm",
-                "img": "chasm.png",
-                "collectable": false,
-                "interaction": "Pit15"
-            },
+            "group": "hazard",
+            "id": 1,
             "x": 4,
             "y": 14
         },
         {
-            "type": {
-                "name": "Chasm",
-                "img": "chasm.png",
-                "collectable": false,
-                "interaction": "Pit15"
-            },
+            "group": "hazard",
+            "id": 1,
             "x": 3,
             "y": 13
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 1,
             "x": 3,
-            "y": 14
-        },
-        {
-            "type": {
-                "name": "Magic Circle",
-                "img": "magic_circle.png",
-                "collectable": false,
-                "interaction": "Magic15"
-            },
-            "x": 12,
             "y": 12
         },
         {
-            "type": {
-                "name": "Magic Circle",
-                "img": "magic_circle.png",
-                "collectable": false,
-                "interaction": "Magic15"
-            },
-            "x": 13,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 9,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 11,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "Magic Circle",
-                "img": "magic_circle.png",
-                "collectable": false,
-                "interaction": "Magic15"
-            },
-            "x": 13,
-            "y": 12
-        },
-        {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 14,
-            "y": 12
+            "y": 10
         },
         {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 14
-        },
-        {
-            "type": {
-                "name": "Magic Circle",
-                "img": "magic_circle.png",
-                "collectable": false,
-                "interaction": "Magic15"
-            },
-            "x": 10,
-            "y": 12
-        },
-        {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 9,
-            "y": 14
-        },
-        {
-            "type": {
-                "name": "Blue Key",
-                "img": "blue_key.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 13,
-            "y": 14
+            "y": 10
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 9,
-            "y": 12
+            "group": "collectable",
+            "id": 3,
+            "x": 12,
+            "y": 10
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 11,
-            "y": 12
+            "y": 10
         },
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 7,
+            "group": "collectable",
+            "id": 3,
+            "x": 10,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 9,
+            "y": 10
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 14,
             "y": 7
         },
         {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
+            "group": "hazard",
+            "id": 0,
             "x": 14,
             "y": 9
         },
         {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
-            "x": 13,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
-            "x": 11,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "Spike Trap",
-                "img": "spikes.png",
-                "collectable": false,
-                "interaction": "Spikes15"
-            },
-            "x": 10,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 9,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
-            "x": 12,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
-            "x": 14,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
-            "x": 14,
-            "y": 8
-        },
-        {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 14,
-            "y": 7
-        },
-        {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 14,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
+            "group": "hazard",
+            "id": 0,
             "x": 14,
             "y": 5
         },
         {
-            "type": {
-                "name": "Red Key",
-                "img": "red_key.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "Red Key",
-                "img": "red_key.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "Blue Key",
-                "img": "blue_key.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "Blue Key",
-                "img": "blue_key.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "Yellow Key",
-                "img": "yellow_key.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 9,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 12,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 12,
+            "group": "hazard",
+            "id": 0,
+            "x": 14,
             "y": 3
         },
         {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 9,
-            "y": 3
+            "group": "hazard",
+            "id": 0,
+            "x": 14,
+            "y": 1
         },
         {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 9,
-            "y": 5
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 12,
-            "y": 5
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 9,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "Riddle",
-                "img": "riddle.png",
-                "collectable": false,
-                "interaction": "Riddle15"
-            },
-            "x": 12,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 12,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 9,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 9,
+            "group": "collectable",
+            "id": 3,
+            "x": 14,
             "y": 2
         },
         {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 12,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 9,
+            "group": "collectable",
+            "id": 3,
+            "x": 14,
             "y": 0
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 0
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 0
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 12,
-            "y": 0
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 13,
             "y": 0
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 14,
+            "group": "collectable",
+            "id": 3,
+            "x": 12,
             "y": 0
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 14,
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
+            "y": 0
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 9,
+            "y": 0
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 10,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
             "y": 1
         },
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 14,
-            "y": 4
+            "group": "hazard",
+            "id": 4,
+            "x": 12,
+            "y": 1
         },
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 14,
+            "group": "hazard",
+            "id": 4,
+            "x": 12,
             "y": 3
         },
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 14,
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 12,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 11,
             "y": 2
         },
         {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
+            "group": "collectable",
+            "id": 3,
+            "x": 10,
+            "y": 2
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 1,
+            "x": 10,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 2,
+            "x": 11,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 12,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 10,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 2,
             "x": 6,
             "y": 8
         },
         {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
+            "group": "hazard",
+            "id": 0,
+            "x": 7,
+            "y": 4
+        },
+        {
+            "group": "hazard",
+            "id": 0,
             "x": 5,
-            "y": 8
+            "y": 1
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 3,
-            "y": 8
+            "group": "collectable",
+            "id": 3,
+            "x": 6,
+            "y": 1
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 2,
-            "y": 8
+            "group": "collectable",
+            "id": 3,
+            "x": 6,
+            "y": 2
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 5
+            "group": "collectable",
+            "id": 3,
+            "x": 6,
+            "y": 3
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 6
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 3
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 7
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 2
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 8
+            "group": "collectable",
+            "id": 7,
+            "x": 5,
+            "y": 10
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
+            "group": "hazard",
+            "id": 2,
             "x": 4,
             "y": 9
         },
         {
-            "type": {
-                "name": "Chasm",
-                "img": "chasm.png",
-                "collectable": false,
-                "interaction": "Pit15"
-            },
+            "group": "hazard",
+            "id": 2,
             "x": 4,
-            "y": 10
+            "y": 7
         },
         {
-            "type": {
-                "name": "Chasm",
-                "img": "chasm.png",
-                "collectable": false,
-                "interaction": "Pit15"
-            },
-            "x": 3,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "Chasm",
-                "img": "chasm.png",
-                "collectable": false,
-                "interaction": "Pit15"
-            },
-            "x": 2,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 5,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 4,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "Blue Key Gate",
-                "img": "blue_key_gate.png",
-                "collectable": false,
-                "interaction": "BlueKeyGate"
-            },
-            "x": 5,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 0,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "hazard",
+            "id": 2,
             "x": 4,
             "y": 2
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 9,
             "x": 4,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 3,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 1,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 2,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 0,
             "y": 3
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 1,
+            "group": "collectable",
+            "id": 9,
+            "x": 4,
             "y": 4
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 1,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 2,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "Blue Key",
-                "img": "blue_key.png",
-                "collectable": true
-            },
-            "x": 0,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 2,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 2,
+            "group": "collectable",
+            "id": 9,
+            "x": 4,
             "y": 5
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 2,
+            "group": "collectable",
+            "id": 9,
+            "x": 4,
             "y": 6
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 2,
-            "y": 7
+            "group": "hazard",
+            "id": 1,
+            "x": 3,
+            "y": 10
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "hazard",
+            "id": 1,
+            "x": 2,
+            "y": 10
+        },
+        {
+            "group": "hazard",
+            "id": 1,
             "x": 1,
             "y": 10
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 1,
             "y": 12
         },
         {
-            "type": {
-                "name": "Red Key Gate",
-                "img": "red_key_gate.png",
-                "collectable": false,
-                "interaction": "RedKeyGate"
-            },
+            "group": "collectable",
+            "id": 3,
             "x": 0,
-            "y": 9
+            "y": 12
         },
         {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 1,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 4,
             "x": 0,
             "y": 8
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 4,
+            "x": 0,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 3,
             "x": 0,
             "y": 11
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 5,
+            "x": 5,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 4,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 7,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 7,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 1,
             "x": 0,
-            "y": 13
+            "y": 0
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 8,
             "x": 1,
-            "y": 14
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 6,
             "y": 1
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
+            "group": "collectable",
+            "id": 8,
+            "x": 2,
             "y": 1
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
-            "y": 2
+            "group": "collectable",
+            "id": 4,
+            "x": 4,
+            "y": 1
         },
         {
-            "type": {
-                "name": "Stuck Door",
-                "img": "door.png",
-                "collectable": false,
-                "interaction": "Door15"
-            },
-            "x": 7,
-            "y": 4
+            "group": "collectable",
+            "id": 4,
+            "x": 0,
+            "y": 1
         },
         {
-            "type": {
-                "name": "XP +1",
-                "img": "xp_bubble_small.png",
-                "collectable": true
-            },
-            "x": 7,
+            "group": "collectable",
+            "id": 8,
+            "x": 3,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 9,
+            "y": 8
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 12,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 10,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
+            "y": 8
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 2,
             "y": 5
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 6,
+            "group": "collectable",
+            "id": 5,
+            "x": 0,
             "y": 3
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 7,
+            "group": "collectable",
+            "id": 5,
+            "x": 0,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 1,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 1,
             "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 2,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 2,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 4,
+            "y": 10
         }
     ]
 }

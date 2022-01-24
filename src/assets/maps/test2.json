@@ -128,9 +128,9 @@
             "y": 1
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 3,
             "y": 1
         },
@@ -226,37 +226,37 @@
             "y": 2
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 2,
-            "y": 2
-        },
-        {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
-            "x": 3,
-            "y": 2
-        },
-        {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
-            "x": 4,
-            "y": 2
-        },
-        {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
-            "x": 5,
             "y": 2
         },
         {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
+            "x": 3,
+            "y": 2
+        },
+        {
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 2
+        },
+        {
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 2
+        },
+        {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 2
         },
@@ -275,9 +275,9 @@
             "y": 2
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 9,
             "y": 2
         },
@@ -289,9 +289,9 @@
             "y": 2
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 2
         },
@@ -338,9 +338,9 @@
             "y": 3
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 3,
             "y": 3
         },
@@ -359,9 +359,9 @@
             "y": 3
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 3
         },
@@ -373,23 +373,23 @@
             "y": 3
         },
         {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 3
+        },
+        {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
-            "x": 8,
+            "x": 9,
             "y": 3
         },
         {
             "name": "Pink Wall",
             "img": "pink_wall.png",
             "wall": true,
-            "x": 9,
-            "y": 3
-        },
-        {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
             "x": 10,
             "y": 3
         },
@@ -443,9 +443,9 @@
             "y": 4
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 3,
             "y": 4
         },
@@ -457,9 +457,9 @@
             "y": 4
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 5,
             "y": 4
         },
@@ -478,23 +478,23 @@
             "y": 4
         },
         {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 4
+        },
+        {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
-            "x": 8,
+            "x": 9,
             "y": 4
         },
         {
             "name": "Pink Wall",
             "img": "pink_wall.png",
             "wall": true,
-            "x": 9,
-            "y": 4
-        },
-        {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
             "x": 10,
             "y": 4
         },
@@ -506,9 +506,9 @@
             "y": 4
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 12,
             "y": 4
         },
@@ -541,9 +541,9 @@
             "y": 5
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 2,
             "y": 5
         },
@@ -604,9 +604,9 @@
             "y": 5
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 5
         },
@@ -618,9 +618,9 @@
             "y": 5
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 13,
             "y": 5
         },
@@ -709,9 +709,9 @@
             "y": 6
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 6
         },
@@ -758,9 +758,9 @@
             "y": 7
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 3,
             "y": 7
         },
@@ -800,8 +800,8 @@
             "y": 7
         },
         {
-            "name": "Ice Floor",
-            "img": "ice_floor.png",
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
             "wall": false,
             "x": 9,
             "y": 7
@@ -814,9 +814,9 @@
             "y": 7
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 7
         },
@@ -912,9 +912,9 @@
             "y": 8
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 10,
             "y": 8
         },
@@ -926,9 +926,9 @@
             "y": 8
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 12,
             "y": 8
         },
@@ -961,9 +961,9 @@
             "y": 9
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 2,
             "y": 9
         },
@@ -996,8 +996,8 @@
             "y": 9
         },
         {
-            "name": "Ice Floor",
-            "img": "ice_floor.png",
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
             "wall": false,
             "x": 7,
             "y": 9
@@ -1017,23 +1017,23 @@
             "y": 9
         },
         {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 9
+        },
+        {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
-            "x": 10,
+            "x": 11,
             "y": 9
         },
         {
             "name": "Pink Wall",
             "img": "pink_wall.png",
             "wall": true,
-            "x": 11,
-            "y": 9
-        },
-        {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
             "x": 12,
             "y": 9
         },
@@ -1066,16 +1066,16 @@
             "y": 10
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 2,
             "y": 10
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 3,
             "y": 10
         },
@@ -1087,16 +1087,16 @@
             "y": 10
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 5,
             "y": 10
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 10
         },
@@ -1108,16 +1108,16 @@
             "y": 10
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 8,
             "y": 10
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 9,
             "y": 10
         },
@@ -1129,16 +1129,16 @@
             "y": 10
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 10
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 12,
             "y": 10
         },
@@ -1178,9 +1178,9 @@
             "y": 11
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 3,
             "y": 11
         },
@@ -1192,58 +1192,58 @@
             "y": 11
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 5,
             "y": 11
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 11
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 7,
             "y": 11
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 8,
             "y": 11
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 9,
             "y": 11
         },
         {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 11
+        },
+        {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
-            "x": 10,
+            "x": 11,
             "y": 11
         },
         {
             "name": "Pink Wall",
             "img": "pink_wall.png",
             "wall": true,
-            "x": 11,
-            "y": 11
-        },
-        {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
             "x": 12,
             "y": 11
         },
@@ -1276,9 +1276,9 @@
             "y": 12
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 2,
             "y": 12
         },
@@ -1290,9 +1290,9 @@
             "y": 12
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 4,
             "y": 12
         },
@@ -1304,51 +1304,51 @@
             "y": 12
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 12
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 7,
             "y": 12
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 8,
             "y": 12
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 9,
             "y": 12
         },
         {
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 12
+        },
+        {
             "name": "Pink Floor",
             "img": "pink_floor.png",
             "wall": false,
-            "x": 10,
+            "x": 11,
             "y": 12
         },
         {
             "name": "Pink Wall",
             "img": "pink_wall.png",
             "wall": true,
-            "x": 11,
-            "y": 12
-        },
-        {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
             "x": 12,
             "y": 12
         },
@@ -1388,9 +1388,9 @@
             "y": 13
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 3,
             "y": 13
         },
@@ -1409,16 +1409,16 @@
             "y": 13
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 6,
             "y": 13
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 7,
             "y": 13
         },
@@ -1437,16 +1437,16 @@
             "y": 13
         },
         {
-            "name": "Pink Floor",
-            "img": "pink_floor.png",
-            "wall": false,
+            "name": "Pink Wall",
+            "img": "pink_wall.png",
+            "wall": true,
             "x": 10,
             "y": 13
         },
         {
-            "name": "Pink Wall",
-            "img": "pink_wall.png",
-            "wall": true,
+            "name": "Pink Floor",
+            "img": "pink_floor.png",
+            "wall": false,
             "x": 11,
             "y": 13
         },
@@ -1579,707 +1579,580 @@
     ],
     "spawns": [
         {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 9,
-            "y": 7
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 5,
-            "y": 7
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
+            "group": "collectable",
+            "id": 9,
             "x": 7,
-            "y": 9
+            "y": 8
         },
         {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
-            "x": 4,
+            "group": "collectable",
+            "id": 8,
+            "x": 8,
             "y": 7
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 7,
-            "y": 10
+            "group": "collectable",
+            "id": 7,
+            "x": 6,
+            "y": 7
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
+            "group": "collectable",
+            "id": 5,
+            "x": 6,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 6,
+            "x": 8,
+            "y": 6
+        },
+        {
+            "group": "gate",
+            "id": 1,
+            "x": 13,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 6,
             "x": 7,
             "y": 4
         },
         {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
+            "group": "collectable",
+            "id": 6,
+            "x": 6,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 6,
+            "x": 5,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 6,
+            "x": 4,
+            "y": 4
+        },
+        {
+            "group": "gate",
+            "id": 0,
+            "x": 4,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 4,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 4,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 4,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 4,
+            "y": 9
+        },
+        {
+            "group": "gate",
+            "id": 1,
+            "x": 3,
+            "y": 7
+        },
+        {
+            "group": "gate",
+            "id": 0,
+            "x": 1,
+            "y": 5
+        },
+        {
+            "group": "gate",
+            "id": 0,
+            "x": 1,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 14,
+            "x": 1,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 1,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 1,
+            "y": 8
+        },
+        {
+            "group": "gate",
+            "id": 4,
             "x": 7,
             "y": 5
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 8
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 8
-        },
-        {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 7,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 8,
+            "group": "gate",
+            "id": 4,
+            "x": 5,
             "y": 7
         },
         {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
+            "group": "gate",
+            "id": 3,
             "x": 7,
-            "y": 8
+            "y": 9
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 7
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "Blue Key Gate",
-                "img": "blue_key_gate.png",
-                "collectable": false,
-                "interaction": "BlueKeyGate"
-            },
-            "x": 6,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "Blue Key Gate",
-                "img": "blue_key_gate.png",
-                "collectable": false,
-                "interaction": "BlueKeyGate"
-            },
-            "x": 8,
-            "y": 2
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 6,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 5,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 8,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 9,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "HP +5",
-                "img": "hp_pickup.png",
-                "collectable": true
-            },
+            "group": "gate",
+            "id": 3,
             "x": 7,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 6,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 10
-        },
-        {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
-            "x": 6,
             "y": 11
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 11
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 6,
-            "y": 12
-        },
-        {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 8,
-            "y": 12
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 6,
+            "group": "gate",
+            "id": 3,
+            "x": 7,
             "y": 13
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 5,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 8,
-            "y": 13
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "gate",
+            "id": 3,
             "x": 9,
             "y": 13
         },
         {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
-            "x": 4,
-            "y": 13
+            "group": "gate",
+            "id": 3,
+            "x": 9,
+            "y": 11
         },
         {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
+            "group": "gate",
+            "id": 5,
             "x": 10,
-            "y": 13
+            "y": 10
         },
         {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 4,
+            "group": "collectable",
+            "id": 9,
+            "x": 7,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 7,
             "y": 12
         },
         {
-            "type": {
-                "name": "Yellow Key Gate",
-                "img": "yellow_key_gate.png",
-                "collectable": false,
-                "interaction": "YellowKeyGate"
-            },
-            "x": 10,
+            "group": "collectable",
+            "id": 9,
+            "x": 8,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 9,
             "y": 12
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 9,
+            "x": 9,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 15,
+            "x": 11,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 11,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 11,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 11,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 11,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 13,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 13,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 13,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 13,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 13,
+            "x": 13,
+            "y": 10
+        },
+        {
+            "group": "gate",
+            "id": 4,
+            "x": 12,
+            "y": 13
+        },
+        {
+            "group": "gate",
+            "id": 4,
             "x": 4,
-            "y": 6
+            "y": 10
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
+            "group": "gate",
+            "id": 4,
             "x": 4,
-            "y": 8
+            "y": 3
         },
         {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 6
-        },
-        {
-            "type": {
-                "name": "DEX +1",
-                "img": "dex.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 8
-        },
-        {
-            "type": {
-                "name": "1 XP Gate",
-                "img": "xp_gate_1.png",
-                "collectable": false,
-                "interaction": "XpGate1"
-            },
-            "x": 10,
-            "y": 7
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 8,
             "x": 4,
             "y": 1
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 8,
+            "x": 4,
+            "y": 2
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 5,
+            "y": 2
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 5,
+            "y": 1
+        },
+        {
+            "group": "gate",
+            "id": 0,
             "x": 3,
+            "y": 2
+        },
+        {
+            "group": "gate",
+            "id": 0,
+            "x": 1,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 1,
             "y": 1
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 4,
+            "x": 2,
+            "y": 2
+        },
+        {
+            "group": "collectable",
+            "id": 4,
             "x": 2,
             "y": 1
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 1,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 12,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 13,
-            "y": 1
-        },
-        {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 4,
             "x": 1,
             "y": 2
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 13,
-            "y": 2
+            "group": "gate",
+            "id": 2,
+            "x": 1,
+            "y": 12
         },
         {
-            "type": {
-                "name": "Red Key Gate",
-                "img": "red_key_gate.png",
-                "collectable": false,
-                "interaction": "RedKeyGate"
-            },
-            "x": 12,
-            "y": 4
+            "group": "collectable",
+            "id": 10,
+            "x": 1,
+            "y": 13
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 11,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 10,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "HP +5",
-                "img": "hp_pickup.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "HP +5",
-                "img": "hp_pickup.png",
-                "collectable": true
-            },
-            "x": 11,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "HP +5",
-                "img": "hp_pickup.png",
-                "collectable": true
-            },
-            "x": 3,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "HP +5",
-                "img": "hp_pickup.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 3
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 4,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
-            "x": 3,
-            "y": 4
-        },
-        {
-            "type": {
-                "name": "Red Key Gate",
-                "img": "red_key_gate.png",
-                "collectable": false,
-                "interaction": "RedKeyGate"
-            },
+            "group": "collectable",
+            "id": 10,
             "x": 2,
-            "y": 4
+            "y": 13
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
+            "group": "collectable",
+            "id": 4,
+            "x": 3,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 4,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 5,
+            "y": 13
+        },
+        {
+            "group": "gate",
+            "id": 5,
+            "x": 2,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 4,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 9,
             "x": 1,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 1,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 3,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 6,
+            "x": 3,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 5,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 5,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 10,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 12,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 10,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 12,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 11,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 13,
+            "y": 6
+        },
+        {
+            "group": "gate",
+            "id": 5,
+            "x": 9,
+            "y": 7
+        },
+        {
+            "group": "gate",
+            "id": 1,
+            "x": 11,
+            "y": 5
+        },
+        {
+            "group": "gate",
+            "id": 4,
+            "x": 11,
+            "y": 2
+        },
+        {
+            "group": "gate",
+            "id": 4,
+            "x": 11,
             "y": 3
         },
         {
-            "type": {
-                "name": "2 XP Gate",
-                "img": "xp_gate_2.png",
-                "collectable": false,
-                "interaction": "XpGate2"
-            },
+            "group": "collectable",
+            "id": 8,
+            "x": 13,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 8,
             "x": 13,
             "y": 3
         },
         {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 5
+            "group": "collectable",
+            "id": 8,
+            "x": 13,
+            "y": 2
         },
         {
-            "type": {
-                "name": "VIT +1",
-                "img": "vit.png",
-                "collectable": true
-            },
+            "group": "collectable",
+            "id": 8,
+            "x": 13,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 12,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 11,
+            "y": 1
+        },
+        {
+            "group": "gate",
+            "id": 0,
             "x": 10,
-            "y": 5
+            "y": 1
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 9
+            "group": "collectable",
+            "id": 5,
+            "x": 9,
+            "y": 4
         },
         {
-            "type": {
-                "name": "SPI +1",
-                "img": "spi.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 9
+            "group": "collectable",
+            "id": 5,
+            "x": 9,
+            "y": 3
         },
         {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 10
+            "group": "collectable",
+            "id": 5,
+            "x": 9,
+            "y": 1
         },
         {
-            "type": {
-                "name": "INT +1",
-                "img": "int.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 10
+            "group": "collectable",
+            "id": 5,
+            "x": 9,
+            "y": 2
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 4,
-            "y": 11
+            "group": "collectable",
+            "id": 5,
+            "x": 8,
+            "y": 2
         },
         {
-            "type": {
-                "name": "STR +1",
-                "img": "str.png",
-                "collectable": true
-            },
-            "x": 10,
-            "y": 11
+            "group": "collectable",
+            "id": 5,
+            "x": 8,
+            "y": 1
+        },
+        {
+            "group": "gate",
+            "id": 4,
+            "x": 7,
+            "y": 1
+        },
+        {
+            "group": "gate",
+            "id": 4,
+            "x": 6,
+            "y": 1
         }
     ]
 }

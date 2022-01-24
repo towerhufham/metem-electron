@@ -96,7 +96,7 @@ export class Hazard implements ObjectType {
 
     interact(o: ObjectOnMap, cs: CollectionService) {
         if (cs.collects[this.kind] < this.amount) {
-            cs.takeDamage(this.amount - cs.collects.str)
+            cs.takeDamage(this.amount - cs.collects[this.kind])
         }
         o.remove()
     }
