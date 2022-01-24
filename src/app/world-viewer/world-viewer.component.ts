@@ -1,11 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as tileLibrary from "../tiles";
-import { Collectable } from '../collectables';
+import { ALL_COLLECTABLES, Collectable } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
+import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
 
 
 function defaultMap() {
@@ -33,7 +34,7 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = new ObjectOnMap({ name: "You!", img: "player.png", collectable: false}, 7, 7);
+  player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "player.png", group: "player"}, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
@@ -81,7 +82,17 @@ export class WorldViewerComponent implements OnInit {
   }
 
   spawnObjectOnMap(spawn: ObjectSpawn) {
-    this.makeObjectOnMap(spawn.type, spawn.x, spawn.y);
+    //get item from the ALL_ lists
+    if (spawn.group === "collectable") {
+      this.makeObjectOnMap(ALL_COLLECTABLES[spawn.id], spawn.x, spawn.y);
+    } else if (spawn.group === "gate") {
+      this.makeObjectOnMap(ALL_GATES[spawn.id], spawn.x, spawn.y);
+    } else if (spawn.group === "hazard") {
+      this.makeObjectOnMap(ALL_HAZARDS[spawn.id], spawn.x, spawn.y);
+    } else {
+      //unknown object
+      alert("unknown object group for " + spawn);
+    }
   }
 
   makePathfindingGrid(ignore?: ObjectOnMap): Grid {
@@ -93,7 +104,7 @@ export class WorldViewerComponent implements OnInit {
       }
     }
     for (const o of this.getActiveObjects()) {
-      if (!o.type.collectable && o !== this.player && o !== ignore) {
+      if (o.type.group !== "collectable" && o !== this.player && o !== ignore) {
         grid.setWalkableAt(o.x, o.y, false)
       }
     }
@@ -207,7 +218,7 @@ export class WorldViewerComponent implements OnInit {
     let spawns: ObjectSpawn[] = []
     for (const o of this.getActiveObjects()) {
       if (o !== this.player) {
-        spawns.push({type: o.type, x: o.x, y: o.y});
+        spawns.push({group: o.type.group, id: o.type.id, x: o.x, y: o.y});
       }
     };
     this.mapService.getMapJSON(this.tiles, spawns);

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Tile, ObjectSpawn, MapData, ObjectType, ObjectOnMap } from './core';
+import { Tile, ObjectSpawn, MapData, ObjectType } from './core';
 import { HttpClient } from '@angular/common/http';
 import { TileType, makeTile } from './tiles';
 

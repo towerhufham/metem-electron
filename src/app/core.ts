@@ -18,8 +18,9 @@ export interface Tile {
 export interface ObjectType {
     //a specific kind of object
     name: string;
+    id: number;
     img: string;
-    collectable: boolean;
+    group: "collectable"|"gate"|"hazard"|"player";
     interact?: (o: ObjectOnMap, cs: CollectionService) => void;
 }
 
@@ -48,7 +49,8 @@ export class ObjectOnMap {
 }
 
 export interface ObjectSpawn {
-    type: ObjectType,
+    group: "collectable"|"gate"|"hazard"|"player", //should never actually be player
+    id: number,
     x: number,
     y: number
 }

@@ -17,7 +17,7 @@
         src="assets/img/{{o.type.img}}"
         *ngFor="let o of getActiveObjects()" 
         [ngStyle]="{'grid-column': o.x+1, 'grid-row': o.y+1, 'animation-delay': ((19-o.x)+(19-o.y))*-100 + 'ms'}" 
-        [ngClass]="{'collectable': o.type.collectable}"
+        [ngClass]="{'collectable': o.type.group==='collectable'}"
         draggable="false"
     >
 </div>
