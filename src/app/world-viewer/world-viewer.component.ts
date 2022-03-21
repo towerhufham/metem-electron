@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
 import * as tileLibrary from "../tiles";
 import { ALL_COLLECTABLES, Collectable } from '../collectables';
@@ -32,6 +32,8 @@ function defaultMap() {
   styleUrls: ['./world-viewer.component.scss']
 })
 export class WorldViewerComponent implements OnInit {
+
+  @Input() debugMode: boolean = false;
 
   tiles: Tile[] = defaultMap();
   player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "player.png", group: "player"}, 7, 7);

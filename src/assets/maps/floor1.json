@@ -1,0 +1,2398 @@
+{
+    "name": "new map",
+    "tiles": [
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 2,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 12,
+            "y": 0
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 0
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 0
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 2,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 12,
+            "y": 1
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 1
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 1
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 1,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 3,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 7,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 9,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 2
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 11,
+            "y": 2
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 2
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 2
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 14,
+            "y": 2
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 3
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 3
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 3
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 3
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 3
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 3
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 0,
+            "y": 4
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 4
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 7,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 9,
+            "y": 4
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 4
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 4
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 4
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 13,
+            "y": 4
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 4
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 5
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 5
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 5
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 5
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 5
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 5
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 1,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 6
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 6
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 7,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 6
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 6
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 6
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 6
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 6
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 6
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 14,
+            "y": 6
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 7
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 7
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 7
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 7
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 7
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 0,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 8
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 8
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 8
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 8
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 8
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 8
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 8
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 13,
+            "y": 8
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 8
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 9
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 9
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 9
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 9
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 9
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 9
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 9
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 9
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 9
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 0,
+            "y": 10
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 10
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 7,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 10
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 10
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 10
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 10
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 10
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 14,
+            "y": 10
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 0,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 2,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 5,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 11
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 11
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 11
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 11
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 11
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 11
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 0,
+            "y": 12
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 2,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 3,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 4,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 6,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 7,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 8,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 9,
+            "y": 12
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 10,
+            "y": 12
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 12
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 12
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 13,
+            "y": 12
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 12
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 2,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 13
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 13
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 13
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 13
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 13
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 0,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 1,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 2,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 3,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 4,
+            "y": 14
+        },
+        {
+            "name": "Dungeon Wall",
+            "img": "dungeon_wall.png",
+            "wall": true,
+            "x": 5,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 6,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 7,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 8,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 9,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 10,
+            "y": 14
+        },
+        {
+            "name": "Grass Floor",
+            "img": "grass_floor.png",
+            "wall": false,
+            "x": 11,
+            "y": 14
+        },
+        {
+            "name": "Dark Dungeon Wall",
+            "img": "dark_dungeon_wall.png",
+            "wall": true,
+            "x": 12,
+            "y": 14
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 13,
+            "y": 14
+        },
+        {
+            "name": "Ice Floor",
+            "img": "ice_floor.png",
+            "wall": false,
+            "x": 14,
+            "y": 14
+        }
+    ],
+    "spawns": [
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 9
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 6,
+            "y": 9
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 5,
+            "y": 7
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 6,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 5,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 5,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 5,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 5,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 10,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 9,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 7,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 8,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 9,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 9,
+            "y": 7
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 9,
+            "y": 8
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 8,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 7,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 6,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 9,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 9,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 9,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 5,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 4,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 3,
+            "y": 10
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 3,
+            "y": 9
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 3,
+            "y": 8
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 2,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 4,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 5,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 7,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 8,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 6,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 1,
+            "x": 10,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 4
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 11,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 11,
+            "y": 9
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 1,
+            "y": 10
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 1,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 1,
+            "x": 1,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 10,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 9,
+            "y": 14
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 8,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 8,
+            "y": 14
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 9,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 10,
+            "y": 14
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 7,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 7,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 2,
+            "x": 6,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 6,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 4,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 2,
+            "y": 14
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 2,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 3,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 5,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 6,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 8,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 9,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 11,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 12,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 2,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 3,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 5,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 6,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 8,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 9,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 11,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 12,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 7,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 7,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 4,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 4,
+            "x": 10,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 4,
+            "y": 1
+        },
+        {
+            "group": "hazard",
+            "id": 1,
+            "x": 10,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 4
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 6
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 3,
+            "y": 7
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 10
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 3,
+            "x": 11,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 11,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 5,
+            "x": 0,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 1,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 6,
+            "x": 1,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 7,
+            "x": 2,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 8,
+            "x": 3,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 9,
+            "x": 4,
+            "y": 13
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 1,
+            "y": 8
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 0,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 1,
+            "y": 4
+        },
+        {
+            "group": "hazard",
+            "id": 0,
+            "x": 0,
+            "y": 2
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 1,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 1,
+            "y": 7
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 1,
+            "y": 5
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 0,
+            "y": 3
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 0,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 1,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 1,
+            "y": 0
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 13,
+            "y": 2
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 13,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 3
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 4
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 13,
+            "y": 5
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 13,
+            "y": 6
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 13,
+            "y": 7
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 7
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 8
+        },
+        {
+            "group": "collectable",
+            "id": 11,
+            "x": 14,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 12,
+            "x": 13,
+            "y": 9
+        },
+        {
+            "group": "collectable",
+            "id": 13,
+            "x": 13,
+            "y": 10
+        },
+        {
+            "group": "collectable",
+            "id": 14,
+            "x": 13,
+            "y": 11
+        },
+        {
+            "group": "collectable",
+            "id": 15,
+            "x": 14,
+            "y": 11
+        },
+        {
+            "group": "hazard",
+            "id": 2,
+            "x": 14,
+            "y": 12
+        },
+        {
+            "group": "collectable",
+            "id": 2,
+            "x": 13,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 1,
+            "x": 14,
+            "y": 14
+        },
+        {
+            "group": "collectable",
+            "id": 0,
+            "x": 13,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 4,
+            "x": 14,
+            "y": 13
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 13,
+            "y": 0
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 13,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 14,
+            "y": 1
+        },
+        {
+            "group": "collectable",
+            "id": 3,
+            "x": 14,
+            "y": 0
+        }
+    ]
+}

@@ -28,7 +28,7 @@ export class CollectionService {
     "spi_mult": 1,
 
     //points
-    "hp": 500,
+    "hp": 100,
     "xp": 0,
   }
 
