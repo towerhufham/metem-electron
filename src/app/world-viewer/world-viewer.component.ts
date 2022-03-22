@@ -45,7 +45,8 @@ export class WorldViewerComponent implements OnInit {
   tilesInPath: Tile[] = [];
 
   isTargeting: Spell|null = null;
-  targetingTiles: Tile[] = [];
+  targetedTiles: Tile[] = [];
+  targetedObjects: ObjectOnMap[] = [];
 
   @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
@@ -56,7 +57,8 @@ export class WorldViewerComponent implements OnInit {
 
   castSpell(spell: Spell, x: number, y: number) {
     spell.effect(this, x, y);
-    this.targetingTiles = [];
+    this.targetedTiles = [];
+    this.targetedObjects = [];
   }
 
   startCastingSpell() {
@@ -218,15 +220,28 @@ export class WorldViewerComponent implements OnInit {
   }
 
   setTargetingTiles(x: number, y: number) {
-    this.targetingTiles = [];
+    //also sets targeted objects
+    this.targetedTiles = [];
+    this.targetedObjects = [];
     if (this.isTargeting !== null) {
-      this.targetingTiles.push(this.getTileAt(x, y));
+      //add anchor tile
+      this.targetedTiles.push(this.getTileAt(x, y));
+      //add object on anchor tile if it exists
+      const o = this.getObjectAt(x, y);
+      if (o !== null && o !== this.player) {
+        this.targetedObjects.push(o);
+      }
+      //if there's an aoe, add all those tiles & objects as well
       if (this.isTargeting.aoe) {
         for (const t of this.isTargeting.aoe) {
           const tx = x + t[0];
           const ty = y + t[1];
           if (tx >= 0 && tx < WORLD_SIZE && ty >= 0 && ty < WORLD_SIZE) {
-            this.targetingTiles.push(this.getTileAt(tx, ty));
+            this.targetedTiles.push(this.getTileAt(tx, ty));
+            const o = this.getObjectAt(tx, ty);
+            if (o !== null && o !== this.player) {
+              this.targetedObjects.push(o);
+            }
           }
         }
       }

@@ -27,7 +27,7 @@ export const Fireball = new Spell (
     true,
     function(world: WorldViewerComponent, x: number, y: number) {
         //test
-        for (const t of world.targetingTiles) {
+        for (const t of world.targetedTiles) {
             world.makeObjectOnMap(YellowKey, t.x, t.y);
         }
     },
