@@ -1,6 +1,4 @@
-import { ObjectOnMap } from "./core";
 import { WorldViewerComponent } from "./world-viewer/world-viewer.component";
-import { YellowKey } from "./collectables";
 
 export class Spell {
     id: number;
@@ -26,9 +24,11 @@ export const Fireball = new Spell (
     "xp_bubble",
     true,
     function(world: WorldViewerComponent, x: number, y: number) {
-        //test
-        for (const t of world.targetedTiles) {
-            world.makeObjectOnMap(YellowKey, t.x, t.y);
+        // for (const t of world.targetedTiles) {
+        //     world.makeObjectOnMap(YellowKey, t.x, t.y);
+        // }
+        for (const o of world.targetedObjects) {
+            o.takeDamage("fire");
         }
     },
     [[-1,-1], [-1,0], [-1,1], [0,-1], [0,1], [1,-1], [1,0], [1,1]]

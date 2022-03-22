@@ -46,6 +46,11 @@ export class ObjectOnMap {
     remove() {
         this.active = false;
     }
+
+    takeDamage(element: string) {
+        //todo: weakness/resistance
+        this.remove();
+    }
 }
 
 export interface ObjectSpawn {
