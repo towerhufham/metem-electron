@@ -223,7 +223,11 @@ export class WorldViewerComponent implements OnInit {
       this.targetingTiles.push(this.getTileAt(x, y));
       if (this.isTargeting.aoe) {
         for (const t of this.isTargeting.aoe) {
-          this.targetingTiles.push(this.getTileAt(x + t[0], y + t[1]));
+          const tx = x + t[0];
+          const ty = y + t[1];
+          if (tx >= 0 && tx < WORLD_SIZE && ty >= 0 && ty < WORLD_SIZE) {
+            this.targetingTiles.push(this.getTileAt(tx, ty));
+          }
         }
       }
     }
