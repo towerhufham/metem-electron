@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { WORLD_SIZE, Tile, ObjectType, ObjectOnMap, MapData, ObjectSpawn } from "../core";
+import { WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
 import * as tileLibrary from "../tiles";
 import { ALL_COLLECTABLES, Collectable } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
@@ -7,6 +7,7 @@ import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
 import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
+import { CrossWinds } from '../spells';
 
 
 function defaultMap() {
@@ -50,6 +51,10 @@ export class WorldViewerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  testSpell() {
+    CrossWinds.effect(this, 0, 0);
+  }
+
   sendInfo(o: any | undefined) {
     let name: string | undefined = undefined;
     let img: string | undefined = undefined;
@@ -79,6 +84,10 @@ export class WorldViewerComponent implements OnInit {
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
     //don't place if there's a wall
     if (!this.getTileAt(x, y).wall) {
+      //if there's an object there that isn't the player, delete it
+      if (this.getObjectAt(x, y) !== this.player) {
+        this.getObjectAt(x, y)?.remove();
+      }
       this.mapObjects.push(new ObjectOnMap(type, x, y));
     }
   }
@@ -269,8 +278,7 @@ export class WorldViewerComponent implements OnInit {
         if (o) {
           //don't place if wall
           if (!this.getTileAt(x, y).wall) {
-            //if there's already an object, remove it
-            this.getObjectAt(x, y)?.remove()
+            //this function will check for objects already there :]
             this.makeObjectOnMap(o, x, y);
           }
         }
