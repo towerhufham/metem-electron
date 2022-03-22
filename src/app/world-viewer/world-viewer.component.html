@@ -5,7 +5,7 @@
         src="assets/img/{{t.img}}" 
         *ngFor="let t of tiles" 
         [ngStyle]="{'grid-column': t.x+1, 'grid-row':t.y+1}" 
-        [ngClass]="{'inPath': tilesInPath.includes(t)}"
+        [ngClass]="{'inPath': tilesInPath.includes(t), 'targeted': targetingTiles.includes(t)}"
         (mouseenter)="hoverHandler(t)" 
         (click)="clickHandler(t.x, t.y)"
         draggable="false"

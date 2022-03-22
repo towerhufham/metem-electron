@@ -7,7 +7,7 @@ import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
 import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
-import { CrossWinds, Fireball, Spell } from '../spells';
+import { Spell, Fireball } from '../spells';
 
 
 function defaultMap() {
@@ -45,6 +45,7 @@ export class WorldViewerComponent implements OnInit {
   tilesInPath: Tile[] = [];
 
   isTargeting: Spell|null = null;
+  targetingTiles: Tile[] = [];
 
   @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
@@ -55,6 +56,7 @@ export class WorldViewerComponent implements OnInit {
 
   castSpell(spell: Spell, x: number, y: number) {
     spell.effect(this, x, y);
+    this.targetingTiles = [];
   }
 
   startCastingSpell() {
@@ -206,7 +208,25 @@ export class WorldViewerComponent implements OnInit {
     } else {
       this.sendInfo(tile);
     }
-    this.getPlayerPathToTile(tile);
+    //if we're not casting, show path
+    if (this.isTargeting === null) {
+      this.getPlayerPathToTile(tile);
+    } else {
+      //show affected squares of spell
+      this.setTargetingTiles(tile.x, tile.y);
+    }
+  }
+
+  setTargetingTiles(x: number, y: number) {
+    this.targetingTiles = [];
+    if (this.isTargeting !== null) {
+      this.targetingTiles.push(this.getTileAt(x, y));
+      if (this.isTargeting.aoe) {
+        for (const t of this.isTargeting.aoe) {
+          this.targetingTiles.push(this.getTileAt(x + t[0], y + t[1]));
+        }
+      }
+    }
   }
 
   movePlayer(x:number, y:number): void {

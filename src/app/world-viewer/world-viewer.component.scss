@@ -17,6 +17,10 @@ div {
     filter: hue-rotate(90deg);
 }
 
+.targeted {
+    filter: hue-rotate(-90deg);
+}
+
 .tile {
     z-index: 10;
     width: 100%; 
