@@ -8,6 +8,7 @@ import { MaterialCollectsComponent } from './material-collects/material-collects
 import { AstralCollectsComponent } from './astral-collects/astral-collects.component';
 import { MapBuilderComponent } from './map-builder/map-builder.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { InfoBoxComponent } from './info-box/info-box.component';
     AstralCollectsComponent,
     MapBuilderComponent,
     InfoBoxComponent,
+    InventoryComponent,
   ],
   imports: [
     BrowserModule,

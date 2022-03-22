@@ -21,7 +21,7 @@ export class Spell {
 export const Fireball = new Spell (
     0,
     "Fireball",
-    "xp_bubble",
+    "xp_bubble.png",
     true,
     function(world: WorldViewerComponent, x: number, y: number) {
         // for (const t of world.targetedTiles) {

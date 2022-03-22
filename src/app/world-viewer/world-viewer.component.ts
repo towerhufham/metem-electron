@@ -61,6 +61,8 @@ export class WorldViewerComponent implements OnInit {
     this.targetedObjects = [];
   }
 
+  //this needs to move over to the inventory code page (so it can control both worlds)
+  //the hoverHandler() and clickHandler() will probably both be checking for status in inventory service(>)
   startCastingSpell() {
     const spell = Fireball;
     if (!spell.targeted) {
