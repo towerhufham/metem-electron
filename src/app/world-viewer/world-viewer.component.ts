@@ -7,7 +7,7 @@ import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
 import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
-import { CrossWinds } from '../spells';
+import { CrossWinds, Fireball, Spell } from '../spells';
 
 
 function defaultMap() {
@@ -44,6 +44,8 @@ export class WorldViewerComponent implements OnInit {
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
+  isTargeting: Spell|null = null;
+
   @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
   constructor(private collectionService: CollectionService, private mapService: MapService, private infoService: InfoService) { }
@@ -51,8 +53,19 @@ export class WorldViewerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  testSpell() {
-    CrossWinds.effect(this, 0, 0);
+  castSpell(spell: Spell, x: number, y: number) {
+    spell.effect(this, x, y);
+  }
+
+  startCastingSpell() {
+    const spell = Fireball;
+    if (!spell.targeted) {
+      //if the spell doesn't target, set x and y to player's coords
+      this.castSpell(spell, this.player.x, this.player.y);
+    } else {
+      //start targeting and let clickHandler() take it from here
+      this.isTargeting = spell;
+    }
   }
 
   sendInfo(o: any | undefined) {
@@ -172,9 +185,14 @@ export class WorldViewerComponent implements OnInit {
   }
 
   clickHandler(x: number, y: number) {
-    //usually move player, but sometimes build tile
+    //usually move player, but sometimes build tile or cast spell
     if (!this.mapService.inBuildingMode()) {
-      this.movePlayer(x, y);
+      if (this.isTargeting === null) {
+        this.movePlayer(x, y);
+      } else {
+        this.castSpell(this.isTargeting, x, y);
+        this.isTargeting = null;
+      }
     } else {
       this.tryBuildThing(x, y);
     }

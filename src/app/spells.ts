@@ -18,6 +18,17 @@ export class Spell {
     }
 }
 
+export const Fireball = new Spell (
+    0,
+    "Fireball",
+    "xp_bubble",
+    true,
+    function(world: WorldViewerComponent, x: number, y: number) {
+        //test
+        world.makeObjectOnMap(YellowKey, x, y);
+    }
+)
+
 export const CrossWinds = new Spell (
     0,
     "CrossWinds",
@@ -29,5 +40,4 @@ export const CrossWinds = new Spell (
     }
 )
 
-
-export const ALL_SPELLS = [CrossWinds];
+export const ALL_SPELLS = [Fireball, CrossWinds];
