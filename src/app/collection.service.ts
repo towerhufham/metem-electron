@@ -30,6 +30,14 @@ export class CollectionService {
 
   registerSpellCollect(collect: SpellCollect): void {
     this.spells.push(collect.spell);
+    this.spells.sort((a, b) => a.id - b.id);
+  }
+
+  removeSpell(spell: Spell) {
+    const i = this.spells.indexOf(spell);
+    if (i !== -1) {
+      this.spells.splice(i, 1);
+    }
   }
 
   takeDamage(n: number) {

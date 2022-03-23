@@ -21,5 +21,6 @@ export class InventoryComponent implements OnInit {
   
   startCastingSpell(spell: Spell) {
     this.targetingService.startCastingSpell(spell);
+    this.collectionService.removeSpell(spell);
   }
 }
