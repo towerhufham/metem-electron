@@ -1,14 +1,16 @@
 import { ObjectType } from "./core";
 import { CollectableKinds } from "./core";
+import { ALL_SPELLS, Spell } from "./spells";
 
-export class Collectable implements ObjectType {
+export class Pickup implements ObjectType {
     
+    //pickups increase a number in the collection
     id: number;
     name: string;
     img: string;
     kind: CollectableKinds;
     amount: number;
-    group: "collectable" = "collectable";
+    group: "pickup" = "pickup";
 
     constructor(id: number, name: string, img: string, kind: CollectableKinds, amount: number = 1) {
         this.id = id;
@@ -20,21 +22,21 @@ export class Collectable implements ObjectType {
 }
 
 //keys
-export const YellowKey = new Collectable (
+export const YellowKey = new Pickup (
     0,
     "Yellow Key",
     "yellow_key.png",
     "yellowKeys"
 )
 
-export const BlueKey = new Collectable(
+export const BlueKey = new Pickup(
     1,
     "Blue Key",
     "blue_key.png",
     "blueKeys"
 )
 
-export const RedKey = new Collectable(
+export const RedKey = new Pickup(
     2,
     "Red Key",
     "red_key.png",
@@ -42,14 +44,14 @@ export const RedKey = new Collectable(
 )
 
 //points
-export const xpPickup = new Collectable (
+export const xpPickup = new Pickup (
     3,
     "XP +1",
     "xp_bubble_small.png",
     "xp"
 )
 
-export const hpPickup = new Collectable(
+export const hpPickup = new Pickup(
     4,
     "HP +25",
     "hp_pickup.png",
@@ -57,92 +59,43 @@ export const hpPickup = new Collectable(
     25
 )
 
-//basic pickups
-export const strPickup = new Collectable(
-    5,
-    "STR +1",
-    "str.png",
-    "str"
-)
-export const dexPickup = new Collectable(
-    6,
-    "DEX +1",
-    "dex.png",
-    "dex"
-)
-export const intPickup = new Collectable(
-    7,
-    "INT +1",
-    "int.png",
-    "int"
-)
-export const vitPickup = new Collectable(
-    8,
-    "VIT +1",
-    "vit.png",
-    "vit"
-)
-export const spiPickup = new Collectable(
-    9,
-    "SPI +1",
-    "spi.png",
-    "spi"
-)
-
-//multiplier pickups
-export const Quartz = new Collectable(
-    10,
-    "Quartz",
-    "quartz.png",
-    "hp_mult"
-)
-export const Ruby = new Collectable(
-    11,
-    "Ruby",
-    "ruby.png",
-    "str_mult"
-)
-export const Emerald = new Collectable(
-    12,
-    "Emerald",
-    "emerald.png",
-    "dex_mult"
-)
-export const Diamond = new Collectable(
-    13,
-    "Diamond",
-    "diamond.png",
-    "int_mult"
-)
-export const Topaz = new Collectable(
-    14,
-    "Topaz",
-    "topaz.png",
-    "vit_mult"
-)
-export const Amethyst = new Collectable(
-    15,
-    "Amethyst",
-    "amethyst.png",
-    "spi_mult"
-)
-
-
-export const ALL_COLLECTABLES: Collectable[] = [
+export const ALL_PICKUPS: Pickup[] = [
     YellowKey,
     BlueKey,
     RedKey,
     xpPickup,
     hpPickup,
-    strPickup,
-    dexPickup,
-    intPickup,
-    vitPickup,
-    spiPickup,
-    Quartz,
-    Ruby,
-    Emerald,
-    Diamond,
-    Topaz,
-    Amethyst
 ]
+
+
+
+export class SpellCollect implements ObjectType {
+    
+    //pickups increase a number in the collection
+    id: number;
+    name: string;
+    img: string;
+    spell: Spell;
+    group: "spellCollect" = "spellCollect";
+
+    constructor(id: number, name: string, img: string, spell: Spell) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.spell = spell;
+    }
+}
+
+//this turns every spell in ALL_SPELLS into collects
+let spellCollects: SpellCollect[] = [];
+ALL_SPELLS.forEach((spell, index) => {
+        spellCollects.push(new SpellCollect(
+            index,
+            spell.name,
+            spell.img,
+            spell
+        ))
+    }
+);
+
+export const ALL_SPELLCOLLECTS: SpellCollect[] = spellCollects;

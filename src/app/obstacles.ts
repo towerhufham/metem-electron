@@ -102,45 +102,46 @@ export class Hazard implements ObjectType {
     }
 }
 
-//HAZARDS
-export const Door15 = new Hazard(
-    0,
-    "Stuck Door",
-    "door.png",
-    "str",
-    15
-)
+// //HAZARDS
+// export const Door15 = new Hazard(
+//     0,
+//     "Stuck Door",
+//     "door.png",
+//     "str",
+//     15
+// )
 
-export const Pit15 = new Hazard(
-    1,
-    "Chasm",
-    "chasm.png",
-    "dex",
-    15
-)
+// export const Pit15 = new Hazard(
+//     1,
+//     "Chasm",
+//     "chasm.png",
+//     "dex",
+//     15
+// )
 
-export const Riddle15 = new Hazard(
-    2,
-    "Riddle",
-    "riddle.png",
-    "int",
-    15
-)
+// export const Riddle15 = new Hazard(
+//     2,
+//     "Riddle",
+//     "riddle.png",
+//     "int",
+//     15
+// )
 
-export const Spikes15 = new Hazard(
-    3,
-    "Spike Trap",
-    "spikes.png",
-    "vit",
-    15
-)
+// export const Spikes15 = new Hazard(
+//     3,
+//     "Spike Trap",
+//     "spikes.png",
+//     "vit",
+//     15
+// )
 
-export const Magic15 = new Hazard(
-    4,
-    "Magic Circle",
-    "magic_circle.png",
-    "spi",
-    15
-)
+// export const Magic15 = new Hazard(
+//     4,
+//     "Magic Circle",
+//     "magic_circle.png",
+//     "spi",
+//     15
+// )
 
-export const ALL_HAZARDS = [Door15, Pit15, Riddle15, Spikes15, Magic15];
+// export const ALL_HAZARDS = [Door15, Pit15, Riddle15, Spikes15, Magic15];
+export const ALL_HAZARDS = [];

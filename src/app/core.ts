@@ -3,8 +3,6 @@ import { CollectionService } from "./collection.service";
 export const WORLD_SIZE = 15;
 
 export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
-    "str" | "dex" | "int" | "vit" | "spi" |
-    "str_mult" | "dex_mult" | "int_mult" | "vit_mult" | "spi_mult" | "hp_mult" |
     "hp" | "xp";
 
 export interface Tile {
@@ -20,7 +18,7 @@ export interface ObjectType {
     name: string;
     id: number;
     img: string;
-    group: "collectable"|"gate"|"hazard"|"player";
+    group: "pickup"|"spellCollect"|"gate"|"hazard"|"player";
     interact?: (o: ObjectOnMap, cs: CollectionService) => void;
 }
 
@@ -54,7 +52,7 @@ export class ObjectOnMap {
 }
 
 export interface ObjectSpawn {
-    group: "collectable"|"gate"|"hazard"|"player", //should never actually be player
+    group: "pickup"|"spellCollect"|"gate"|"hazard"|"player", //should never actually be player
     id: number,
     x: number,
     y: number

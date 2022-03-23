@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
 import * as tileLibrary from "../tiles";
-import { ALL_COLLECTABLES, Collectable } from '../collectables';
+import { ALL_PICKUPS, ALL_SPELLCOLLECTS } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
@@ -122,8 +122,10 @@ export class WorldViewerComponent implements OnInit {
 
   spawnObjectOnMap(spawn: ObjectSpawn) {
     //get item from the ALL_ lists
-    if (spawn.group === "collectable") {
-      this.makeObjectOnMap(ALL_COLLECTABLES[spawn.id], spawn.x, spawn.y);
+    if (spawn.group === "pickup") {
+      this.makeObjectOnMap(ALL_PICKUPS[spawn.id], spawn.x, spawn.y);
+    } else if (spawn.group === "spellCollect") {
+      this.makeObjectOnMap(ALL_SPELLCOLLECTS[spawn.id], spawn.x, spawn.y);
     } else if (spawn.group === "gate") {
       this.makeObjectOnMap(ALL_GATES[spawn.id], spawn.x, spawn.y);
     } else if (spawn.group === "hazard") {
@@ -143,7 +145,7 @@ export class WorldViewerComponent implements OnInit {
       }
     }
     for (const o of this.getActiveObjects()) {
-      if (o.type.group !== "collectable" && o !== this.player && o !== ignore) {
+      if (o.type.group !== "pickup" && o.type.group !== "spellCollect" && o !== this.player && o !== ignore) {
         grid.setWalkableAt(o.x, o.y, false)
       }
     }
@@ -264,10 +266,16 @@ export class WorldViewerComponent implements OnInit {
       for (const t of this.tilesInPath) {
         const o = this.getObjectAt(t.x, t.y);
         if (o && o != this.player) {
-          if (o.type instanceof Collectable) {
-            //collect
+          if (o.type.group === "pickup") {
+            //pickup
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
-            this.collectionService.registerCollection(o.type);
+            // @ts-ignore
+            this.collectionService.registerPickup(o.type);
+          } else if (o.type.group === "spellCollect") {
+            //spell
+            this.mapObjects = this.mapObjects.filter(ob => ob !== o);
+            // @ts-ignore
+            this.collectionService.registerSpellCollect(o.type);
           }
         }
       }

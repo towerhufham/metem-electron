@@ -17,7 +17,7 @@
         src="assets/img/{{o.type.img}}"
         *ngFor="let o of getActiveObjects()" 
         [ngStyle]="{'grid-column': o.x+1, 'grid-row': o.y+1, 'animation-delay': ((19-o.x)+(19-o.y))*-100 + 'ms'}" 
-        [ngClass]="{'collectable': o.type.group==='collectable', 'targeted': targetedObjects.includes(o)}"
+        [ngClass]="{'collectable': o.type.group==='pickup'||o.type.group==='spellCollect', 'targeted': targetedObjects.includes(o)}"
         draggable="false"
     >
 </div>
