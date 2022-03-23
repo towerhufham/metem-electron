@@ -18,7 +18,7 @@ export interface ObjectType {
     name: string;
     id: number;
     img: string;
-    group: "pickup"|"spellCollect"|"gate"|"hazard"|"player";
+    group: "pickup"|"spellCollect"|"gate"|"enemy"|"player";
     interact?: (o: ObjectOnMap, cs: CollectionService) => void;
 }
 
@@ -52,7 +52,7 @@ export class ObjectOnMap {
 }
 
 export interface ObjectSpawn {
-    group: "pickup"|"spellCollect"|"gate"|"hazard"|"player", //should never actually be player
+    group: "pickup"|"spellCollect"|"gate"|"enemy"|"player", //should never actually be player
     id: number,
     x: number,
     y: number

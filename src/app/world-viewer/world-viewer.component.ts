@@ -6,7 +6,7 @@ import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
-import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
+import { ALL_GATES, ALL_ENEMIES } from '../obstacles';
 import { Spell } from '../spells';
 import { TargetingService } from '../targeting.service';
 
@@ -128,8 +128,8 @@ export class WorldViewerComponent implements OnInit {
       this.makeObjectOnMap(ALL_SPELLCOLLECTS[spawn.id], spawn.x, spawn.y);
     } else if (spawn.group === "gate") {
       this.makeObjectOnMap(ALL_GATES[spawn.id], spawn.x, spawn.y);
-    } else if (spawn.group === "hazard") {
-      this.makeObjectOnMap(ALL_HAZARDS[spawn.id], spawn.x, spawn.y);
+    } else if (spawn.group === "enemy") {
+      this.makeObjectOnMap(ALL_ENEMIES[spawn.id], spawn.x, spawn.y);
     } else {
       //unknown object
       alert("unknown object group for " + spawn);

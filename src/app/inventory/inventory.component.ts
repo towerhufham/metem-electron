@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from '../collection.service';
-import { Fireball, Spell } from '../spells';
+import { Spell } from '../spells';
 import { TargetingService } from '../targeting.service';
 
 @Component({

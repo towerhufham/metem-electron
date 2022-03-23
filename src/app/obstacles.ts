@@ -77,71 +77,32 @@ export const XpGate5 = new Gate(
 export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate1, XpGate2, XpGate5];
 
 
-export class Hazard implements ObjectType {
+export class Enemy implements ObjectType {
 
     id: number;
     name: string;
     img: string;
-    kind: CollectableKinds;
-    amount: number;
-    group: "hazard" = "hazard";
+    damage: number;
+    group: "enemy" = "enemy";
 
-    constructor(id:number, name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+    constructor(id:number, name: string, img: string, damage: number) {
         this.id = id;
         this.name = name;
         this.img = img;
-        this.kind = kind;
-        this.amount = amount;
+        this.damage = damage;
     }
 
     interact(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.collects[this.kind] < this.amount) {
-            cs.takeDamage(this.amount - cs.collects[this.kind])
-        }
+        cs.takeDamage(this.damage);
         o.remove()
     }
 }
 
-// //HAZARDS
-// export const Door15 = new Hazard(
-//     0,
-//     "Stuck Door",
-//     "door.png",
-//     "str",
-//     15
-// )
+export const Slime = new Enemy (
+    0,
+    "Slime",
+    "monster-test.gif",
+    15
+)
 
-// export const Pit15 = new Hazard(
-//     1,
-//     "Chasm",
-//     "chasm.png",
-//     "dex",
-//     15
-// )
-
-// export const Riddle15 = new Hazard(
-//     2,
-//     "Riddle",
-//     "riddle.png",
-//     "int",
-//     15
-// )
-
-// export const Spikes15 = new Hazard(
-//     3,
-//     "Spike Trap",
-//     "spikes.png",
-//     "vit",
-//     15
-// )
-
-// export const Magic15 = new Hazard(
-//     4,
-//     "Magic Circle",
-//     "magic_circle.png",
-//     "spi",
-//     15
-// )
-
-// export const ALL_HAZARDS = [Door15, Pit15, Riddle15, Spikes15, Magic15];
-export const ALL_HAZARDS = [];
+export const ALL_ENEMIES = [Slime];
