@@ -38,7 +38,7 @@ export class WorldViewerComponent implements OnInit {
   @Input() debugMode: boolean = false;
 
   tiles: Tile[] = defaultMap();
-  player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "player.png", group: "player"}, 7, 7);
+  player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "gnome.gif", group: "player"}, 7, 7);
   mapObjects: ObjectOnMap[] = [this.player];
 
   pathfindingGrid: Grid = this.makePathfindingGrid();
