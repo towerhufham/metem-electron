@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fireball, Spell } from '../spells';
+import { TargetingService } from '../targeting.service';
 
 @Component({
   selector: 'app-inventory',
@@ -10,12 +11,16 @@ export class InventoryComponent implements OnInit {
 
   spells: Spell[] = [Fireball, Fireball, Fireball];
 
-  constructor() { }
+  constructor(private targetingService: TargetingService) { }
 
   ngOnInit(): void {
   }
 
   addSpell(spell: Spell) {
     this.spells.push(spell);
+  }
+
+  startCastingSpell(spell: Spell) {
+    this.targetingService.startCastingSpell(spell);
   }
 }

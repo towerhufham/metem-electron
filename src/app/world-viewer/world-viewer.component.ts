@@ -7,7 +7,8 @@ import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
 import { ALL_GATES, ALL_HAZARDS } from '../obstacles';
-import { Spell, Fireball } from '../spells';
+import { Spell } from '../spells';
+import { TargetingService } from '../targeting.service';
 
 
 function defaultMap() {
@@ -44,34 +45,42 @@ export class WorldViewerComponent implements OnInit {
   finder = new BreadthFirstFinder();
   tilesInPath: Tile[] = [];
 
-  isTargeting: Spell|null = null;
   targetedTiles: Tile[] = [];
   targetedObjects: ObjectOnMap[] = [];
 
   @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
-  constructor(private collectionService: CollectionService, private mapService: MapService, private infoService: InfoService) { }
+  constructor(
+    private collectionService: CollectionService, 
+    private mapService: MapService, 
+    private infoService: InfoService, 
+    private targetingService: TargetingService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  castSpell(spell: Spell, x: number, y: number) {
-    spell.effect(this, x, y);
+  isTargeting(): Spell|null {
+    return this.targetingService.getTargeting();
+  }
+
+  setTargeting(target: Spell|null) {
+    this.targetingService.setTargeting(target);
+  }
+
+  mouseLeave() {
+    this.clearPath();
+    this.clearTargeted();
+  }
+
+  clearTargeted() {
     this.targetedTiles = [];
     this.targetedObjects = [];
   }
 
-  //this needs to move over to the inventory code page (so it can control both worlds)
-  //the hoverHandler() and clickHandler() will probably both be checking for status in inventory service(>)
-  startCastingSpell() {
-    const spell = Fireball;
-    if (!spell.targeted) {
-      //if the spell doesn't target, set x and y to player's coords
-      this.castSpell(spell, this.player.x, this.player.y);
-    } else {
-      //start targeting and let clickHandler() take it from here
-      this.isTargeting = spell;
-    }
+  castSpell(spell: Spell, x: number, y: number) {
+    spell.effect(this, x, y);
+    this.clearTargeted();
   }
 
   sendInfo(o: any | undefined) {
@@ -193,11 +202,11 @@ export class WorldViewerComponent implements OnInit {
   clickHandler(x: number, y: number) {
     //usually move player, but sometimes build tile or cast spell
     if (!this.mapService.inBuildingMode()) {
-      if (this.isTargeting === null) {
+      if (this.isTargeting() === null) {
         this.movePlayer(x, y);
       } else {
-        this.castSpell(this.isTargeting, x, y);
-        this.isTargeting = null;
+        this.castSpell(this.isTargeting()!, x, y);
+        this.setTargeting(null);
       }
     } else {
       this.tryBuildThing(x, y);
@@ -213,7 +222,7 @@ export class WorldViewerComponent implements OnInit {
       this.sendInfo(tile);
     }
     //if we're not casting, show path
-    if (this.isTargeting === null) {
+    if (this.isTargeting() === null) {
       this.getPlayerPathToTile(tile);
     } else {
       //show affected squares of spell
@@ -223,9 +232,8 @@ export class WorldViewerComponent implements OnInit {
 
   setTargetingTiles(x: number, y: number) {
     //also sets targeted objects
-    this.targetedTiles = [];
-    this.targetedObjects = [];
-    if (this.isTargeting !== null) {
+    this.clearTargeted();
+    if (this.isTargeting() !== null) {
       //add anchor tile
       this.targetedTiles.push(this.getTileAt(x, y));
       //add object on anchor tile if it exists
@@ -234,8 +242,8 @@ export class WorldViewerComponent implements OnInit {
         this.targetedObjects.push(o);
       }
       //if there's an aoe, add all those tiles & objects as well
-      if (this.isTargeting.aoe) {
-        for (const t of this.isTargeting.aoe) {
+      if (this.isTargeting()!.aoe) {
+        for (const t of this.isTargeting()!.aoe!) {
           const tx = x + t[0];
           const ty = y + t[1];
           if (tx >= 0 && tx < WORLD_SIZE && ty >= 0 && ty < WORLD_SIZE) {
