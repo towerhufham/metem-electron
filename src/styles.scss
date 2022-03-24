@@ -18,3 +18,16 @@
 * {
 	font-family: Antiquity;
 }
+
+body {
+	margin: 0px;
+}
+
+.middle-box-section {
+    width: 200px;
+    height: 240px;
+    border: 2px royalblue solid;
+    box-sizing: border-box;
+	background-color: lightskyblue;
+	// margin: 2px 0;
+}

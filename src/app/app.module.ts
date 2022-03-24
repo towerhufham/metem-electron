@@ -9,6 +9,7 @@ import { AstralCollectsComponent } from './astral-collects/astral-collects.compo
 import { MapBuilderComponent } from './map-builder/map-builder.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { SpellInventoryComponent } from './spell-inventory/spell-inventory.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { InventoryComponent } from './inventory/inventory.component';
     MapBuilderComponent,
     InfoBoxComponent,
     InventoryComponent,
+    SpellInventoryComponent,
   ],
   imports: [
     BrowserModule,

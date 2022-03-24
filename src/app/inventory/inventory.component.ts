@@ -10,17 +10,28 @@ import { TargetingService } from '../targeting.service';
 })
 export class InventoryComponent implements OnInit {
 
-  constructor(private targetingService: TargetingService, private collectionService: CollectionService) { }
+  constructor(private collectionService: CollectionService) { }
 
   ngOnInit(): void {
   }
 
-  getSpells(): Spell[] {
-    return this.collectionService.spells;
+  getHp() {
+    return this.collectionService.collects.hp;
   }
-  
-  startCastingSpell(spell: Spell) {
-    this.targetingService.startCastingSpell(spell);
-    this.collectionService.removeSpell(spell);
+
+  getXp() {
+    return this.collectionService.collects.xp;
+  }
+
+  getYellowKeys() {
+    return this.collectionService.collects.yellowKeys;
+  }
+
+  getBlueKeys() {
+    return this.collectionService.collects.blueKeys;
+  }
+
+  getRedKeys() {
+    return this.collectionService.collects.redKeys;
   }
 }
