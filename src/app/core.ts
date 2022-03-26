@@ -11,6 +11,7 @@ export interface Tile {
     x: number;
     y: number;
     wall: boolean;
+    weakness?: string;
 }
 
 export interface ObjectType {

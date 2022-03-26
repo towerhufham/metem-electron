@@ -1,13 +1,18 @@
 import { Tile } from "./core";
 
 export function makeTile(type: TileType, x: number, y: number): Tile {
-    return {name: type.name, img: type.img, wall: type.wall, x: x, y: y};
+    if (type.weakness) {
+        return {name: type.name, img: type.img, wall: type.wall, weakness: type.weakness, x: x, y: y};
+    } else {
+        return {name: type.name, img: type.img, wall: type.wall, x: x, y: y};
+    } 
 }
 
 export interface TileType {
     name: string,
     img: string,
-    wall: boolean
+    wall: boolean,
+    weakness?: string
 }
 
 export const GrassFloor: TileType = {
@@ -58,7 +63,49 @@ export const PinkWall: TileType = {
     wall: true
 }
 
+// SPELL WALLS
 
+export const FireSpellWall: TileType = {
+    name: "Fire Spell Wall",
+    img: "fire_spell_wall.png",
+    wall: true,
+    weakness: "fire"
+}
+
+export const EarthSpellWall: TileType = {
+    name: "Earth Spell Wall",
+    img: "earth_spell_wall.png",
+    wall: true,
+    weakness: "earth"
+}
+
+export const WaterSpellWall: TileType = {
+    name: "Water Spell Wall",
+    img: "water_spell_wall.png",
+    wall: true,
+    weakness: "water"
+}
+
+export const WindSpellWall: TileType = {
+    name: "Wind Spell Wall",
+    img: "wind_spell_wall.png",
+    wall: true,
+    weakness: "wind"
+}
+
+export const IceSpellWall: TileType = {
+    name: "Ice Spell Wall",
+    img: "ice_spell_wall.png",
+    wall: true,
+    weakness: "ice"
+}
+
+export const LightSpellWall: TileType = {
+    name: "Light Spell Wall",
+    img: "light_spell_wall.png",
+    wall: true,
+    weakness: "light"
+}
 
 export const ALL_TILES: TileType[] = [
     GrassFloor,
@@ -68,5 +115,11 @@ export const ALL_TILES: TileType[] = [
     DarkDungeonFloor,
     DarkDungeonWall,
     PinkFloor,
-    PinkWall
+    PinkWall,
+    FireSpellWall,
+    EarthSpellWall,
+    WaterSpellWall,
+    WindSpellWall,
+    IceSpellWall,
+    LightSpellWall
 ];

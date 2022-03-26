@@ -232,16 +232,29 @@ export class WorldViewerComponent implements OnInit {
     }
   }
 
-  setTargetingTiles(x: number, y: number) {
+  setTargetingTiles(px: number, py: number) {
     //also sets targeted objects
     this.clearTargeted();
     if (this.isTargeting() !== null) {
-      //add anchor tile
-      this.targetedTiles.push(this.getTileAt(x, y));
-      //add object on anchor tile if it exists
-      const o = this.getObjectAt(x, y);
-      if (o !== null && o !== this.player) {
-        this.targetedObjects.push(o);
+      //if targeted, use pointer x and y
+      //if untargeted, use player's position as x and y
+      let x = 0;
+      let y = 0;
+      if (this.isTargeting()?.targeted) {
+        x = px;
+        y = py;
+      } else {
+        x = this.player.x;
+        y = this.player.y;
+      }
+      //add anchor tile, unless the flag is set not to
+      if (this.isTargeting()?.includeAnchor) {
+        this.targetedTiles.push(this.getTileAt(x, y));
+        //add object on anchor tile if it exists
+        const o = this.getObjectAt(x, y);
+        if (o !== null && o !== this.player) {
+          this.targetedObjects.push(o);
+        }
       }
       //if there's an aoe, add all those tiles & objects as well
       if (this.isTargeting()!.aoe) {
