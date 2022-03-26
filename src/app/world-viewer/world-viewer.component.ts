@@ -312,6 +312,16 @@ export class WorldViewerComponent implements OnInit {
     }
   }
 
+  findDownStairs(): Tile|null  {
+    //returns the the first found DownStairs
+    for (const t of this.tiles) {
+      if (t.name === "Stairs Down") {
+        return t;
+      } 
+    }
+    return null;
+  }
+
   getMapJSON() {
     //have to convert actual objects on map to object spawns
     let spawns: ObjectSpawn[] = []
@@ -335,6 +345,12 @@ export class WorldViewerComponent implements OnInit {
           currentMap.mapObjects = [player];
           for (const s of x.spawns) {
             currentMap.spawnObjectOnMap(s);
+          }
+          //put player on DownStairs
+          const down = currentMap.findDownStairs();
+          if (down) {
+            currentMap.player.x = down.x;
+            currentMap.player.y = down.y;
           }
         }
       });
