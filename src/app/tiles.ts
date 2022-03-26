@@ -15,6 +15,22 @@ export interface TileType {
     weakness?: string
 }
 
+//STAIRS
+
+export const DownStairs: TileType = {
+    name: "Stairs Down",
+    img: "down_stairs.png",
+    wall: false,
+}
+
+export const UpStairs: TileType = {
+    name: "Stairs Up",
+    img: "up_stairs.png",
+    wall: false,
+}
+
+//NORMAL TILES
+
 export const GrassFloor: TileType = {
     name: "Grass Floor",
     img: "grass_floor.png",
@@ -108,6 +124,8 @@ export const LightSpellWall: TileType = {
 }
 
 export const ALL_TILES: TileType[] = [
+    DownStairs,
+    UpStairs,
     GrassFloor,
     DungeonWall,
     IceFloor,

@@ -20,8 +20,10 @@ export class Gate implements ObjectType {
 
     interact(o: ObjectOnMap, cs: CollectionService) {
         if (cs.collects[this.kind] >= this.amount) {
-            alert("Opening gate!");
-            cs.collects[this.kind] -= this.amount;
+            //if xp, don't remove it
+            if (this.kind !== "xp") {
+                cs.collects[this.kind] -= this.amount;
+            }
             o.remove();
         } else {
             alert(`Not enough ${this.kind}!`);
@@ -51,30 +53,31 @@ export const RedKeyGate = new Gate(
     "redKeys"
 )
 
-export const XpGate1 = new Gate(
+export const XpGate25 = new Gate(
     3,
-    "1 XP Gate",
-    "xp_gate_1.png",
-    "xp"
+    "25 XP Gate",
+    "xp_gate_25.png",
+    "xp",
+    25
 )
 
-export const XpGate2 = new Gate(
+export const XpGate50 = new Gate(
     4,
-    "2 XP Gate",
-    "xp_gate_2.png",
+    "50 XP Gate",
+    "xp_gate_50.png",
     "xp",
-    2
+    50
 )
 
-export const XpGate5 = new Gate(
+export const XpGate75 = new Gate(
     5,
-    "5 XP Gate",
-    "xp_gate_5.png",
+    "75 XP Gate",
+    "xp_gate_75.png",
     "xp",
-    5
+    75
 )
 
-export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate1, XpGate2, XpGate5];
+export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate25, XpGate50, XpGate75];
 
 
 export class Enemy implements ObjectType {
