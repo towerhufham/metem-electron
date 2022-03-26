@@ -47,9 +47,14 @@ export class ObjectOnMap {
     }
 
     takeDamage(element: string) {
-        //todo: weakness/resistance
         if (this.type.group !== "gate") {
-            this.remove();
+            //check for immunity
+            if (this.type.group === "enemy") {
+                // @ts-ignore
+                if (this.type.immunity != element) {
+                    this.remove();
+                }
+            }
         }
     }
 }

@@ -83,13 +83,15 @@ export class Enemy implements ObjectType {
     name: string;
     img: string;
     damage: number;
+    immunity?: string;
     group: "enemy" = "enemy";
 
-    constructor(id:number, name: string, img: string, damage: number) {
+    constructor(id:number, name: string, img: string, damage: number, immunity?: string) {
         this.id = id;
         this.name = name;
         this.img = img;
         this.damage = damage;
+        this.immunity = immunity;
     }
 
     interact(o: ObjectOnMap, cs: CollectionService) {
@@ -105,4 +107,52 @@ export const Slime = new Enemy (
     15
 )
 
-export const ALL_ENEMIES = [Slime];
+export const Wisp = new Enemy (
+    0,
+    "Wisp",
+    "wisp.gif",
+    15,
+    "fire"
+)
+
+export const RockElemental = new Enemy (
+    0,
+    "Rock Elemental",
+    "rock_elemental.gif",
+    15,
+    "earth"
+)
+
+export const Crab = new Enemy (
+    0,
+    "Crab",
+    "crab.gif",
+    15,
+    "water"
+)
+
+export const Bat = new Enemy (
+    0,
+    "Bat",
+    "bat.gif",
+    15,
+    "wind"
+)
+
+export const IceSlug = new Enemy (
+    0,
+    "Ice Slug",
+    "ice_slug.gif",
+    15,
+    "ice"
+)
+
+export const Machine = new Enemy (
+    0,
+    "Machine",
+    "machine.gif",
+    15,
+    "light"
+)
+
+export const ALL_ENEMIES = [Slime, Wisp, RockElemental, Crab, Bat, IceSlug, Machine];
