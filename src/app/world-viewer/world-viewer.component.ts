@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
+import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
 import * as tileLibrary from "../tiles";
 import { ALL_PICKUPS, ALL_SPELLCOLLECTS } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
@@ -35,7 +35,8 @@ function defaultMap() {
 })
 export class WorldViewerComponent implements OnInit {
 
-  @Input() debugMode: boolean = false;
+  DEBUG = DEBUG;
+  // @Input() debugMode: boolean = false;
 
   tiles: Tile[] = defaultMap();
   player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "gnome.gif", group: "player"}, 7, 7);

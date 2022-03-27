@@ -1,12 +1,12 @@
 <div id="root">
-    <app-map-builder *ngIf="debugMode"></app-map-builder>
+    <app-map-builder *ngIf="DEBUG"></app-map-builder>
     <div id="worldHolder">
-        <app-world-viewer [debugMode]="debugMode" id="materialWorld"></app-world-viewer>
+        <app-world-viewer id="materialWorld"></app-world-viewer>
         <div id="middle-column">
             <app-info-box></app-info-box>
             <app-inventory></app-inventory>
             <app-spell-inventory></app-spell-inventory>
         </div>
-        <app-world-viewer [debugMode]="debugMode" id="astralWorld"></app-world-viewer>
+        <app-world-viewer id="astralWorld"></app-world-viewer>
     </div>
 </div>

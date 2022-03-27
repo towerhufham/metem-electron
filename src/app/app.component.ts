@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DEBUG } from './core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'metem';
-  debugMode = true;
+  DEBUG = DEBUG;
 }
