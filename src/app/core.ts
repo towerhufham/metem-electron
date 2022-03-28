@@ -7,6 +7,16 @@ export const WORLD_SIZE = 15;
 export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
     "hp" | "xp";
 
+export type Side = "left" | "right"
+
+export function otherSide(side: Side): Side {
+    if (side === "left") {
+        return "right";
+    } else {
+        return "left";
+    }
+}
+
 export interface Tile {
     name: string;
     img: string;
@@ -22,7 +32,7 @@ export interface ObjectType {
     id: number;
     img: string;
     group: "pickup"|"spellCollect"|"gate"|"enemy"|"player";
-    interact?: (o: ObjectOnMap, cs: CollectionService) => void;
+    interact?: (side: Side, o: ObjectOnMap, cs: CollectionService) => void;
 }
 
 export class ObjectOnMap {

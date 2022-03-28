@@ -1,6 +1,22 @@
-div {
+#info-box {
+    width: 308px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
+
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+h2, p {
+    margin: 0;
+}
+
 img {
     width: 48px;
     height: 48px;

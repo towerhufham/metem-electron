@@ -5,6 +5,7 @@ img {
 }
 
 #inventory {
+    width: 570px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +13,7 @@ img {
 }
 
 #inventory div {
-    gap: 16px;
+    gap: 8px;
     display: flex;
     flex-direction: row;
 }

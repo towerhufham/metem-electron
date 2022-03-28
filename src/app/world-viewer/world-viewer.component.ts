@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
+import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType, Side } from "../core";
 import * as tileLibrary from "../tiles";
 import { ALL_PICKUPS, ALL_SPELLCOLLECTS } from '../collectables';
 import { Grid, BreadthFirstFinder } from "pathfinding";
@@ -36,7 +36,7 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   DEBUG = DEBUG;
-  // @Input() debugMode: boolean = false;
+  @Input() side: Side = "left";
 
   tiles: Tile[] = defaultMap();
   player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "gnome.gif", group: "player"}, 7, 7);
@@ -284,12 +284,12 @@ export class WorldViewerComponent implements OnInit {
             //pickup
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
             // @ts-ignore
-            this.collectionService.registerPickup(o.type);
+            this.collectionService.registerPickup(this.side, o.type);
           } else if (o.type.group === "spellCollect") {
             //spell
             this.mapObjects = this.mapObjects.filter(ob => ob !== o);
             // @ts-ignore
-            this.collectionService.registerSpellCollect(o.type);
+            this.collectionService.registerSpellCollect(this.side, o.type);
           }
         }
       }
@@ -298,7 +298,7 @@ export class WorldViewerComponent implements OnInit {
       if (o) {
         if (o.type.interact && o.active) {
           //interact
-          o.type.interact(o, this.collectionService);
+          o.type.interact(this.side, o, this.collectionService);
           if (o.active) {
             //if the object is still there after interacting, place player just before it
             const semiFinalStep = this.tilesInPath[this.tilesInPath.length - 2];
