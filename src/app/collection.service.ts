@@ -48,6 +48,10 @@ export class CollectionService {
     const kind = collect.kind;
     const amount = collect.amount;
     this.collects[otherSide(side)].pickups[kind] += amount;
+    //xp is shared between both boards
+    if (kind === "xp") {
+      this.collects[side].pickups[kind] += amount;
+    }
   }
 
   registerSpellCollect(side: Side, collect: SpellCollect): void {
