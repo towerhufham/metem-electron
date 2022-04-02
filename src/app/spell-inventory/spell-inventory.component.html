@@ -1,0 +1,5 @@
+<div id="spell-inventory" class="middle-box-section">
+    <div>
+        <p class="iconLabel"><img *ngFor="let spell of getSpells();" class="icon" src="assets/img/{{spell.img}}" (click)="startCastingSpell(spell)" /></p>
+    </div>
+</div>

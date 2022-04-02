@@ -1,22 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from '../collection.service';
-import { Spell } from '../spells';
-import { TargetingService } from '../targeting.service';
 
 @Component({
-  selector: 'app-inventory',
-  templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.scss']
+  selector: 'app-astral-collects',
+  templateUrl: './astral-collects.component.html',
+  styleUrls: ['./astral-collects.component.scss']
 })
-export class InventoryComponent implements OnInit {
+export class AstralCollectsComponent implements OnInit {
 
   constructor(private collectionService: CollectionService) { }
 
   ngOnInit(): void {
-  }
-
-  getHp() {
-    return this.collectionService.collects.hp;
   }
 
   getXp() {

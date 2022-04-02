@@ -1,0 +1,24 @@
+#holder {
+    border: 7px goldenrod solid;
+    border-radius: 10%;
+    background-color: peachpuff;
+    column-gap: 32px;
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    width: 32px; 
+    height: 32px; 
+    image-rendering: pixelated;
+}
+
+.iconLabel {
+    font-size: 2rem;
+}

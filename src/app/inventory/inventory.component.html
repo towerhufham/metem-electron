@@ -1,12 +1,13 @@
-<div id="inventory" class="bottom-bar-section">
+<div id="inventory" class="middle-box-section">
     <div>
         <p class="iconLabel"><img class="icon" src="assets/img/hp_pickup.png"> {{getHp()}}</p>
         <p class="iconLabel"><img class="icon" src="assets/img/xp_bubble_small.png"> {{getXp()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/yellow_key.png"> {{getYellowKeys()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/blue_key.png"> {{getBlueKeys()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/red_key.png"> {{getRedKeys()}}</p>
     </div>
     <div>
-        <p class="iconLabel"><img *ngFor="let spell of getSpells();" class="icon" src="assets/img/{{spell.img}}" (click)="startCastingSpell(spell)" /></p>
+        <p class="iconLabel"><img class="icon" src="assets/img/yellow_key.png"> {{getYellowKeys()}}</p>
+        <p class="iconLabel"><img class="icon" src="assets/img/blue_key.png"> {{getBlueKeys()}}</p>
+    </div>
+    <div>
+        <p class="iconLabel"><img class="icon" src="assets/img/red_key.png"> {{getRedKeys()}}</p>
     </div>
 </div>

@@ -1,10 +1,5 @@
-<div id="info-box" class="bottom-bar-section">
-    <div>
-        <h2 *ngIf="getName()" id="infoName">{{getName()}}</h2>
-        <img *ngIf="getImg()" id="infoImage" src="assets/img/{{getImg()}}">
-    </div>
-    <div>
-        <!-- <p *ngIf="getDescription()" id="infoDescription">{{getDescription()}}</p> -->
-        <p id="infoDescription">description</p>
-    </div>
+<div class="middle-box-section">
+    <h2 *ngIf="getName()" id="infoName">{{getName()}}</h2>
+    <img *ngIf="getImg()" id="infoImage" src="assets/img/{{getImg()}}">
+    <p *ngIf="getDescription()" id="infoDescription">{{getDescription()}}</p>
 </div>

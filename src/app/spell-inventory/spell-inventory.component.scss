@@ -4,17 +4,18 @@ img {
     image-rendering: pixelated;
 }
 
-#inventory {
+#spell-inventory {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-#inventory div {
+#spell-inventory div {
     gap: 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    float: right;
 }
 
 .icon {
@@ -24,6 +25,6 @@ img {
 }
 
 .iconLabel {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 0px;
 }

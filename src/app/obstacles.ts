@@ -1,5 +1,5 @@
 import { CollectionService } from "./collection.service";
-import { CollectableKinds, ObjectOnMap, ObjectType, Side } from "./core"
+import { CollectableKinds, ObjectOnMap, ObjectType } from "./core"
 
 export class Gate implements ObjectType {
 
@@ -18,11 +18,11 @@ export class Gate implements ObjectType {
         this.amount = amount;
     }
 
-    interact(side: Side, o: ObjectOnMap, cs: CollectionService) {
-        if (cs.getPickups(side, this.kind) >= this.amount) {
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.collects[this.kind] >= this.amount) {
             //if xp, don't remove it
             if (this.kind !== "xp") {
-                cs.collects[side].pickups[this.kind] -= this.amount;
+                cs.collects[this.kind] -= this.amount;
             }
             o.remove();
         } else {
@@ -97,8 +97,8 @@ export class Enemy implements ObjectType {
         this.immunity = immunity;
     }
 
-    interact(side: Side, o: ObjectOnMap, cs: CollectionService) {
-        cs.takeDamage(side, this.damage);
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        cs.takeDamage(this.damage);
         o.remove()
     }
 }

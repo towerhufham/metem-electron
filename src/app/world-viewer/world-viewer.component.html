@@ -1,8 +1,3 @@
-<span *ngIf="DEBUG">
-    <button (click)="getMapJSON()" type="button">Get map JSON</button>
-    <input #mapInput id="mapInput" type="text" placeholder="Map .json file">
-    <button (click)="loadMapJSON()" type="button">Load test.JSON</button>
-</span>
 <div id="grid" (mouseleave)="mouseLeave()">
     <!-- tiles -->
     <img 
@@ -26,3 +21,8 @@
         draggable="false"
     >
 </div>
+<span *ngIf="DEBUG">
+    <button (click)="getMapJSON()" type="button">Get map JSON</button>
+    <input #mapInput id="mapInput" type="text" placeholder="Map .json file">
+    <button (click)="loadMapJSON()" type="button">Load test.JSON</button>
+</span>
