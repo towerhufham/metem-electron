@@ -16,6 +16,8 @@ export class CollectionService {
     //points
     "hp": 100,
     "xp": 0,
+    "atk": 0,
+    "def": 0
   }
 
   spells: Spell[] = [];
@@ -41,6 +43,8 @@ export class CollectionService {
   }
 
   takeDamage(n: number) {
-    this.collects.hp = Math.max(0, this.collects.hp - n);
+    if (n > 0) {
+      this.collects.hp = Math.max(0, this.collects.hp - n);
+    }
   }
 }

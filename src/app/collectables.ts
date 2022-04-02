@@ -59,12 +59,28 @@ export const hpPickup = new Pickup(
     25
 )
 
+export const atkPickup = new Pickup (
+    5,
+    "ATK +1",
+    "atk_bubble_small.png",
+    "atk"
+)
+
+export const defPickup = new Pickup (
+    6,
+    "DEF +1",
+    "def_bubble_small.png",
+    "def"
+)
+
 export const ALL_PICKUPS: Pickup[] = [
     YellowKey,
     BlueKey,
     RedKey,
     xpPickup,
     hpPickup,
+    atkPickup,
+    defPickup
 ]
 
 

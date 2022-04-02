@@ -5,7 +5,7 @@ export const DEBUG = true;
 export const WORLD_SIZE = 15;
 
 export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" |
-    "hp" | "xp";
+    "hp" | "atk" | "def" | "xp";
 
 export interface Tile {
     name: string;

@@ -85,7 +85,7 @@ export class Enemy implements ObjectType {
     id: number;
     name: string;
     img: string;
-    damage: number;
+    level: number;
     immunity?: string;
     group: "enemy" = "enemy";
 
@@ -93,13 +93,17 @@ export class Enemy implements ObjectType {
         this.id = id;
         this.name = name;
         this.img = img;
-        this.damage = damage;
+        this.level = damage;
         this.immunity = immunity;
     }
 
     interact(o: ObjectOnMap, cs: CollectionService) {
-        cs.takeDamage(this.damage);
-        o.remove()
+        if (cs.collects.atk >= this.level) {
+            //cs.takeDamage won't let you take negative damage btw
+            const damage = this.level - cs.collects.def;
+            cs.takeDamage(damage);
+            o.remove()
+        }
     }
 }
 

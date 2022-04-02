@@ -28,6 +28,14 @@ export class InventoryComponent implements OnInit {
     return this.cs.collects.hp;
   }
 
+  getAtk() {
+    return this.cs.collects.atk;
+  }
+
+  getDef() {
+    return this.cs.collects.def;
+  }
+
   getXp() {
     return this.cs.collects.xp;
   }
