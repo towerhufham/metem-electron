@@ -1,20 +1,25 @@
+#inventory {
+    width: 1448px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#inventory div {
+    border: 2px royalblue solid;
+    box-sizing: border-box;
+	background-color: lightskyblue;
+    width: 483px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
     width: 32px;
     height: 32px;
     image-rendering: pixelated;
-}
-
-#inventory {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#inventory div {
-    gap: 16px;
-    display: flex;
-    flex-direction: row;
 }
 
 .icon {

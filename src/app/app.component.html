@@ -1,12 +1,16 @@
 <div id="root">
     <app-map-builder *ngIf="DEBUG"></app-map-builder>
-    <div id="worldHolder">
-        <app-world-viewer id="materialWorld"></app-world-viewer>
-        <div id="middle-column">
+    <div id="centered">
+        <div>
             <app-info-box></app-info-box>
-            <app-inventory></app-inventory>
-            <app-spell-inventory></app-spell-inventory>
         </div>
-        <app-world-viewer id="astralWorld"></app-world-viewer>
+        <div id="world-holder">
+            <app-world-viewer id="materialWorld"></app-world-viewer>
+            <div id="spacer"></div>
+            <app-world-viewer id="astralWorld"></app-world-viewer>
+        </div>
+        <div>
+            <app-inventory></app-inventory>
+        </div>
     </div>
 </div>

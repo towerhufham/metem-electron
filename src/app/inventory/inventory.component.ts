@@ -10,28 +10,52 @@ import { TargetingService } from '../targeting.service';
 })
 export class InventoryComponent implements OnInit {
 
-  constructor(private collectionService: CollectionService) { }
+  constructor(private cs: CollectionService, private targetingService: TargetingService) { }
 
   ngOnInit(): void {
   }
 
+  getSpells(): Spell[] {
+    return this.cs.spells;
+  }
+  
+  startCastingSpell(spell: Spell) {
+    this.targetingService.startCastingSpell(spell);
+    this.cs.removeSpell(spell);
+  }
+
   getHp() {
-    return this.collectionService.collects.hp;
+    return this.cs.collects.hp;
   }
 
   getXp() {
-    return this.collectionService.collects.xp;
+    return this.cs.collects.xp;
+  }
+
+  getKeyList(): string[] {
+    //just for visual candy
+    let keys = [];
+    for (let i = 0; i < this.cs.collects.yellowKeys; i++) {
+      keys.push("yellow_key.png");
+    }
+    for (let i = 0; i < this.cs.collects.blueKeys; i++) {
+      keys.push("blue_key.png");
+    }
+    for (let i = 0; i < this.cs.collects.redKeys; i++) {
+      keys.push("red_key.png");
+    }
+    return keys;
   }
 
   getYellowKeys() {
-    return this.collectionService.collects.yellowKeys;
+    return this.cs.collects.yellowKeys;
   }
 
   getBlueKeys() {
-    return this.collectionService.collects.blueKeys;
+    return this.cs.collects.blueKeys;
   }
 
   getRedKeys() {
-    return this.collectionService.collects.redKeys;
+    return this.cs.collects.redKeys;
   }
 }

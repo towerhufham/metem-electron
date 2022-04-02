@@ -1,8 +1,21 @@
 div {
-    text-align: center;
-}
-img {
-    width: 48px;
+    border: 2px royalblue solid;
+    box-sizing: border-box;
+	background-color: lightskyblue;
     height: 48px;
-    image-rendering: pixelated;
+    width: 1448px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
 }

@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class InfoService {
 
-  name?: string;
+  name?: string = "Hover over";
   img?: string;
-  description?: string;
+  description?: string = "something to see its description";
   
   constructor() { }
 
