@@ -41,7 +41,7 @@ function defaultSpellBehavior(world: WorldViewerComponent, element: string) {
         o.takeDamage(element);
     }
     for (const t of world.targetedTiles) {
-        if (t.weakness === element) {
+        if (t.weakness === element || t.weakness === "all") {
             t.wall = false;
             t.img = "pink_floor.png";
             t.name = "Cleared Wall";

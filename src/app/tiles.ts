@@ -31,6 +31,60 @@ export const UpStairs: TileType = {
 
 //NORMAL TILES
 
+export const RedFloor: TileType = {
+    name: "Red Floor",
+    img: "red_floor.png",
+    wall: false
+}
+
+export const OrangeFloor: TileType = {
+    name: "Orange Floor",
+    img: "orange_floor.png",
+    wall: false
+}
+
+export const YellowFloor: TileType = {
+    name: "Yellow Floor",
+    img: "yellow_floor.png",
+    wall: false
+}
+
+export const GreenFloor: TileType = {
+    name: "Green Floor",
+    img: "green_floor.png",
+    wall: false
+}
+
+export const BlueFloor: TileType = {
+    name: "Blue Floor",
+    img: "blue_floor.png",
+    wall: false
+}
+
+export const PurpleFloor: TileType = {
+    name: "Purple Floor",
+    img: "purple_floor.png",
+    wall: false
+}
+
+export const PinkFloor: TileType = {
+    name: "Pink Floor",
+    img: "pink_floor.png",
+    wall: false
+}
+
+export const GreyWall: TileType = {
+    name: "Grey Wall",
+    img: "grey_wall.png",
+    wall: true
+}
+
+export const PinkWall: TileType = {
+    name: "Pink Wall",
+    img: "pink_wall.png",
+    wall: true
+}
+
 export const GrassFloor: TileType = {
     name: "Grass Floor",
     img: "grass_floor.png",
@@ -52,6 +106,7 @@ export const IceFloor: TileType = {
 export const IceWall: TileType = {
     name: "Ice Wall",
     img: "ice_wall.png",
+    // img: "ice-wall-hq3x.png",
     wall: true
 }
 
@@ -67,19 +122,14 @@ export const DarkDungeonWall: TileType = {
     wall: true
 }
 
-export const PinkFloor: TileType = {
-    name: "Pink Floor",
-    img: "pink_floor.png",
-    wall: false
-}
-
-export const PinkWall: TileType = {
-    name: "Pink Wall",
-    img: "pink_wall.png",
-    wall: true
-}
-
 // SPELL WALLS
+
+export const BreakWall: TileType = {
+    name: "Breakable Wall",
+    img: "brown_wall.png",
+    wall: true,
+    weakness: "all",
+}
 
 export const FireSpellWall: TileType = {
     name: "Fire Spell Wall",
@@ -126,14 +176,22 @@ export const LightSpellWall: TileType = {
 export const ALL_TILES: TileType[] = [
     DownStairs,
     UpStairs,
+    RedFloor,
+    OrangeFloor,
+    YellowFloor,
+    GreenFloor,
+    BlueFloor,
+    PurpleFloor,
+    PinkFloor,
+    GreyWall,
     GrassFloor,
     DungeonWall,
     IceFloor,
     IceWall,
     DarkDungeonFloor,
     DarkDungeonWall,
-    PinkFloor,
     PinkWall,
+    BreakWall,
     FireSpellWall,
     EarthSpellWall,
     WaterSpellWall,
