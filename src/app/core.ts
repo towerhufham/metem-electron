@@ -4,10 +4,6 @@ export const DEBUG = true;
 
 export const WORLD_SIZE = 15;
 
-export type CollectableKinds = "yellowKeys" | "blueKeys" | "redKeys" | "purpleKeys" |
-    "forestKeys" | "fireKeys" | "waterKeys" |
-    "hp" | "atk" | "def" | "xp";
-
 export interface Tile {
     name: string;
     img: string;

@@ -24,46 +24,22 @@ export class InventoryComponent implements OnInit {
     this.cs.removeSpell(spell);
   }
 
-  getHp() {
-    return this.cs.collects.hp;
-  }
-
-  getAtk() {
-    return this.cs.collects.atk;
-  }
-
-  getDef() {
-    return this.cs.collects.def;
-  }
-
-  getXp() {
-    return this.cs.collects.xp;
+  get(kind: string) {
+    return this.cs.get(kind);
   }
 
   getKeyList(): string[] {
     //just for visual candy
     let keys = [];
-    for (let i = 0; i < this.cs.collects.yellowKeys; i++) {
+    for (let i = 0; i < this.cs.get("yellowKeys"); i++) {
       keys.push("yellow_key.png");
     }
-    for (let i = 0; i < this.cs.collects.blueKeys; i++) {
+    for (let i = 0; i < this.cs.get("blueKeys"); i++) {
       keys.push("blue_key.png");
     }
-    for (let i = 0; i < this.cs.collects.redKeys; i++) {
+    for (let i = 0; i < this.cs.get("redKeys"); i++) {
       keys.push("red_key.png");
     }
     return keys;
-  }
-
-  getYellowKeys() {
-    return this.cs.collects.yellowKeys;
-  }
-
-  getBlueKeys() {
-    return this.cs.collects.blueKeys;
-  }
-
-  getRedKeys() {
-    return this.cs.collects.redKeys;
   }
 }

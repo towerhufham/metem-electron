@@ -3,16 +3,13 @@
         <p class="iconLabel"><img *ngFor="let spell of getSpells();" class="icon" src="assets/img/{{spell.img}}" (click)="startCastingSpell(spell)" /></p>
     </div>
     <div id="stats-inventory">
-        <p class="iconLabel"><img class="icon" src="assets/img/hp_pickup.png"> {{getHp()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/atk_bubble_small.png"> {{getAtk()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/def_bubble_small.png"> {{getDef()}}</p>
+        <p class="iconLabel"><img class="icon" src="assets/img/hp_pickup.png"> {{get("hp")}}</p>
+        <p class="iconLabel"><img class="icon" src="assets/img/atk_bubble_small.png"> {{get("atk")}}</p>
+        <p class="iconLabel"><img class="icon" src="assets/img/def_bubble_small.png"> {{get("def")}}</p>
         <!-- <p class="iconLabel"><img class="icon" src="assets/img/xp_bubble_small.png"> {{getXp()}}</p> -->
     </div>
 
     <div id="keys-inventory">
-        <!-- <p class="iconLabel"><img class="icon" src="assets/img/yellow_key.png"> {{getYellowKeys()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/blue_key.png"> {{getBlueKeys()}}</p>
-        <p class="iconLabel"><img class="icon" src="assets/img/red_key.png"> {{getRedKeys()}}</p> -->
         <p class="iconLabel"><img *ngFor="let img of getKeyList();" class="icon" src="assets/img/{{img}}" /></p>
     </div>
 </div>

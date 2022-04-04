@@ -7,31 +7,30 @@ import { Spell } from './spells';
 })
 export class CollectionService {
 
-  collects = {
-    //keys
-    "yellowKeys": 0,
-    "blueKeys": 0,
-    "redKeys": 0,
-    "purpleKeys": 0,
-    "forestKeys": 0,
-    "fireKeys": 0,
-    "waterKeys": 0,
-
-    //points
-    "hp": 100,
-    "xp": 0,
-    "atk": 0,
-    "def": 0
-  }
+  collects = new Map<string, number>();
 
   spells: Spell[] = [];
 
-  constructor() { }
+  constructor() { 
+    //the 0 ones aren't that necessary, but it makes me feel better
+    this.collects.set("hp", 100);
+    this.collects.set("atk", 0);
+    this.collects.set("def", 0);
+    this.collects.set("xp", 0);
+  }
+
+  get(kind: string): number {
+    if (this.collects.has(kind)) {
+      return this.collects.get(kind)!;
+    } else {
+      return 0;
+    }
+  }
 
   registerPickup(collect: Pickup): void {
     const kind = collect.kind;
-    const amount = collect.amount;
-    this.collects[kind] += amount;
+    const total = this.get(kind) + collect.amount;
+    this.collects.set(kind, total);
   }
 
   registerSpellCollect(collect: SpellCollect): void {
@@ -48,7 +47,7 @@ export class CollectionService {
 
   takeDamage(n: number) {
     if (n > 0) {
-      this.collects.hp = Math.max(0, this.collects.hp - n);
+      this.collects.set("hp", Math.max(0, this.collects.get("hp")! - n));
     }
   }
 }

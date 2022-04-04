@@ -1,16 +1,16 @@
 import { CollectionService } from "./collection.service";
-import { CollectableKinds, ObjectOnMap, ObjectType } from "./core"
+import { ObjectOnMap, ObjectType } from "./core"
 
 export class Gate implements ObjectType {
 
     id: number;
     name: string;
     img: string;
-    kind: CollectableKinds;
+    kind: string;
     amount: number;
     group: "gate" = "gate";
 
-    constructor (id: number, name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+    constructor (id: number, name: string, img: string, kind: string, amount: number = 1) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -19,10 +19,11 @@ export class Gate implements ObjectType {
     }
 
     interact(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.collects[this.kind] >= this.amount) {
-            //if xp, don't remove it
+        if (cs.get(this.kind) >= this.amount) {
+            //if xp, don't detract it from player inventory
             if (this.kind !== "xp") {
-                cs.collects[this.kind] -= this.amount;
+                const total = cs.get(this.kind) - this.amount;
+                cs.collects.set(this.kind, total);
             }
             o.remove();
         } else {
@@ -126,9 +127,9 @@ export class Enemy implements ObjectType {
     }
 
     interact(o: ObjectOnMap, cs: CollectionService) {
-        if (cs.collects.atk >= this.level) {
+        if (cs.get("atk") >= this.level) {
             //cs.takeDamage won't let you take negative damage btw
-            const damage = this.level - cs.collects.def;
+            const damage = this.level - cs.get("def");
             cs.takeDamage(damage);
             o.remove()
         }

@@ -1,5 +1,4 @@
 import { ObjectType } from "./core";
-import { CollectableKinds } from "./core";
 import { ALL_SPELLS, Spell } from "./spells";
 
 export class Pickup implements ObjectType {
@@ -8,11 +7,11 @@ export class Pickup implements ObjectType {
     id: number;
     name: string;
     img: string;
-    kind: CollectableKinds;
+    kind: string;
     amount: number;
     group: "pickup" = "pickup";
 
-    constructor(id: number, name: string, img: string, kind: CollectableKinds, amount: number = 1) {
+    constructor(id: number, name: string, img: string, kind: string, amount: number = 1) {
         this.id = id;
         this.name = name;
         this.img = img;
