@@ -15,6 +15,10 @@ export class InventoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get(kind: string) {
+    return this.cs.get(kind);
+  }
+
   getSpells(): Spell[] {
     return this.cs.spells;
   }
@@ -22,10 +26,6 @@ export class InventoryComponent implements OnInit {
   startCastingSpell(spell: Spell) {
     this.targetingService.startCastingSpell(spell);
     this.cs.removeSpell(spell);
-  }
-
-  get(kind: string) {
-    return this.cs.get(kind);
   }
 
   getKeyList(): string[] {

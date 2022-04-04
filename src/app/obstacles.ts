@@ -138,14 +138,14 @@ export class Enemy implements ObjectType {
 
 export const Slime = new Enemy (
     0,
-    "Slime",
+    "Slime (Lv.5)",
     "monster-test.gif",
     5
 )
 
 export const Wisp = new Enemy (
     1,
-    "Wisp",
+    "Wisp (Lv.15)",
     "wisp.gif",
     15,
     "fire"
@@ -153,7 +153,7 @@ export const Wisp = new Enemy (
 
 export const RockElemental = new Enemy (
     2,
-    "Rock Elemental",
+    "Rock Elemental (Lv. 25)",
     "rock_elemental.gif",
     25,
     "earth"
@@ -161,7 +161,7 @@ export const RockElemental = new Enemy (
 
 export const Crab = new Enemy (
     3,
-    "Crab",
+    "Crab (Lv.15)",
     "crab.gif",
     15,
     "water"
@@ -169,25 +169,25 @@ export const Crab = new Enemy (
 
 export const Bat = new Enemy (
     4,
-    "Bat",
+    "Bat (lv. 25)",
     "bat.gif",
-    15,
+    25,
     "wind"
 )
 
 export const IceSlug = new Enemy (
     5,
-    "Ice Slug",
+    "Ice Slug (Lv.35)",
     "ice_slug.gif",
-    15,
+    35,
     "ice"
 )
 
 export const Machine = new Enemy (
     6,
-    "Machine",
+    "Machine (Lv.50)",
     "machine.gif",
-    15,
+    50,
     "light"
 )
 

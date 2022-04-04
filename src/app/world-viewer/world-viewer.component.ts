@@ -84,32 +84,6 @@ export class WorldViewerComponent implements OnInit {
     this.clearTargeted();
   }
 
-  sendInfo(o: any | undefined) {
-    let name: string | undefined = undefined;
-    let img: string | undefined = undefined;
-    let description: string | undefined = undefined;
-    //for tiles
-    if (o.hasOwnProperty("name")) {
-      name = o.name;
-    }
-    if (o.hasOwnProperty("img")) {
-      img = o.img;
-    }
-    if (o.hasOwnProperty("description")) {
-      description = o.description;
-    }
-    //for objects
-    if (o.hasOwnProperty("type")) {
-      const t = o.type;
-      name = t.name;
-      img = t.img;
-      if (t.hasOwnProperty("description")) {
-        description = t.description;
-      }
-    }
-    this.infoService.setInfo(name, img, description);
-  }
-
   makeObjectOnMap(type: ObjectType, x:number, y:number) {
     //don't place if there's a wall
     if (!this.getTileAt(x, y).wall) {
@@ -220,9 +194,9 @@ export class WorldViewerComponent implements OnInit {
     //send info
     const o = this.getObjectAt(tile.x, tile.y);
     if (o) {
-      this.sendInfo(o);
+      this.infoService.getObjectInfo(o);
     } else {
-      this.sendInfo(tile);
+      this.infoService.getTileInfo(tile);
     }
     //if we're not casting, show path
     if (this.isTargeting() === null) {
