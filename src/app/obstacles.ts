@@ -53,8 +53,36 @@ export const RedKeyGate = new Gate(
     "redKeys"
 )
 
-export const XpGate25 = new Gate(
+export const PurpleKeyGate = new Gate(
     3,
+    "Purple Key Gate",
+    "purple_key_gate.png",
+    "purpleKeys"
+)
+
+export const ForestKeyGate = new Gate(
+    4,
+    "Forest Key Gate",
+    "forest_key_gate.png",
+    "forestKeys"
+)
+
+export const FireKeyGate = new Gate(
+    5,
+    "Fire Key Gate",
+    "fire_key_gate.png",
+    "fireKeys"
+)
+
+export const WaterKeyGate = new Gate(
+    6,
+    "Water Key Gate",
+    "water_key_gate.png",
+    "waterKeys"
+)
+
+export const XpGate25 = new Gate(
+    7,
     "25 XP Gate",
     "xp_gate_25.png",
     "xp",
@@ -62,7 +90,7 @@ export const XpGate25 = new Gate(
 )
 
 export const XpGate50 = new Gate(
-    4,
+    8,
     "50 XP Gate",
     "xp_gate_50.png",
     "xp",
@@ -70,14 +98,14 @@ export const XpGate50 = new Gate(
 )
 
 export const XpGate75 = new Gate(
-    5,
+    9,
     "75 XP Gate",
     "xp_gate_75.png",
     "xp",
     75
 )
 
-export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, XpGate25, XpGate50, XpGate75];
+export const ALL_GATES = [YellowKeyGate, BlueKeyGate, RedKeyGate, PurpleKeyGate, ForestKeyGate, FireKeyGate, WaterKeyGate, XpGate25, XpGate50, XpGate75];
 
 
 export class Enemy implements ObjectType {
@@ -111,11 +139,11 @@ export const Slime = new Enemy (
     0,
     "Slime",
     "monster-test.gif",
-    15
+    5
 )
 
 export const Wisp = new Enemy (
-    0,
+    1,
     "Wisp",
     "wisp.gif",
     15,
@@ -123,15 +151,15 @@ export const Wisp = new Enemy (
 )
 
 export const RockElemental = new Enemy (
-    0,
+    2,
     "Rock Elemental",
     "rock_elemental.gif",
-    15,
+    25,
     "earth"
 )
 
 export const Crab = new Enemy (
-    0,
+    3,
     "Crab",
     "crab.gif",
     15,
@@ -139,7 +167,7 @@ export const Crab = new Enemy (
 )
 
 export const Bat = new Enemy (
-    0,
+    4,
     "Bat",
     "bat.gif",
     15,
@@ -147,7 +175,7 @@ export const Bat = new Enemy (
 )
 
 export const IceSlug = new Enemy (
-    0,
+    5,
     "Ice Slug",
     "ice_slug.gif",
     15,
@@ -155,7 +183,7 @@ export const IceSlug = new Enemy (
 )
 
 export const Machine = new Enemy (
-    0,
+    6,
     "Machine",
     "machine.gif",
     15,

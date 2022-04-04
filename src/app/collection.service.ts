@@ -12,6 +12,10 @@ export class CollectionService {
     "yellowKeys": 0,
     "blueKeys": 0,
     "redKeys": 0,
+    "purpleKeys": 0,
+    "forestKeys": 0,
+    "fireKeys": 0,
+    "waterKeys": 0,
 
     //points
     "hp": 100,

@@ -43,16 +43,44 @@ export const RedKey = new Pickup(
     "redKeys"
 )
 
+export const PurpleKey = new Pickup(
+    3,
+    "Purple Key",
+    "purple_key.png",
+    "purpleKeys"
+)
+
+export const ForestKey = new Pickup(
+    4,
+    "Forest Key",
+    "forest_key.png",
+    "forestKeys"
+)
+
+export const FireKeys = new Pickup(
+    5,
+    "Fire Key",
+    "fire_key.png",
+    "fireKeys"
+)
+
+export const WaterKeys = new Pickup(
+    6,
+    "Water Key",
+    "water_key.png",
+    "waterKeys"
+)
+
 //points
 export const xpPickup = new Pickup (
-    3,
+    7,
     "XP +1",
     "xp_bubble_small.png",
     "xp"
 )
 
 export const hpPickup = new Pickup(
-    4,
+    8,
     "HP +25",
     "hp_pickup.png",
     "hp",
@@ -60,14 +88,14 @@ export const hpPickup = new Pickup(
 )
 
 export const atkPickup = new Pickup (
-    5,
+    9,
     "ATK +1",
     "atk_bubble_small.png",
     "atk"
 )
 
 export const defPickup = new Pickup (
-    6,
+    10,
     "DEF +1",
     "def_bubble_small.png",
     "def"
@@ -77,6 +105,10 @@ export const ALL_PICKUPS: Pickup[] = [
     YellowKey,
     BlueKey,
     RedKey,
+    PurpleKey,
+    ForestKey,
+    FireKeys,
+    WaterKeys,
     xpPickup,
     hpPickup,
     atkPickup,
