@@ -30,16 +30,6 @@ export class InventoryComponent implements OnInit {
 
   getKeyList(): string[] {
     //just for visual candy
-    let keys = [];
-    for (let i = 0; i < this.cs.get("yellowKeys"); i++) {
-      keys.push("yellow_key.png");
-    }
-    for (let i = 0; i < this.cs.get("blueKeys"); i++) {
-      keys.push("blue_key.png");
-    }
-    for (let i = 0; i < this.cs.get("redKeys"); i++) {
-      keys.push("red_key.png");
-    }
-    return keys;
+    return this.cs.getKeyList();
   }
 }

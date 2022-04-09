@@ -1,3 +1,4 @@
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Injectable } from '@angular/core';
 import { Pickup, SpellCollect } from './collectables';
 import { Spell } from './spells';
@@ -25,6 +26,18 @@ export class CollectionService {
     } else {
       return 0;
     }
+  }
+
+  getKeyList(): string[] {
+    let list: string[] = [];
+    for (const [key, value] of this.collects) {
+      if (key.endsWith("_key")) {
+        for (let i=0; i < value; i++) {
+          list.push(key);
+        }
+      }
+    }
+    return list;
   }
 
   registerPickup(collect: Pickup): void {

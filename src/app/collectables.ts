@@ -25,49 +25,49 @@ export const YellowKey = new Pickup (
     0,
     "Yellow Key",
     "yellow_key.png",
-    "yellowKeys"
+    "yellow_key"
 )
 
 export const BlueKey = new Pickup(
     1,
     "Blue Key",
     "blue_key.png",
-    "blueKeys"
+    "blue_key"
 )
 
 export const RedKey = new Pickup(
     2,
     "Red Key",
     "red_key.png",
-    "redKeys"
+    "red_key"
 )
 
 export const PurpleKey = new Pickup(
     3,
     "Purple Key",
     "purple_key.png",
-    "purpleKeys"
+    "purple_key"
 )
 
 export const ForestKey = new Pickup(
     4,
     "Forest Key",
     "forest_key.png",
-    "forestKeys"
+    "forest_key"
 )
 
 export const FireKeys = new Pickup(
     5,
     "Fire Key",
     "fire_key.png",
-    "fireKeys"
+    "fire_key"
 )
 
 export const WaterKeys = new Pickup(
     6,
     "Water Key",
     "water_key.png",
-    "waterKeys"
+    "water_key"
 )
 
 //points

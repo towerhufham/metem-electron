@@ -37,49 +37,49 @@ export const YellowKeyGate = new Gate(
     0,
     "Yellow Key Gate",
     "yellow_key_gate.png",
-    "yellowKeys"
+    "yellow_keys"
 )
 
 export const BlueKeyGate = new Gate(
     1,
     "Blue Key Gate",
     "blue_key_gate.png",
-    "blueKeys"
+    "blue_keys"
 )
 
 export const RedKeyGate = new Gate(
     2,
     "Red Key Gate",
     "red_key_gate.png",
-    "redKeys"
+    "red_keys"
 )
 
 export const PurpleKeyGate = new Gate(
     3,
     "Purple Key Gate",
     "purple_key_gate.png",
-    "purpleKeys"
+    "purple_keys"
 )
 
 export const ForestKeyGate = new Gate(
     4,
     "Forest Key Gate",
     "forest_key_gate.png",
-    "forestKeys"
+    "forest_keys"
 )
 
 export const FireKeyGate = new Gate(
     5,
     "Fire Key Gate",
     "fire_key_gate.png",
-    "fireKeys"
+    "fire_keys"
 )
 
 export const WaterKeyGate = new Gate(
     6,
     "Water Key Gate",
     "water_key_gate.png",
-    "waterKeys"
+    "water_keys"
 )
 
 export const XpGate25 = new Gate(

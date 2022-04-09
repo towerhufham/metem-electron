@@ -16,13 +16,7 @@ function defaultMap() {
   for (var i = 0; i < WORLD_SIZE; i++) {
     for (var j = 0; j < WORLD_SIZE; j++) {
       //testing
-      if (Math.random() < 0.8) {
-        // map.push({ name: "ice floor", img: "ice_floor.png", x: j, y: i, wall: false});
-        map.push(tileLibrary.makeTile(tileLibrary.IceFloor, j, i));
-      } else {
-        //map.push({ name: "ice wall", img: "ice_wall.png", x: j, y: i, wall: true});
-        map.push(tileLibrary.makeTile(tileLibrary.IceWall, j, i));
-      }
+      map.push(tileLibrary.makeTile(tileLibrary.DungeonWall, j, i));
     }
   }
   return map;
