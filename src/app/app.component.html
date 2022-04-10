@@ -5,9 +5,9 @@
             <app-info-box></app-info-box>
         </div>
         <div id="world-holder">
-            <app-world-viewer id="materialWorld"></app-world-viewer>
+            <app-world-viewer [isAstral]="false" #materialWorld id="materialWorld"></app-world-viewer>
             <div id="spacer"></div>
-            <app-world-viewer id="astralWorld"></app-world-viewer>
+            <app-world-viewer [isAstral]="true" #astralWorld id="astralWorld"></app-world-viewer>
         </div>
         <div>
             <app-inventory></app-inventory>

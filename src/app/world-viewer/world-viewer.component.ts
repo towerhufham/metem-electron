@@ -30,7 +30,7 @@ function defaultMap() {
 export class WorldViewerComponent implements OnInit {
 
   DEBUG = DEBUG;
-  // @Input() debugMode: boolean = false;
+  @Input() isAstral: boolean = false;
 
   tiles: Tile[] = defaultMap();
   player: ObjectOnMap = new ObjectOnMap({ id:-1, name: "You!", img: "gnome.gif", group: "player"}, 7, 7);
@@ -45,12 +45,22 @@ export class WorldViewerComponent implements OnInit {
 
   @ViewChild("mapInput") mapInput?: ElementRef<HTMLInputElement>;
 
+  loadStartMapsFixThis(isAstral: boolean) {
+    if (isAstral) { //this dont work because @input updates after this constructor
+      this.loadMapJSON("tuta");
+    } else {
+      this.loadMapJSON("tut1");
+    }
+  }
+
   constructor(
     private collectionService: CollectionService, 
     private mapService: MapService, 
     private infoService: InfoService, 
     private targetingService: TargetingService
-  ) { }
+  ) { 
+    setTimeout(() => {this.loadStartMapsFixThis(this.isAstral)}, 100);
+  }
 
   ngOnInit(): void {
   }
@@ -302,8 +312,12 @@ export class WorldViewerComponent implements OnInit {
     this.mapService.getMapJSON(this.tiles, spawns);
   }
 
-  loadMapJSON() {
+  triggerMapLoad() {
     const name = this.mapInput?.nativeElement.value!;
+    this.loadMapJSON(name);
+  }
+
+  loadMapJSON(name: string) {
     if (name != "") {
       const player = this.player;
       const ob = this.mapService.loadMapJSON(name);
