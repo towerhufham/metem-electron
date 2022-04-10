@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MapService } from '../map.service';
-import { ALL_TILES, TileType } from '../tiles';
-import { ALL_ITEMS, ALL_SPELLCOLLECTS } from '../factories';
+import { ALL_ITEMS, ALL_SPELLCOLLECTS, ALL_TILES } from '../factories';
 import { ALL_ENEMIES, ALL_GATES } from '../factories';
-import { ObjectType } from '../core';
+import { ObjectType, TileType } from '../core';
 
 @Component({
   selector: 'app-map-builder',

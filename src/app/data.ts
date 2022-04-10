@@ -30,3 +30,32 @@ export const ENEMY_DATA: [string, string, number, string|undefined][] = [
     ["Ice Slug", "ice_slug.gif", 35, "ice"],
     ["Machine", "machine.gif", 50, "light"],
 ]
+
+//name, img, wall, weakness
+export const TILE_DATA: [string, string, boolean, string?][] = [
+    //STAIRS
+    ["Stairs Down", "down_stairs.png", false],
+    ["Stairs Up", "up_stairs.png", false],
+    //NORMAL TILES
+    ["Red Floor", "red_floor.png", false],
+    ["Orange Floor", "orange_floor.png", false],
+    ["Yellow Floor", "yellow_floor.png", false],
+    ["Green Floor", "green_floor.png", false],
+    ["Blue Floor", "blue_floor.png", false],
+    ["Purple Floor", "purple_floor.png", false],
+    ["Pink Floor", "pink_floor.png", false],
+    ["Grey Wall", "grey_wall.png", true],
+    ["Pink Wall", "pink_wall.png", true],
+    ["Grass Floor", "grass_floor.png", false],
+    ["Dungeon Wall", "dungeon_wall.png", true],
+    ["Ice Floor", "ice_floor.png", false],
+    ["Ice Wall", "ice_wall.png", true],
+    ["Dark Dungeon Wall", "dark_dungeon_wall.png", true],
+    //SPELL WALLS
+    ["Break Wall", "brown_wall.png", true, "all"],
+    ["Fire Spell Wall", "fire_spell_wall.png", true, "fire"],
+    ["Earth Spell Wall", "earth_spell_wall.png", true, "earth"],
+    ["Water Spell Wall", "water_spell_wall.png", true, "water"],
+    ["Wind Spell Wall", "wind_spell_wall.png", true, "wind"],
+    ["Ice Spell Wall", "ice_spell_wall.png", true, "ice"],
+]

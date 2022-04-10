@@ -1,6 +1,6 @@
 import { ALL_SPELLS } from "./spells";
-import { ENEMY_DATA, KEY_DATA, PICKUP_DATA } from "./data";
-import { Enemy, Gate, Pickup, SpellCollect } from "./core";
+import { ENEMY_DATA, KEY_DATA, PICKUP_DATA, TILE_DATA } from "./data";
+import { Enemy, Gate, Pickup, SpellCollect, TileType } from "./core";
 
 function itemsFactory(): Pickup[] {
     let items: Pickup[] = [];
@@ -56,3 +56,13 @@ function enemyFactory(): Enemy[] {
     return enemies;
 }
 export const ALL_ENEMIES = enemyFactory();
+
+
+function tileFactory(): TileType[] {
+    let tiles: TileType[] = [];
+    for (const [name, img, wall, weakness] of TILE_DATA) {
+        tiles.push({name: name, img: img, wall: wall, weakness: weakness})
+    }
+    return tiles;
+}
+export const ALL_TILES = tileFactory();

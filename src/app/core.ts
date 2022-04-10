@@ -5,6 +5,13 @@ export const DEBUG = true;
 
 export const WORLD_SIZE = 15;
 
+export interface TileType {
+    name: string,
+    img: string,
+    wall: boolean,
+    weakness?: string
+}
+
 export interface Tile {
     name: string;
     img: string;
@@ -12,6 +19,14 @@ export interface Tile {
     y: number;
     wall: boolean;
     weakness?: string;
+}
+
+export function makeTile(type: TileType, x: number, y: number): Tile {
+    if (type.weakness) {
+        return {name: type.name, img: type.img, wall: type.wall, weakness: type.weakness, x: x, y: y};
+    } else {
+        return {name: type.name, img: type.img, wall: type.wall, x: x, y: y};
+    } 
 }
 
 export interface ObjectType {

@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
-import * as tileLibrary from "../tiles";
-import { ALL_ITEMS, ALL_SPELLCOLLECTS } from '../factories';
+import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType, makeTile } from "../core";
+import { ALL_ITEMS, ALL_SPELLCOLLECTS, ALL_TILES } from '../factories';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
@@ -16,7 +15,7 @@ function defaultMap() {
   for (var i = 0; i < WORLD_SIZE; i++) {
     for (var j = 0; j < WORLD_SIZE; j++) {
       //testing
-      map.push(tileLibrary.makeTile(tileLibrary.DungeonWall, j, i));
+      map.push(makeTile(ALL_TILES[12], j, i));
     }
   }
   return map;
