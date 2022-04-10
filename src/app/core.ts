@@ -1,4 +1,5 @@
 import { CollectionService } from "./collection.service";
+import { Spell } from "./spells";
 
 export const DEBUG = true;
 
@@ -20,6 +21,100 @@ export interface ObjectType {
     img: string;
     group: "pickup"|"spellCollect"|"gate"|"enemy"|"player";
     interact?: (o: ObjectOnMap, cs: CollectionService) => void;
+}
+
+export class Pickup implements ObjectType {
+    
+    //pickups increase a number in the collection
+    id: number;
+    name: string;
+    img: string;
+    kind: string;
+    amount: number;
+    group: "pickup" = "pickup";
+
+    constructor(id: number, name: string, img: string, kind: string, amount: number = 1) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.kind = kind;
+        this.amount = amount;
+    }
+}
+
+export class SpellCollect implements ObjectType {
+    
+    //pickups increase a number in the collection
+    id: number;
+    name: string;
+    img: string;
+    spell: Spell;
+    group: "spellCollect" = "spellCollect";
+
+    constructor(id: number, name: string, img: string, spell: Spell) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.spell = spell;
+    }
+}
+
+export class Gate implements ObjectType {
+
+    id: number;
+    name: string;
+    img: string;
+    kind: string;
+    amount: number;
+    group: "gate" = "gate";
+
+    constructor (id: number, name: string, img: string, kind: string, amount: number = 1) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.kind = kind;
+        this.amount = amount;
+    }
+
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.get(this.kind) >= this.amount) {
+            //if xp, don't detract it from player inventory
+            if (this.kind !== "xp") {
+                const total = cs.get(this.kind) - this.amount;
+                cs.collects.set(this.kind, total);
+            }
+            o.remove();
+        } else {
+            alert(`Not enough ${this.kind}!`);
+        }
+    }
+}
+
+export class Enemy implements ObjectType {
+
+    id: number;
+    name: string;
+    img: string;
+    level: number;
+    immunity?: string;
+    group: "enemy" = "enemy";
+
+    constructor(id:number, name: string, img: string, damage: number, immunity?: string) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.level = damage;
+        this.immunity = immunity;
+    }
+
+    interact(o: ObjectOnMap, cs: CollectionService) {
+        if (cs.get("atk") >= this.level) {
+            //cs.takeDamage won't let you take negative damage btw
+            const damage = this.level - cs.get("def");
+            cs.takeDamage(damage);
+            o.remove()
+        }
+    }
 }
 
 export class ObjectOnMap {

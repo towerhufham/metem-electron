@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CollectionService } from './collection.service';
 import { ObjectOnMap, Tile } from './core';
-import { Enemy } from './obstacles';
+import { Enemy } from './core';
 
 @Injectable({
   providedIn: 'root'

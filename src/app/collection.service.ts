@@ -1,6 +1,5 @@
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Injectable } from '@angular/core';
-import { Pickup, SpellCollect } from './collectables';
+import { Pickup, SpellCollect } from './core';
 import { Spell } from './spells';
 
 @Injectable({

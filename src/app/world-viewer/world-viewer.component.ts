@@ -1,12 +1,12 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType } from "../core";
 import * as tileLibrary from "../tiles";
-import { ALL_PICKUPS, ALL_SPELLCOLLECTS } from '../collectables';
+import { ALL_ITEMS, ALL_SPELLCOLLECTS } from '../factories';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
-import { ALL_GATES, ALL_ENEMIES } from '../obstacles';
+import { ALL_GATES, ALL_ENEMIES } from '../factories';
 import { Spell } from '../spells';
 import { TargetingService } from '../targeting.service';
 
@@ -92,7 +92,7 @@ export class WorldViewerComponent implements OnInit {
   spawnObjectOnMap(spawn: ObjectSpawn) {
     //get item from the ALL_ lists
     if (spawn.group === "pickup") {
-      this.makeObjectOnMap(ALL_PICKUPS[spawn.id], spawn.x, spawn.y);
+      this.makeObjectOnMap(ALL_ITEMS[spawn.id], spawn.x, spawn.y);
     } else if (spawn.group === "spellCollect") {
       this.makeObjectOnMap(ALL_SPELLCOLLECTS[spawn.id], spawn.x, spawn.y);
     } else if (spawn.group === "gate") {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MapService } from '../map.service';
 import { ALL_TILES, TileType } from '../tiles';
-import { ALL_PICKUPS, ALL_SPELLCOLLECTS } from '../collectables';
-import { ALL_ENEMIES, ALL_GATES } from '../obstacles';
+import { ALL_ITEMS, ALL_SPELLCOLLECTS } from '../factories';
+import { ALL_ENEMIES, ALL_GATES } from '../factories';
 import { ObjectType } from '../core';
 
 @Component({
@@ -13,7 +13,7 @@ import { ObjectType } from '../core';
 export class MapBuilderComponent implements OnInit {
 
   tileLibrary = ALL_TILES;
-  collectableLibrary = ALL_PICKUPS;
+  collectableLibrary = ALL_ITEMS;
   spellCollectLibrary = ALL_SPELLCOLLECTS;
   gateLibrary = ALL_GATES;
   enemyLibrary = ALL_ENEMIES
