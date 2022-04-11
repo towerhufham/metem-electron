@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "the-wizard-tower": {
+      "hosting": {
+        "metem": [
+          "locksmyth"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "the-wizard-tower"
+  }
+}

@@ -46,3 +46,7 @@ Thumbs.db
 
 # eletron-forge
 /out
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

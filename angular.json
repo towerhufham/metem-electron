@@ -116,10 +116,19 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "metem:build:production",
+            "firebaseProject": "the-wizard-tower",
+            "firebaseHostingSite": "locksmyth"
+          }
         }
       }
     }
   },
   "defaultProject": "metem"
 }
-
