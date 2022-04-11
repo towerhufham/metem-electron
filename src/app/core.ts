@@ -1,7 +1,7 @@
 import { CollectionService } from "./collection.service";
 import { Spell } from "./spells";
 
-export const DEBUG = true;
+export const DEBUG = false;
 
 export const WORLD_SIZE = 15;
 

@@ -47,9 +47,9 @@ export class WorldViewerComponent implements OnInit {
 
   loadStartMapsFixThis(isAstral: boolean) {
     if (isAstral) { //this dont work because @input updates after this constructor
-      this.loadMapJSON("tuta");
+      this.loadMapJSON(this.mapListService.astralMaps[0]);
     } else {
-      this.loadMapJSON("tut1");
+      this.loadMapJSON(this.mapListService.materialMaps[0]);
     }
   }
 

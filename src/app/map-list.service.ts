@@ -7,9 +7,11 @@ const clamp = (min: number, num: number, max: number) => Math.min(Math.max(num, 
 })
 export class MapListService {
 
-  materialMaps: string[] = ["tut1", "tut2", "tut3", "tut4"];
+  //materialMaps: string[] = ["tut1", "tut2", "tut3", "tut4"];
+  materialMaps: string[] = ["sandbox"];
   materialFloor: number = 0;
-  astralMaps: string[] = ["tuta"];
+  //astralMaps: string[] = ["tuta"];
+  astralMaps: string[] = ["sandboxa"];
   astralFloor: number = 0;
 
   constructor() { }
