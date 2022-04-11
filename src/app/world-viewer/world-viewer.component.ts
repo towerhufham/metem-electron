@@ -8,6 +8,7 @@ import { InfoService } from '../info.service';
 import { ALL_GATES, ALL_ENEMIES } from '../factories';
 import { Spell } from '../spells';
 import { TargetingService } from '../targeting.service';
+import { MapListService } from '../map-list.service';
 
 
 function defaultMap() {
@@ -56,7 +57,8 @@ export class WorldViewerComponent implements OnInit {
     private collectionService: CollectionService, 
     private mapService: MapService, 
     private infoService: InfoService, 
-    private targetingService: TargetingService
+    private targetingService: TargetingService,
+    private mapListService: MapListService
   ) { 
     setTimeout(() => {this.loadStartMapsFixThis(this.isAstral)}, 100);
   }
@@ -287,13 +289,21 @@ export class WorldViewerComponent implements OnInit {
       //actually move
       this.player.moveTo(x, y);
       this.clearPath();
+      //stair logic
+      if (this.getPlayerTile().special === "down-stairs") {
+        const nextMap = this.mapListService.moveFloor(this.isAstral, false);
+        this.loadMapJSON(nextMap);
+      } else if (this.getPlayerTile().special === "up-stairs") {
+        const nextMap = this.mapListService.moveFloor(this.isAstral, true);
+        this.loadMapJSON(nextMap);
+      }
     }
   }
 
   findDownStairs(): Tile|null  {
     //returns the the first found DownStairs
     for (const t of this.tiles) {
-      if (t.name === "Stairs Down") {
+      if (t.special === "down-stairs" || t.special === "start") {
         return t;
       } 
     }

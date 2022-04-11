@@ -21,8 +21,8 @@ export const PICKUP_DATA: [string, string, string, number][] = [
 ]
 
 //name, img, level, immunity
-export const ENEMY_DATA: [string, string, number, string|undefined][] = [
-    ["Slime", "monster-test.gif", 5, undefined],
+export const ENEMY_DATA: [string, string, number, string?][] = [
+    ["Slime", "monster-test.gif", 5],
     ["Wisp", "wisp.gif", 15, "fire"],
     ["Rock Elemental", "rock_elemental.gif", 25, "earth"],
     ["Crab", "crab.gif", 15, "water"],
@@ -31,11 +31,11 @@ export const ENEMY_DATA: [string, string, number, string|undefined][] = [
     ["Machine", "machine.gif", 50, "light"],
 ]
 
-//name, img, wall, weakness
+//name, img, wall, special
 export const TILE_DATA: [string, string, boolean, string?][] = [
     //STAIRS
-    ["Stairs Down", "down_stairs.png", false],
-    ["Stairs Up", "up_stairs.png", false],
+    ["Stairs Down", "down_stairs.png", false, "down-stairs"],
+    ["Stairs Up", "up_stairs.png", false, "up-stairs"],
     //NORMAL TILES
     ["Red Floor", "red_floor.png", false],
     ["Orange Floor", "orange_floor.png", false],
@@ -58,4 +58,6 @@ export const TILE_DATA: [string, string, boolean, string?][] = [
     ["Water Spell Wall", "water_spell_wall.png", true, "water"],
     ["Wind Spell Wall", "wind_spell_wall.png", true, "wind"],
     ["Ice Spell Wall", "ice_spell_wall.png", true, "ice"],
+    //MOVE THIS AFTER I REWRITE THE MAP SAVE DATA LMAO
+    ["Start Floor", "teal_floor.png", false, "start"]
 ]

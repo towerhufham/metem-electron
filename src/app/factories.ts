@@ -60,8 +60,8 @@ export const ALL_ENEMIES = enemyFactory();
 
 function tileFactory(): TileType[] {
     let tiles: TileType[] = [];
-    for (const [name, img, wall, weakness] of TILE_DATA) {
-        tiles.push({name: name, img: img, wall: wall, weakness: weakness})
+    for (const [name, img, wall, special] of TILE_DATA) {
+        tiles.push({name: name, img: img, wall: wall, special: special})
     }
     return tiles;
 }

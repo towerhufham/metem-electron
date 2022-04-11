@@ -9,7 +9,7 @@ export interface TileType {
     name: string,
     img: string,
     wall: boolean,
-    weakness?: string
+    special?: string
 }
 
 export interface Tile {
@@ -18,12 +18,12 @@ export interface Tile {
     x: number;
     y: number;
     wall: boolean;
-    weakness?: string;
+    special?: string;
 }
 
 export function makeTile(type: TileType, x: number, y: number): Tile {
-    if (type.weakness) {
-        return {name: type.name, img: type.img, wall: type.wall, weakness: type.weakness, x: x, y: y};
+    if (type.special) {
+        return {name: type.name, img: type.img, wall: type.wall, special: type.special, x: x, y: y};
     } else {
         return {name: type.name, img: type.img, wall: type.wall, x: x, y: y};
     } 
