@@ -1,7 +1,7 @@
 import { CollectionService } from "./collection.service";
 import { Spell } from "./spells";
 
-export const DEBUG = false;
+export const DEBUG = true;
 
 export const WORLD_SIZE = 15;
 
@@ -169,8 +169,7 @@ export class ObjectOnMap {
 }
 
 export interface ObjectSpawn {
-    group: "pickup"|"spellCollect"|"gate"|"enemy"|"player", //should never actually be player
-    id: number,
+    name: string,
     x: number,
     y: number
 }

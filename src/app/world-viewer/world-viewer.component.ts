@@ -1,12 +1,11 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType, makeTile } from "../core";
-import { ALL_ITEMS, ALL_SPELLCOLLECTS, ALL_TILES } from '../factories';
+import { getEntity, ALL_ITEMS, ALL_SPELLCOLLECTS, ALL_TILES, ALL_GATES, ALL_ENEMIES } from '../factories';
 import { Grid, BreadthFirstFinder } from "pathfinding";
+import { Spell } from '../spells';
 import { CollectionService } from '../collection.service';
 import { MapService } from '../map.service';
 import { InfoService } from '../info.service';
-import { ALL_GATES, ALL_ENEMIES } from '../factories';
-import { Spell } from '../spells';
 import { TargetingService } from '../targeting.service';
 import { MapListService } from '../map-list.service';
 
@@ -102,18 +101,7 @@ export class WorldViewerComponent implements OnInit {
 
   spawnObjectOnMap(spawn: ObjectSpawn) {
     //get item from the ALL_ lists
-    if (spawn.group === "pickup") {
-      this.makeObjectOnMap(ALL_ITEMS[spawn.id], spawn.x, spawn.y);
-    } else if (spawn.group === "spellCollect") {
-      this.makeObjectOnMap(ALL_SPELLCOLLECTS[spawn.id], spawn.x, spawn.y);
-    } else if (spawn.group === "gate") {
-      this.makeObjectOnMap(ALL_GATES[spawn.id], spawn.x, spawn.y);
-    } else if (spawn.group === "enemy") {
-      this.makeObjectOnMap(ALL_ENEMIES[spawn.id], spawn.x, spawn.y);
-    } else {
-      //unknown object
-      alert("unknown object group for " + spawn);
-    }
+    this.makeObjectOnMap(getEntity(spawn.name), spawn.x, spawn.y);
   }
 
   makePathfindingGrid(ignore?: ObjectOnMap): Grid {
@@ -209,6 +197,16 @@ export class WorldViewerComponent implements OnInit {
     } else {
       //show affected squares of spell
       this.setTargetingTiles(tile.x, tile.y);
+    }
+  }
+
+  rightClickHandler(e: Event, x: number, y: number) {
+    e.preventDefault();
+    if (this.mapService.inBuildingMode()) {
+      const o = this.getObjectAt(x, y);
+      if (o !== this.player) {
+        o?.remove();
+      }
     }
   }
 
@@ -315,7 +313,7 @@ export class WorldViewerComponent implements OnInit {
     let spawns: ObjectSpawn[] = []
     for (const o of this.getActiveObjects()) {
       if (o !== this.player) {
-        spawns.push({group: o.type.group, id: o.type.id, x: o.x, y: o.y});
+        spawns.push({name: o.type.name, x: o.x, y: o.y});
       }
     };
     this.mapService.getMapJSON(this.tiles, spawns);

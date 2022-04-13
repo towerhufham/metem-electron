@@ -1,6 +1,6 @@
 import { ALL_SPELLS } from "./spells";
 import { ENEMY_DATA, KEY_DATA, PICKUP_DATA, TILE_DATA } from "./data";
-import { Enemy, Gate, Pickup, SpellCollect, TileType } from "./core";
+import { Enemy, Gate, ObjectType, Pickup, SpellCollect, TileType } from "./core";
 
 function itemsFactory(): Pickup[] {
     let items: Pickup[] = [];
@@ -38,7 +38,7 @@ function gateFactory(): Gate[] {
     let gates: Gate[] = [];
     let i = 0;
     for (const [name, kind] of KEY_DATA) {
-        gates.push(new Gate(i, name, kind + "_gate.png", kind));
+        gates.push(new Gate(i, name + " Gate", kind + "_gate.png", kind));
         i++;
     }
     return gates;
@@ -66,3 +66,16 @@ function tileFactory(): TileType[] {
     return tiles;
 }
 export const ALL_TILES = tileFactory();
+
+
+//for map loading
+export function getEntity(name: string): ObjectType {
+    const ALL = [...ALL_ITEMS, ...ALL_SPELLCOLLECTS, ...ALL_GATES, ...ALL_ENEMIES];
+    for (const o of ALL) {
+        if (o.name === name) {
+            return o;
+        }
+    }
+    //fallback
+    return ALL_SPELLCOLLECTS[0];
+}

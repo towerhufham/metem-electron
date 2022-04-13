@@ -8,6 +8,7 @@
         [ngClass]="{'inPath': tilesInPath.includes(t), 'targeted': targetedTiles.includes(t)}"
         (mouseenter)="hoverHandler(t)" 
         (click)="clickHandler(t.x, t.y)"
+        (contextmenu)="rightClickHandler($event, t.x, t.y)"
         draggable="false"
     >
 

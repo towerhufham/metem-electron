@@ -13,12 +13,11 @@ export class MapService {
   constructor(private http: HttpClient) { }
 
   getMapJSON(tiles: Tile[], spawns: ObjectSpawn[]) {
-    const m = { name: "new map", tiles: tiles, spawns: spawns };
+    const m = { tiles: tiles, spawns: spawns };
     console.log(JSON.stringify(m));
   }
 
   loadMapJSON(name: string) {
-    //todo: more than just test.json
     return this.http.get<MapData>(`./assets/maps/${name}.json`);
   }
 
