@@ -14,13 +14,13 @@ export class MapListService {
 
   constructor() { }
 
-  moveFloor(isAstral: boolean, up: boolean) {
+  moveFloor(isAstral: boolean, steps: number) {
     if (isAstral) {
-      up ? this.astralFloor++ : this.astralFloor--;
+      this.astralFloor += steps
       this.astralFloor = clamp(0, this.astralFloor, this.astralMaps.length-1);
       return this.astralMaps[this.astralFloor];
     } else {
-      up ? this.materialFloor++ : this.materialFloor--;
+      this.materialFloor += steps
       this.materialFloor = clamp(0, this.materialFloor, this.materialMaps.length-1);
       return this.materialMaps[this.materialFloor];
     }
