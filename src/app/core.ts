@@ -176,6 +176,6 @@ export interface ObjectSpawn {
 
 export interface MapData {
     name: string,
-    tiles: Tile[],
+    tiles: string[],
     spawns: ObjectSpawn[]
 }

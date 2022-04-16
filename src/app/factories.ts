@@ -79,3 +79,12 @@ export function getEntity(name: string): ObjectType {
     //fallback
     return ALL_SPELLCOLLECTS[0];
 }
+export function getTileType(name: string): TileType {
+    for (const t of ALL_TILES) {
+        if (t.name === name) {
+            return t;
+        }
+    }
+    //fallback
+    return ALL_TILES[2];
+}

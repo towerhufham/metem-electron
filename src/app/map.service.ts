@@ -12,8 +12,8 @@ export class MapService {
 
   constructor(private http: HttpClient) { }
 
-  getMapJSON(tiles: Tile[], spawns: ObjectSpawn[]) {
-    const m = { tiles: tiles, spawns: spawns };
+  getMapJSON(tileNames: string[], spawns: ObjectSpawn[]) {
+    const m = { tiles: tileNames, spawns: spawns };
     console.log(JSON.stringify(m));
   }
 

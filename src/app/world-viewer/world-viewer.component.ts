@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { DEBUG, WORLD_SIZE, Tile, ObjectOnMap, ObjectSpawn, ObjectType, makeTile } from "../core";
-import { getEntity, ALL_ITEMS, ALL_SPELLCOLLECTS, ALL_TILES, ALL_GATES, ALL_ENEMIES } from '../factories';
+import { getEntity, ALL_TILES, getTileType } from '../factories';
 import { Grid, BreadthFirstFinder } from "pathfinding";
 import { Spell } from '../spells';
 import { CollectionService } from '../collection.service';
@@ -316,7 +316,11 @@ export class WorldViewerComponent implements OnInit {
         spawns.push({name: o.type.name, x: o.x, y: o.y});
       }
     };
-    this.mapService.getMapJSON(this.tiles, spawns);
+    let tileNames: string[] = [];
+    for (const t of this.tiles) {
+      tileNames.push(t.name);
+    }
+    this.mapService.getMapJSON(tileNames, spawns);
   }
 
   triggerMapLoad() {
@@ -331,7 +335,15 @@ export class WorldViewerComponent implements OnInit {
       let currentMap = this;
       ob.subscribe({
         next(x) { 
-          currentMap.tiles = x.tiles;
+          currentMap.tiles = [];
+          let count = 0;
+          for (const t of x.tiles) {
+            const tx = count % WORLD_SIZE;
+            const ty = Math.floor(count/WORLD_SIZE);
+            const type = getTileType(t);
+            currentMap.tiles.push(makeTile(type, tx, ty));
+            count++;
+          }
           currentMap.mapObjects = [player];
           for (const s of x.spawns) {
             currentMap.spawnObjectOnMap(s);
