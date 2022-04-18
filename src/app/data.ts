@@ -33,9 +33,10 @@ export const ENEMY_DATA: [string, string, number, string?][] = [
 
 //name, img, wall, special
 export const TILE_DATA: [string, string, boolean, string?][] = [
-    //STAIRS
-    ["Stairs Down", "down_stairs.png", false, "down-stairs"],
-    ["Stairs Up", "up_stairs.png", false, "up-stairs"],
+    //FUNCTION TILES
+    ["Start Tile", "start.png", false, "start"],
+    ["Next Floor", "next.png", false, "next"],
+    ["Refresh Tile", "refresh.gif", false, "refresh"],
     //NORMAL TILES
     ["Red Floor", "red_floor.png", false],
     ["Orange Floor", "orange_floor.png", false],

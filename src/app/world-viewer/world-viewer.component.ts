@@ -288,10 +288,10 @@ export class WorldViewerComponent implements OnInit {
       this.player.moveTo(x, y);
       this.clearPath();
       //stair logic
-      if (this.getPlayerTile().special === "down-stairs") {
-        const nextMap = this.mapListService.moveFloor(this.isAstral, -1);
+      if (this.getPlayerTile().special === "refresh") {
+        const nextMap = this.mapListService.moveFloor(this.isAstral, 0);
         this.loadMapJSON(nextMap);
-      } else if (this.getPlayerTile().special === "up-stairs") {
+      } else if (this.getPlayerTile().special === "next") {
         const nextMap = this.mapListService.moveFloor(this.isAstral, 1);
         this.loadMapJSON(nextMap);
       }
